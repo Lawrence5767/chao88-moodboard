@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>潮八八 · Modern Heirloom — Creative Direction v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #B7342A;
+    --red-soft: #A04036;
+    --cream: #F6E9D3;
+    --cream-deep: #EBDDC0;
+    --paper: #FAF3DD;
+    --green: #1E5A44;
+    --green-deep: #143A2D;
+    --green-soft: #4A7560;
+    --gold: #C89A5B;
+    --gold-soft: #B88958;
+    --charcoal: #2D2D2D;
+    --ink: #1A1A1A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background: #1F1A14;
+    color: var(--charcoal);
+    padding: 40px;
+    line-height: 1.5;
+  }
+  .deck { max-width: 1400px; margin: 0 auto; }
+  .page {
+    background: var(--paper);
+    border-radius: 6px;
+    margin-bottom: 32px;
+    padding: 80px 96px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    background-image:
+      radial-gradient(circle at 8% 12%, rgba(200,154,91,0.05) 0%, transparent 30%),
+      radial-gradient(circle at 92% 88%, rgba(30,90,68,0.04) 0%, transparent 35%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.65' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.4 0 0 0 0 0.25 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .page-num {
+    position: absolute; top: 32px; right: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+  }
+  .corner-mark {
+    position: absolute; bottom: 32px; left: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  /* ============ PAGE 1 — CONCEPT ============ */
+  .p1 { min-height: 760px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .p1-left .concept-pretitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .p1-left .concept-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0.9;
+    color: var(--green-deep);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+  .p1-left .concept-title em {
+    font-style: italic;
+    color: var(--red);
+  }
+  .p1-left .concept-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: var(--charcoal);
+    letter-spacing: 0.15em;
+    margin-bottom: 32px;
+  }
+  .p1-left .concept-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--charcoal);
+    max-width: 480px;
+    margin-bottom: 32px;
+  }
+  .p1-left .concept-body strong { color: var(--green-deep); font-weight: 700; }
+
+  .concept-manifest {
+    border-left: 2px solid var(--red);
+    padding: 4px 0 4px 20px;
+    margin-bottom: 32px;
+  }
+  .concept-manifest .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .concept-manifest .quote {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .concept-manifest .quote-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--green);
+    margin-top: 6px;
+  }
+
+  /* Big ink-brush mark */
+  .p1-right { display: flex; align-items: center; justify-content: center; position: relative; }
+  .ink-mark {
+    font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+    font-size: 360px;
+    color: var(--green-deep);
+    line-height: 1;
+    text-shadow:
+      0 0 1px rgba(0,0,0,0.3),
+      2px 4px 0 rgba(200,154,91,0.15);
+    position: relative;
+    transform: rotate(-2deg);
+  }
+  .ink-mark::after {
+    content: ''; position: absolute;
+    width: 80px; height: 80px;
+    bottom: 20px; right: -30px;
+    background: var(--red);
+    border-radius: 4px;
+    transform: rotate(3deg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .ink-mark .stamp-text {
+    position: absolute;
+    bottom: 35px; right: -15px;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: var(--cream);
+    z-index: 2;
+    line-height: 1;
+    transform: rotate(3deg);
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .ink-mark .stamp-text .small { font-size: 14px; display: block; letter-spacing: 0.1em; margin-top: 2px; }
+
+  /* ============ PAGE 2 — STRATEGY (away from / toward) ============ */
+  .p2 { padding-top: 60px; padding-bottom: 60px; }
+  .p2 h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--green-deep);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .p2 .sub {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    color: var(--charcoal);
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+    margin-bottom: 48px;
+  }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+  .compare-col {
+    padding: 36px;
+    border-radius: 4px;
+  }
+  .compare-col.away { background: rgba(45,45,45,0.06); }
+  .compare-col.toward { background: var(--green-deep); color: var(--cream); }
+  .compare-col .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .compare-col h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  .compare-col.away h3 { color: var(--charcoal); }
+  .compare-col ul { list-style: none; }
+  .compare-col li {
+    padding: 12px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(45,45,45,0.1);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .compare-col.toward li { border-bottom-color: rgba(246,233,211,0.15); color: var(--cream); }
+  .compare-col li::before {
+    content: '◇'; color: var(--red); flex-shrink: 0;
+  }
+  .compare-col.toward li::before { color: var(--gold); }
+  .compare-arrow {
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 60px;
+  }
+
+  /* ============ PAGE 3 — EDITORIAL SPREADS ============ */
+  .p3 h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--green-deep);
+    margin-bottom: 8px;
+  }
+  .p3 .sub {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    color: var(--charcoal);
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+    margin-bottom: 56px;
+  }
+  .spread {
+    margin-bottom: 80px;
+    display: grid;
+    gap: 32px;
+  }
+  .spread:last-child { margin-bottom: 0; }
+  .spread-1 { grid-template-columns: 1.4fr 1fr; }
+  .spread-2 { grid-template-columns: 1fr 1.4fr; }
+  .spread-3 { grid-template-columns: 1fr 1fr; }
+
+  .spread .photo-frame {
+    aspect-ratio: 4/5;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  }
+  .photo-frame .tag {
+    position: absolute; bottom: 16px; left: 16px;
+    background: rgba(26,26,26,0.7);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .photo-1 { background:
+    radial-gradient(ellipse at 30% 35%, rgba(255,220,150,0.5) 0%, transparent 50%),
+    linear-gradient(135deg, #4a2818 0%, #2a1610 60%, #15080a 100%);
+  }
+  .photo-2 { background:
+    radial-gradient(ellipse at 60% 45%, rgba(220,200,160,0.7) 0%, transparent 55%),
+    linear-gradient(160deg, #6a3a20 0%, #3a1f15 50%, #1a0e0a 100%);
+  }
+  .photo-3 { background:
+    radial-gradient(ellipse at 50% 55%, rgba(255,230,180,0.4) 0%, transparent 60%),
+    linear-gradient(180deg, #2a1810 0%, #4a2a18 50%, #6a4028 100%);
+  }
+
+  .spread-content { display: flex; flex-direction: column; justify-content: center; padding: 24px 0; }
+  .spread-pretitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .spread-cal {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 180px;
+    color: var(--red);
+    line-height: 0.9;
+    margin-bottom: 16px;
+  }
+  .spread-en-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--green-deep);
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+  .spread-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.9;
+    color: var(--ink);
+    margin-bottom: 16px;
+    max-width: 440px;
+  }
+  .spread-en {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--charcoal);
+    opacity: 0.8;
+    max-width: 440px;
+  }
+
+  /* ============ PAGE 4 — SYSTEM (palette + type + photo) ============ */
+  .p4 .pretitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .p4 h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--green-deep);
+    margin-bottom: 56px;
+  }
+  .sys-section { margin-bottom: 64px; }
+  .sys-section h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .sys-section .h3-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* Proportional palette */
+  .palette-prop {
+    display: grid;
+    grid-template-columns: 5fr 1.5fr 1.5fr 1fr 0.5fr;
+    height: 160px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  .palette-prop .ps {
+    padding: 20px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-family: 'Inter', monospace;
+    font-size: 11px;
+  }
+  .palette-prop .ps .label {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .palette-prop .ps .pct {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    opacity: 0.7;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .palette-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--charcoal);
+    opacity: 0.6;
+    margin-top: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+
+  /* Typography */
+  .type-stack { display: grid; grid-template-columns: 240px 1fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid rgba(45,45,45,0.08); }
+  .type-stack:last-child { border-bottom: none; }
+  .type-stack .stack-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .type-stack .stack-label strong {
+    display: block;
+    font-style: normal;
+    font-family: 'Noto Serif SC', serif;
+    color: var(--charcoal);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+  .type-stack .stack-sample-cn-brush { font-family: 'Ma Shan Zheng', cursive; font-size: 72px; color: var(--red); line-height: 1; }
+  .type-stack .stack-sample-cn-serif { font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 48px; color: var(--green-deep); letter-spacing: 0.05em; }
+  .type-stack .stack-sample-cn-body { font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 20px; color: var(--charcoal); line-height: 1.7; }
+  .type-stack .stack-sample-en-display { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-style: italic; font-size: 44px; color: var(--green-deep); letter-spacing: 0.02em; }
+  .type-stack .stack-sample-en-body { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; color: var(--charcoal); line-height: 1.65; }
+  .type-stack .spec {
+    font-family: 'Inter', monospace;
+    font-size: 11px;
+    color: var(--charcoal);
+    opacity: 0.55;
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Iconography (botanical herbs) */
+  .botanical-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+  .botanical {
+    text-align: center;
+    padding: 20px 12px;
+    background: var(--cream);
+    border-radius: 4px;
+    border: 1px solid rgba(200,154,91,0.3);
+  }
+  .botanical svg { width: 64px; height: 64px; margin-bottom: 12px; }
+  .botanical .name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--green-deep);
+    letter-spacing: 0.08em;
+  }
+  .botanical .en-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--gold-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* Photo direction grid */
+  .photo-direction-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pd-card {
+    aspect-ratio: 1;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  .pd-card.pd-1 { background:
+    radial-gradient(ellipse at 35% 30%, rgba(255,220,140,0.7) 0%, transparent 50%),
+    linear-gradient(135deg, #2a1610 0%, #4a2818 60%, #15080a 100%);
+  }
+  .pd-card.pd-2 { background:
+    radial-gradient(circle at 50% 60%, rgba(240,210,160,0.5) 0%, transparent 60%),
+    linear-gradient(180deg, #1a0e08 0%, #3a2010 50%, #5a3018 100%);
+  }
+  .pd-card.pd-3 { background:
+    radial-gradient(circle at 60% 40%, rgba(200,180,140,0.4) 0%, transparent 65%),
+    linear-gradient(160deg, #3a1f10 0%, #1f100a 100%);
+  }
+  .pd-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 100%);
+    color: var(--cream);
+  }
+  .pd-overlay .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold-light);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .pd-overlay .name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .pd-overlay .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+  .gold-light { color: #DEB97D; }
+
+  /* Video subtitle frames */
+  .video-frames { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 700px; }
+  .vf {
+    aspect-ratio: 9/16;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #2a1610 0%, #4a2818 60%, #15080a 100%);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  }
+  .vf::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center 40%, rgba(220,160,90,0.3) 0%, transparent 60%);
+  }
+  .vf .stamp {
+    position: absolute; top: 18px; right: 18px;
+    width: 32px; height: 32px;
+    background: var(--cream);
+    color: var(--red);
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 0;
+    border: 1px solid var(--red);
+  }
+  .vf .editorial-caption {
+    position: absolute;
+    bottom: 80px; left: 18px; right: 18px;
+    text-align: left;
+  }
+  .vf .ec-pre {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 9px;
+    color: var(--gold-light);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .vf .ec-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 17px;
+    color: var(--cream);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+  }
+  .vf .ec-cn .acc { color: #DEB97D; }
+  .vf .ec-en {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--cream);
+    opacity: 0.8;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+  .vf .corner-rule {
+    position: absolute;
+    bottom: 18px; left: 18px;
+    width: 24px; height: 1px;
+    background: var(--gold-light);
+  }
+
+  /* ============ PAGE 5 — ALTERNATIVES ============ */
+  .alts-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 20px;
+  }
+  .alt-card {
+    padding: 32px;
+    border-radius: 4px;
+    background: var(--cream);
+  }
+  .alt-card.chosen { background: var(--green-deep); color: var(--cream); position: relative; }
+  .alt-card.chosen::before {
+    content: 'CHOSEN'; position: absolute; top: 16px; right: 16px;
+    background: var(--red); color: var(--cream);
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    padding: 4px 10px; font-size: 10px; letter-spacing: 0.3em;
+  }
+  .alt-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    margin-bottom: 8px;
+  }
+  .alt-card.chosen .num { color: var(--gold-light); }
+  .alt-card:not(.chosen) .num { color: var(--gold); }
+  .alt-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 4px;
+    line-height: 1.1;
+  }
+  .alt-card .cn-name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+    letter-spacing: 0.1em;
+  }
+  .alt-card.chosen h4, .alt-card.chosen .cn-name { color: var(--cream); }
+  .alt-card:not(.chosen) h4 { color: var(--green-deep); }
+  .alt-card:not(.chosen) .cn-name { color: var(--red); }
+  .alt-card .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .alt-card.chosen .desc { color: var(--cream); opacity: 0.9; }
+  .alt-card .refs {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  .alt-card.chosen .refs { color: var(--gold-light); }
+
+  /* Final small note */
+  .closer {
+    text-align: center;
+    padding: 48px 0 32px;
+    border-top: 1px solid rgba(45,45,45,0.1);
+    margin-top: 64px;
+  }
+  .closer .cn {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 40px;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+  .closer .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--green);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page p1">
+  <div class="page-num">i · concept</div>
+
+  <div class="p1-left">
+    <div class="concept-pretitle">Creative Direction · v3 · Proposed</div>
+    <div class="concept-title">Modern<br/><em>Heirloom</em></div>
+    <div class="concept-cn">奶奶的方子 · 设计师的手</div>
+    <div class="concept-body">
+      A Chaoshan family recipe box, opened in 2026 by an art director who studied editorial design. Warmth without kitsch. Tradition without cliché. <strong>Quiet authority</strong> — the kind that doesn't need lanterns to prove it's Chinese.
+    </div>
+
+    <div class="concept-manifest">
+      <div class="label">Brand Manifesto</div>
+      <div class="quote">慢一点。鲜一点。<br/>每一锅，都是一封写给家人的信。</div>
+      <div class="quote-en">Slower. Fresher. Every pot is a letter to the family.</div>
+    </div>
+  </div>
+
+  <div class="p1-right">
+    <div class="ink-mark">
+      鲜
+      <div class="stamp-text">潮八八<span class="small">88</span></div>
+    </div>
+  </div>
+
+  <div class="corner-mark">潮八八 · 现切鸡煲 · moodboard v3</div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page p2">
+  <div class="page-num">ii · strategy</div>
+  <h2>The visual pivot</h2>
+  <div class="sub">If every other Chinese hotpot brand in SG looks like a Chinatown postcard, we go the other way.</div>
+
+  <div class="compare-grid">
+    <div class="compare-col away">
+      <div class="label">Moving away from</div>
+      <h3>Chinatown<br/>Postcard</h3>
+      <ul>
+        <li>Red lanterns · gold dragons · opera masks as decoration</li>
+        <li>Saturated red dominating 60%+ of every frame</li>
+        <li>Loud promotional energy — "限时优惠！" everywhere</li>
+        <li>Stock food photography lit like a menu board</li>
+        <li>Pagoda silhouettes treated as "Chinese-ness shortcut"</li>
+        <li>EN copy reads like Google Translate</li>
+      </ul>
+    </div>
+
+    <div class="compare-arrow">→</div>
+
+    <div class="compare-col toward">
+      <div class="label">Moving toward</div>
+      <h3>Editorial<br/>Heirloom</h3>
+      <ul>
+        <li>Brush calligraphy as the only ornament — chosen, not stacked</li>
+        <li>Deep green dominates · cream breathes · red is reserved for emphasis</li>
+        <li>Quiet copy — short Chinese sentences, like grandma talking</li>
+        <li>Cinematic food photography — chiaroscuro, steam, slow light</li>
+        <li>Botanical apothecary illustrations (jujube, goji, ginseng)</li>
+        <li>CN-led typography · EN sits beneath in italic Cormorant</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="corner-mark">page 2 · away ← → toward</div>
+</div>
+
+<!-- ============ PAGE 3 ============ -->
+<div class="page p3">
+  <div class="page-num">iii · spreads</div>
+  <h2>Three editorial spreads</h2>
+  <div class="sub">Each video / still in the campaign falls into one of three story-pillars. Visual treatment shown.</div>
+
+  <!-- Spread 1: 鲜 -->
+  <div class="spread spread-1">
+    <div class="photo-frame photo-1">
+      <div class="tag">Pillar 01 · 鲜 · Freshness</div>
+    </div>
+    <div class="spread-content">
+      <div class="spread-pretitle">Pillar 01 · The Cleaver</div>
+      <div class="spread-cal">鲜</div>
+      <div class="spread-en-title">Cut today,<br/>or not at all.</div>
+      <div class="spread-cn">
+        清晨五点，JB工厂的灯亮着。<br/>砧板比鸡先到。每一刀，<br/>都是和昨天的告别。
+      </div>
+      <div class="spread-en">
+        At 5am in JB, the lights are on. The chopping board arrives before the chicken. Every cut is a goodbye to yesterday.
+      </div>
+    </div>
+  </div>
+
+  <!-- Spread 2: 养 -->
+  <div class="spread spread-2">
+    <div class="spread-content">
+      <div class="spread-pretitle">Pillar 02 · The Broth</div>
+      <div class="spread-cal" style="color: var(--green);">养</div>
+      <div class="spread-en-title">A bowl that<br/>does something.</div>
+      <div class="spread-cn">
+        石橄榄清肺。凤梨鸡养胃。<br/>乌鸡补气。这不是火锅 — <br/>是从中药铺走出来的一锅汤。
+      </div>
+      <div class="spread-en">
+        Stone Olive for the lungs. Pineapple Chicken for the stomach. Black Chicken for energy. This isn't hotpot — it's a tonic that walked out of an apothecary.
+      </div>
+    </div>
+    <div class="photo-frame photo-2">
+      <div class="tag">Pillar 02 · 养 · Tonic Broth</div>
+    </div>
+  </div>
+
+  <!-- Spread 3: 家 -->
+  <div class="spread spread-3">
+    <div class="photo-frame photo-3">
+      <div class="tag">Pillar 03 · 家 · Family Table</div>
+    </div>
+    <div class="spread-content">
+      <div class="spread-pretitle">Pillar 03 · The Table</div>
+      <div class="spread-cal" style="color: var(--gold-soft);">家</div>
+      <div class="spread-en-title">Three generations,<br/>one pot.</div>
+      <div class="spread-cn">
+        妈妈夹一块鸡腿给孩子。<br/>奶奶慢慢喝汤。爸爸递酒。<br/>潮八八，懂这种安静。
+      </div>
+      <div class="spread-en">
+        Mum picks a drumstick for the kid. Grandma sips her broth. Dad pours the wine. Chao 88 understands this kind of quiet.
+      </div>
+    </div>
+  </div>
+
+  <div class="corner-mark">page 3 · 鲜 · 养 · 家</div>
+</div>
+
+<!-- ============ PAGE 4 ============ -->
+<div class="page p4">
+  <div class="page-num">iv · system</div>
+  <div class="pretitle">The Build</div>
+  <h2>Design system</h2>
+
+  <!-- Palette with proportions -->
+  <div class="sys-section">
+    <h3>色彩比例</h3>
+    <div class="h3-en">Colour, by usage proportion</div>
+    <div class="palette-prop">
+      <div class="ps" style="background: var(--cream); color: var(--charcoal);">
+        <div><div class="label">米色</div>Cream</div>
+        <div><div>#F6E9D3</div><div class="pct">70% · base &amp; air</div></div>
+      </div>
+      <div class="ps" style="background: var(--green-deep); color: var(--cream);">
+        <div><div class="label">潮汕深绿</div>Deep Green</div>
+        <div><div>#143A2D</div><div class="pct">15% · hero</div></div>
+      </div>
+      <div class="ps" style="background: var(--red); color: var(--cream);">
+        <div><div class="label">紫红</div>Brand Red</div>
+        <div><div>#B7342A</div><div class="pct">10% · accent</div></div>
+      </div>
+      <div class="ps" style="background: var(--gold); color: var(--charcoal);">
+        <div><div class="label">古铜金</div>Gold</div>
+        <div><div>#C89A5B</div><div class="pct">4% · stamp</div></div>
+      </div>
+      <div class="ps" style="background: var(--ink); color: var(--cream);">
+        <div><div class="label">墨黑</div></div>
+        <div><div>#1A1A1A</div><div class="pct">1%</div></div>
+      </div>
+    </div>
+    <p class="palette-caption">
+      The hierarchy is the secret. Most Chinese F&B brands use red as the BASE — we use it as the ACCENT. Deep green replaces red as the hero color, evoking traditional Chaoshan opera silks + porcelain inlay. Cream gives us editorial breathing room. The proportions matter more than the swatches.
+    </p>
+  </div>
+
+  <!-- Typography -->
+  <div class="sys-section">
+    <h3>字体规范</h3>
+    <div class="h3-en">Type system · 4 families</div>
+
+    <div class="type-stack">
+      <div class="stack-label">CN Brush<strong>Ma Shan Zheng</strong></div>
+      <div>
+        <div class="stack-sample-cn-brush">鲜养真</div>
+        <div class="spec">Used ONLY for hero calligraphy moments (1 character per frame). Imitates a chef's handwritten label. Never for body. Never for English.</div>
+      </div>
+    </div>
+
+    <div class="type-stack">
+      <div class="stack-label">CN Display<strong>Noto Serif SC 900</strong></div>
+      <div>
+        <div class="stack-sample-cn-serif">潮八八现切鸡煲</div>
+        <div class="spec">Brand mark, titles, posters. Bold but not aggressive. 字距 0.05em.</div>
+      </div>
+    </div>
+
+    <div class="type-stack">
+      <div class="stack-label">CN Body<strong>Noto Sans SC 400 / 500</strong></div>
+      <div>
+        <div class="stack-sample-cn-body">慢火细煮 · 锁住每一口的温度。从来不是大锅一炒,而是一只鸡, 一锅汤。</div>
+        <div class="spec">Captions, social copy, subtitles. Light to medium weight. line-height 1.7. Never goes bold.</div>
+      </div>
+    </div>
+
+    <div class="type-stack">
+      <div class="stack-label">EN Display + Body<strong>Cormorant Garamond + Inter</strong></div>
+      <div>
+        <div class="stack-sample-en-display">A bowl that does something.</div>
+        <div class="stack-sample-en-body">Cormorant Garamond Italic for headlines. Inter Regular for body. Never use bold sans-serif for Chinese-style brands — it kills the mood.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iconography -->
+  <div class="sys-section">
+    <h3>植物图谱</h3>
+    <div class="h3-en">Iconography · Botanical apothecary</div>
+    <p class="palette-caption" style="margin-top: -8px; margin-bottom: 24px;">Replace pagoda/lantern decorations with hand-drawn botanical line illustrations of broth ingredients. Each tonic broth gets its own herb signature.</p>
+    <div class="botanical-grid">
+      <div class="botanical">
+        <svg viewBox="0 0 64 64"><ellipse cx="32" cy="36" rx="10" ry="14" fill="none" stroke="#1E5A44" stroke-width="1.5"/><path d="M32 22 L32 12 M28 18 L32 22 L36 18" stroke="#1E5A44" stroke-width="1.5" fill="none"/><circle cx="28" cy="34" r="1.5" fill="#B7342A"/><circle cx="34" cy="38" r="1.5" fill="#B7342A"/></svg>
+        <div class="name">红枣</div>
+        <div class="en-name">Jujube</div>
+      </div>
+      <div class="botanical">
+        <svg viewBox="0 0 64 64"><path d="M20 20 Q32 12 44 20 M22 28 Q32 22 42 28 M24 36 Q32 32 40 36 M26 44 Q32 42 38 44" stroke="#1E5A44" stroke-width="1.5" fill="none"/><path d="M32 12 L32 50" stroke="#1E5A44" stroke-width="1.5"/></svg>
+        <div class="name">石橄榄</div>
+        <div class="en-name">Stone Olive</div>
+      </div>
+      <div class="botanical">
+        <svg viewBox="0 0 64 64"><circle cx="20" cy="32" r="3" fill="#B7342A"/><circle cx="28" cy="28" r="3" fill="#B7342A"/><circle cx="36" cy="34" r="3" fill="#B7342A"/><circle cx="44" cy="30" r="3" fill="#B7342A"/><path d="M16 32 L48 32" stroke="#1E5A44" stroke-width="1" stroke-dasharray="2,2"/></svg>
+        <div class="name">枸杞</div>
+        <div class="en-name">Goji</div>
+      </div>
+      <div class="botanical">
+        <svg viewBox="0 0 64 64"><path d="M32 12 Q24 24 28 36 Q32 48 32 52" stroke="#1E5A44" stroke-width="1.5" fill="none"/><path d="M28 18 L34 22 M26 26 L34 28 M28 34 L36 36" stroke="#1E5A44" stroke-width="1" fill="none"/><circle cx="32" cy="52" r="3" fill="#C89A5B"/></svg>
+        <div class="name">人参</div>
+        <div class="en-name">Ginseng</div>
+      </div>
+      <div class="botanical">
+        <svg viewBox="0 0 64 64"><path d="M32 14 Q40 22 38 32 Q36 42 32 50 Q28 42 26 32 Q24 22 32 14" fill="none" stroke="#1E5A44" stroke-width="1.5"/><path d="M32 18 L32 48" stroke="#1E5A44" stroke-width="1"/></svg>
+        <div class="name">党参</div>
+        <div class="en-name">Codonopsis</div>
+      </div>
+      <div class="botanical">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="none" stroke="#1E5A44" stroke-width="1.5"/><path d="M32 18 Q34 24 32 32 Q30 24 32 18 M18 32 Q24 30 32 32 Q24 34 18 32" stroke="#1E5A44" stroke-width="1" fill="none"/><path d="M46 32 Q40 30 32 32 Q40 34 46 32 M32 46 Q34 40 32 32 Q30 40 32 46" stroke="#1E5A44" stroke-width="1" fill="none"/></svg>
+        <div class="name">凤梨</div>
+        <div class="en-name">Pineapple</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo direction -->
+  <div class="sys-section">
+    <h3>摄影方向</h3>
+    <div class="h3-en">Photography · 3 lighting recipes</div>
+    <div class="photo-direction-grid">
+      <div class="pd-card pd-1">
+        <div class="pd-overlay">
+          <div class="label gold-light">Recipe 01</div>
+          <div class="name">琥珀光 · Amber Key</div>
+          <div class="desc">Single warm window light, 45° from left. Hard shadows. Steam catches the rim light. Used for hero food shots — broth pours, cleaver close-ups.</div>
+        </div>
+      </div>
+      <div class="pd-card pd-2">
+        <div class="pd-overlay">
+          <div class="label gold-light">Recipe 02</div>
+          <div class="name">慢光 · Slow Light</div>
+          <div class="desc">Soft top light through linen diffusion. Even, dreamy. Used for the family table — multiple subjects, no harsh shadows on faces.</div>
+        </div>
+      </div>
+      <div class="pd-card pd-3">
+        <div class="pd-overlay">
+          <div class="label gold-light">Recipe 03</div>
+          <div class="name">夜色 · Night Mood</div>
+          <div class="desc">Deep amber, 80% shadow, single candle-like source. Used for "old world" cultural cutaways — herb close-ups, ingredient flat-lays.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video subtitle treatment -->
+  <div class="sys-section">
+    <h3>视频字幕</h3>
+    <div class="h3-en">Subtitle treatment · editorial caption</div>
+    <p class="palette-caption" style="margin-top: -8px; margin-bottom: 24px;">Reject centered-bottom karaoke subtitles. Instead: left-aligned editorial captions with italic pretitle + Chinese serif body + English supporting line. 88 stamp in top-right (replaces pagoda mascot). All 15 videos share this template.</p>
+    <div class="video-frames">
+      <div class="vf">
+        <div class="stamp">八</div>
+        <div class="editorial-caption">
+          <div class="ec-pre">Pillar 01 · 鲜</div>
+          <div class="ec-cn">现切鸡 · <span class="acc">每日一刀</span></div>
+          <div class="ec-en">Cut today, not yesterday.</div>
+        </div>
+        <div class="corner-rule"></div>
+      </div>
+      <div class="vf" style="background: linear-gradient(180deg, #1a3025 0%, #2a4838 60%, #0a1f15 100%);">
+        <div class="stamp">八</div>
+        <div class="editorial-caption">
+          <div class="ec-pre">Pillar 02 · 养</div>
+          <div class="ec-cn">石橄榄汤 · <span class="acc">清润不上火</span></div>
+          <div class="ec-en">Stone Olive · gentle on the lungs.</div>
+        </div>
+        <div class="corner-rule"></div>
+      </div>
+      <div class="vf" style="background: linear-gradient(180deg, #3a1f10 0%, #5a3a25 60%, #1f100a 100%);">
+        <div class="stamp">八</div>
+        <div class="editorial-caption">
+          <div class="ec-pre">Pillar 03 · 家</div>
+          <div class="ec-cn">三代人 · <span class="acc">一锅汤</span></div>
+          <div class="ec-en">Three generations. One pot.</div>
+        </div>
+        <div class="corner-rule"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="corner-mark">page 4 · system</div>
+</div>
+
+<!-- ============ PAGE 5 ============ -->
+<div class="page p5">
+  <div class="page-num">v · directions</div>
+  <div class="pretitle">If "Modern Heirloom" isn't the right vibe</div>
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 48px; color: var(--green-deep); margin-bottom: 56px;">Two alternatives I'd happily explore</h2>
+
+  <div class="alts-grid">
+    <div class="alt-card chosen">
+      <div class="num">DIRECTION 01</div>
+      <h4>Modern Heirloom</h4>
+      <div class="cn-name">现代传家</div>
+      <div class="desc">What you're looking at. Editorial heritage — grandma's recipe box opened by an art director. Quiet authority, brush calligraphy as the only ornament, deep green dominant, red as accent. Best fit for the 温润食补 wellness audience.</div>
+      <div class="refs">References: Cereal magazine · 茶颜悦色 menus · Aman Tokyo brand book</div>
+    </div>
+
+    <div class="alt-card">
+      <div class="num">DIRECTION 02</div>
+      <h4>Folk Revival</h4>
+      <div class="cn-name">潮汕文创</div>
+      <div class="desc">Lean HARDER into Chaoshan-specific folk culture — 嵌瓷 porcelain inlay patterns, 潮剧 opera silhouettes, lantern festival energy. Bolder, redder, more "museum gift shop". Strong if Joanna wants to position as cultural ambassador / tourist destination.</div>
+      <div class="refs">References: 故宫文创 · Shanghai Tang · Loong Mun Heen branding</div>
+    </div>
+
+    <div class="alt-card">
+      <div class="num">DIRECTION 03</div>
+      <h4>Apothecary Modern</h4>
+      <div class="cn-name">中药铺</div>
+      <div class="desc">Push the wellness angle to the front. Sage greens + paper kraft + scientific botanical illustrations. The broth becomes the medicine, the restaurant becomes the modern apothecary. Best if expanding into bottled tonics / DTC product line.</div>
+      <div class="refs">References: Aesop · The Goodhood Store · 食养山房</div>
+    </div>
+  </div>
+
+  <div class="closer">
+    <div class="cn">慢一点 · 鲜一点</div>
+    <div class="en">SLOWER · FRESHER · NEXTGEN MARKETING · 22 MAY 2026</div>
+  </div>
+
+  <div class="corner-mark">page 5 · alternatives</div>
+</div>
+
+</div>
+</body>
+</html>

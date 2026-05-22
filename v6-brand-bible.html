@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>潮八八 · Brand Bible — v6</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #B7342A;
+    --red-deep: #8B1A14;
+    --red-soft: #D14A3F;
+    --cream: #F5E8D0;
+    --cream-deep: #E8D6B5;
+    --paper: #FAF3DD;
+    --gold: #C89A5B;
+    --gold-light: #DEB97D;
+    --green: #1E5A44;
+    --green-deep: #143A2D;
+    --ink: #1A1A1A;
+    --soft-ink: #4A4540;
+    --wood: #6B4423;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #2A1F18;
+    color: var(--ink);
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    padding: 32px 16px;
+    line-height: 1.5;
+  }
+  .deck { max-width: 1500px; margin: 0 auto; }
+
+  /* PAGE WRAPPER */
+  .page {
+    background: var(--paper);
+    border-radius: 8px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  }
+  .page-num {
+    position: absolute; top: 32px; right: 40px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.35em;
+    z-index: 10;
+  }
+  .page-foot {
+    padding: 20px 64px;
+    background: var(--ink);
+    color: var(--gold-light);
+    display: flex; justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .pretitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .pretitle::before { content: '◉ '; color: var(--red); }
+
+  /* ============ PAGE 1 — HERO with real brand image ============ */
+  .p1 {
+    aspect-ratio: 16/9;
+    background: url('assets/brand-page-1.jpg') center / cover no-repeat;
+    position: relative;
+    color: var(--cream);
+  }
+  .p1::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, transparent 30%, transparent 60%, rgba(0,0,0,0.7) 100%);
+  }
+  .p1-overlay {
+    position: absolute; inset: 0;
+    padding: 56px 64px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+  .p1-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .p1-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold-light);
+    letter-spacing: 0.4em;
+  }
+  .p1-tag::before { content: '◉ '; color: var(--red-soft); }
+  .p1-credit {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cream);
+    letter-spacing: 0.25em;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+  .p1-bottom {
+    max-width: 700px;
+  }
+  .p1-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--gold-light);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .p1-h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  }
+  .p1-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  }
+
+  /* ============ PAGE 2 — BRAND STORY (verbatim from PDF) ============ */
+  .p2 {
+    padding: 96px 80px 64px;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(184,52,42,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 20% 80%, rgba(30,90,68,0.05) 0%, transparent 40%),
+      var(--paper);
+  }
+  .p2-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .p2-h {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 64px;
+    color: var(--red-deep);
+    line-height: 1.05;
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+  }
+  .p2-h em {
+    font-style: normal;
+    color: var(--green-deep);
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 80px;
+  }
+  .p2-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 40px;
+  }
+  .p2-body-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 2.1;
+    color: var(--ink);
+    margin-bottom: 28px;
+    letter-spacing: 0.04em;
+  }
+  .p2-body-cn p { margin-bottom: 14px; }
+  .p2-body-cn p strong { color: var(--red-deep); font-weight: 700; }
+  .p2-body-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--soft-ink);
+    padding-top: 24px;
+    border-top: 1px solid var(--gold);
+    max-width: 580px;
+  }
+
+  .p2-right {
+    aspect-ratio: 3/4;
+    background: url('assets/brand-page-1.jpg') center / cover no-repeat;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .p2-right::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4), transparent 50%);
+  }
+  .p2-right-cap {
+    position: absolute; bottom: 20px; left: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cream);
+    letter-spacing: 0.2em;
+    z-index: 2;
+  }
+
+  /* ============ PAGE 3 — PILLARS 鲜 嫩 养 ============ */
+  .p3 { padding: 96px 80px 64px; }
+  .p3-head { text-align: center; margin-bottom: 64px; }
+  .p3-h { font-family: 'ZCOOL XiaoWei', serif; font-size: 56px; color: var(--red-deep); letter-spacing: 0.15em; margin-bottom: 8px; }
+  .p3-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pillar {
+    aspect-ratio: 3/4;
+    border: 1px solid var(--red-deep);
+    padding: 40px 28px;
+    position: relative;
+    display: flex; flex-direction: column;
+    background: var(--cream);
+    overflow: hidden;
+  }
+  .pillar::before, .pillar::after {
+    content: ''; position: absolute;
+    width: 32px; height: 32px;
+    border: 2px solid var(--red);
+  }
+  .pillar::before { top: 12px; left: 12px; border-right: 0; border-bottom: 0; }
+  .pillar::after { bottom: 12px; right: 12px; border-left: 0; border-top: 0; }
+  .pillar .p-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 8px;
+  }
+  .pillar .p-char {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 220px;
+    line-height: 1;
+    color: var(--red-deep);
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 4px 0 rgba(184,52,42,0.15);
+  }
+  .pillar .p-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--green-deep);
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: 0.1em;
+  }
+  .pillar .p-body {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink);
+    text-align: center;
+    margin-top: auto;
+  }
+  .pillar:nth-child(2) .p-char { color: var(--green-deep); }
+  .pillar:nth-child(2) .p-en { color: var(--red-deep); }
+  .pillar:nth-child(3) .p-char { color: var(--gold); }
+  .pillar:nth-child(3) .p-en { color: var(--green-deep); }
+
+  /* ============ PAGE 4 — CHICKEN COOKING GUIDE (embeds PDF page) ============ */
+  .p4 { padding: 0; }
+  .p4-head { padding: 80px 80px 32px; text-align: center; }
+  .p4-h { font-family: 'ZCOOL XiaoWei', serif; font-size: 56px; color: var(--red-deep); letter-spacing: 0.15em; margin-bottom: 8px; }
+  .p4-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; }
+  .p4-blurb { max-width: 720px; margin: 0 auto; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--soft-ink); line-height: 1.8; }
+  .p4-blurb em { color: var(--red); font-style: normal; font-weight: 600; }
+  .p4-img {
+    width: 100%;
+    display: block;
+  }
+  .p4-img img { width: 100%; height: auto; display: block; }
+  .p4-notes {
+    padding: 48px 80px 80px;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .p4-note {
+    border-left: 3px solid var(--red);
+    padding: 12px 20px;
+  }
+  .p4-note .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 8px;
+  }
+  .p4-note .cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .p4-note .en {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--soft-ink);
+    line-height: 1.6;
+  }
+
+  /* ============ PAGE 5 — DIPPING PHILOSOPHY ============ */
+  .p5 {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .p5::before {
+    content: ''; position: absolute; inset: 0;
+    background: url('assets/brand-page-5.jpg') center / cover no-repeat;
+    opacity: 0.25;
+  }
+  .p5-content {
+    position: relative; z-index: 2;
+    max-width: 880px; margin: 0 auto;
+    text-align: center;
+    padding: 0 64px;
+  }
+  .p5 .pretitle {
+    color: var(--gold-light);
+    margin-bottom: 24px;
+    justify-content: center;
+    display: inline-block;
+  }
+  .p5-h {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 120px;
+    color: var(--gold-light);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-shadow: 0 0 30px rgba(222,185,125,0.3);
+  }
+  .p5-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--red-soft);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+  }
+  .p5-divider {
+    width: 60px; height: 1px;
+    background: var(--gold-light);
+    margin: 0 auto 56px;
+  }
+  .p5-poem-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 2.1;
+    color: var(--cream);
+    margin-bottom: 48px;
+    letter-spacing: 0.08em;
+  }
+  .p5-poem-cn .accent { color: var(--gold-light); font-weight: 700; }
+  .p5-poem-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.95;
+    color: var(--cream);
+    opacity: 0.8;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* ============ PAGE 6 — THE MENU ============ */
+  .p6 { padding: 96px 80px 64px; background: var(--paper); }
+  .p6-head { text-align: center; margin-bottom: 56px; }
+  .p6-h { font-family: 'ZCOOL XiaoWei', serif; font-size: 56px; color: var(--red-deep); letter-spacing: 0.15em; margin-bottom: 8px; }
+  .p6-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; }
+  .p6-blurb { max-width: 640px; margin: 0 auto; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--soft-ink); line-height: 1.7; }
+
+  .menu-section {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .menu-h {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--red-deep);
+    margin-bottom: 4px;
+    letter-spacing: 0.08em;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .menu-h::after {
+    content: ''; flex: 1; height: 1px; background: var(--gold);
+  }
+  .menu-h-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* Signature broths */
+  .broth-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .broth-card {
+    background: var(--cream);
+    border: 1px solid var(--red);
+    padding: 24px 18px;
+    position: relative;
+  }
+  .broth-card.featured {
+    background: var(--red-deep);
+    color: var(--cream);
+    border-color: var(--red-deep);
+  }
+  .broth-card .stamp-sig {
+    position: absolute;
+    top: -8px; right: -8px;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 11px;
+    padding: 4px 8px;
+    letter-spacing: 0.15em;
+    transform: rotate(8deg);
+    border: 1px solid var(--ink);
+  }
+  .broth-card .cn-name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 2px;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+  }
+  .broth-card.featured .cn-name { color: var(--cream); }
+  .broth-card .en-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .broth-card.featured .en-name { color: var(--gold-light); }
+  .broth-card .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    min-height: 50px;
+  }
+  .broth-card.featured .desc { color: var(--cream); opacity: 0.85; }
+  .broth-card .price-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--gold);
+  }
+  .broth-card .price-cell {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+  .broth-card .price-cell strong { display: block; font-size: 13px; font-weight: 700; }
+  .broth-card.featured .price-cell { color: var(--cream); }
+  .broth-card.featured .price-cell strong { color: var(--gold-light); }
+  .broth-card .price-label { color: var(--gold); }
+
+  /* Sides + staples */
+  .sides-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .side-card {
+    background: var(--cream);
+    padding: 14px 16px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px;
+    border-left: 3px solid var(--red);
+  }
+  .side-card .name { color: var(--ink); font-weight: 500; }
+  .side-card .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--soft-ink);
+    margin-left: 6px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .side-card .price {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--red-deep);
+    font-weight: 500;
+  }
+
+  /* ============ PAGE 7 — CHICKEN GUIDE EMBED ============ */
+  .p7 { padding: 0; }
+  .p7-img { width: 100%; display: block; }
+  .p7-img img { width: 100%; height: auto; display: block; }
+  .p7-overlay {
+    padding: 64px 80px;
+    background: var(--cream-deep);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .p7-overlay .lead .p7-h {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 48px;
+    color: var(--red-deep);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  .p7-overlay .lead .p7-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .cuts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .cut {
+    background: var(--paper);
+    padding: 16px;
+    border-top: 3px solid var(--red);
+    text-align: center;
+  }
+  .cut .cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--red-deep);
+    margin-bottom: 2px;
+  }
+  .cut .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .cut .time {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--green-deep);
+    background: var(--cream);
+    padding: 4px 10px;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+  .cut .note {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: var(--soft-ink);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  /* ============ PAGE 8 — CULTURAL HERITAGE ============ */
+  .p8 {
+    background: url('assets/brand-page-4.jpg') center / cover no-repeat;
+    aspect-ratio: 16/9;
+    position: relative;
+    color: var(--cream);
+  }
+  .p8::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 40%, transparent 65%);
+  }
+  .p8-overlay {
+    position: absolute; inset: 0;
+    padding: 56px 64px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+  .p8-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+  }
+  .p8-tag { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold-light); letter-spacing: 0.4em; }
+  .p8-tag::before { content: '◉ '; color: var(--red-soft); }
+  .p8-bottom { max-width: 760px; }
+  .p8-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold-light);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .p8-big {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 64px;
+    color: var(--cream);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  }
+  .p8-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--cream);
+    opacity: 0.85;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+  .p8-chips {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .p8-chip {
+    background: rgba(184,52,42,0.85);
+    color: var(--cream);
+    padding: 6px 14px;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--gold-light);
+  }
+  .p8-chip em {
+    font-style: normal;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10px;
+    margin-left: 6px;
+    opacity: 0.7;
+    letter-spacing: 0.2em;
+  }
+
+  /* ============ PAGE 9 — VISUAL SYSTEM ============ */
+  .p9 { padding: 80px; background: var(--paper); }
+  .p9-head { margin-bottom: 48px; }
+  .p9-h { font-family: 'ZCOOL XiaoWei', serif; font-size: 56px; color: var(--red-deep); letter-spacing: 0.1em; margin-bottom: 4px; }
+  .p9-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; }
+
+  .sys-block { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(184,52,42,0.15); }
+  .sys-block:last-child { border-bottom: 0; }
+  .sys-block h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--red-deep);
+    margin-bottom: 4px;
+    letter-spacing: 0.06em;
+  }
+  .sys-block .h3-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* Colour bar */
+  .color-bar {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 1.2fr 0.8fr;
+    height: 110px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .cb {
+    padding: 16px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+  .cb .name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .cb .pct {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  /* Stamps library — SVG recreations of brand decorative elements */
+  .stamps-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+  }
+  .stamp-box {
+    aspect-ratio: 1;
+    background: var(--cream);
+    border-radius: 4px;
+    padding: 8px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border: 1px solid rgba(184,52,42,0.2);
+  }
+  .stamp-box svg { width: 100%; height: 75%; }
+  .stamp-box .stamp-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 9px;
+    color: var(--soft-ink);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  /* Typography stack */
+  .type-stack {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px dotted rgba(0,0,0,0.1);
+    align-items: center;
+  }
+  .type-stack:last-child { border-bottom: 0; }
+  .type-stack .role {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  .type-stack .role strong {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--ink);
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    text-transform: none;
+  }
+  .type-stack .sample.cn-brush { font-family: 'Ma Shan Zheng', cursive; font-size: 60px; color: var(--red-deep); }
+  .type-stack .sample.cn-display { font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 44px; color: var(--ink); letter-spacing: 0.05em; }
+  .type-stack .sample.cn-body { font-family: 'Noto Sans SC', sans-serif; font-weight: 400; font-size: 17px; line-height: 1.7; color: var(--ink); }
+  .type-stack .sample.en-display { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 700; font-size: 36px; color: var(--green-deep); }
+  .type-stack .when {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--soft-ink);
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  /* ============ PAGE 10 — EXTENSIONS ============ */
+  .p10 { padding: 80px; background: var(--ink); color: var(--cream); }
+  .p10-head { text-align: center; margin-bottom: 56px; }
+  .p10 .pretitle { display: inline-block; }
+  .p10-h {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 56px;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .p10-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--red-soft);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .p10-blurb {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--cream);
+    line-height: 1.8;
+    opacity: 0.85;
+  }
+  .ext-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .ext-card {
+    background: rgba(245,232,208,0.05);
+    border: 1px solid var(--gold);
+    padding: 32px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .ext-card:hover { background: rgba(245,232,208,0.1); border-color: var(--gold-light); transform: translateY(-4px); }
+  .ext-card .ext-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold-light);
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+  }
+  .ext-card .ext-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--cream);
+    margin-bottom: 6px;
+    letter-spacing: 0.08em;
+  }
+  .ext-card .ext-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--red-soft);
+    margin-bottom: 20px;
+  }
+  .ext-card .ext-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--cream);
+    opacity: 0.8;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .ext-card .ext-cta {
+    align-self: flex-start;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold-light);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--gold-light);
+  }
+  .ext-card:hover .ext-cta { color: var(--red-soft); border-bottom-color: var(--red-soft); }
+
+  .closer {
+    text-align: center;
+    margin-top: 56px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(245,232,208,0.15);
+  }
+  .closer-cn {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 56px;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    letter-spacing: 0.1em;
+  }
+  .closer-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--cream);
+    opacity: 0.7;
+    letter-spacing: 0.3em;
+  }
+  .download-link {
+    margin-top: 32px;
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--red-deep);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--gold-light);
+  }
+  .download-link:hover { background: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+<!-- ============ PAGE 1 — HERO ============ -->
+<div class="page p1">
+  <div class="page-num">i · cover</div>
+  <div class="p1-overlay">
+    <div class="p1-top">
+      <div class="p1-tag">BRAND BIBLE v6 · 22 MAY 2026</div>
+      <div class="p1-credit">
+        Chao 88 × NextGen Marketing<br/>
+        <em>Lawrence Ooi</em>
+      </div>
+    </div>
+    <div class="p1-bottom">
+      <div class="p1-title">CHAO 88 · MASTER BRAND DOC</div>
+      <div class="p1-h1">潮汕</div>
+      <div class="p1-sub">Chao Shan · the soul of every pot</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — BRAND STORY (verbatim from PDF) ============ -->
+<div class="page p2">
+  <div class="page-num">ii · brand</div>
+
+  <div class="p2-grid">
+    <div>
+      <div class="pretitle">Chapter 一 · The Story</div>
+      <h2 class="p2-h">深耕<em>潮汕</em><br/>风味</h2>
+      <div class="p2-en">Rooted in Teochew tradition</div>
+
+      <div class="p2-body-cn">
+        <p>潮八八<strong>深耕潮汕风味</strong>，甄选地道好料，精工细作，恪守清鲜本味，严选新鲜食材，主打<strong>温润食补养生</strong>风味。</p>
+        <p>鲜鸡鲜汤、特色风味主食，皆是<strong>潮汕非遗</strong>地道滋味，藏着深入人心的家常好味，陪伴日常烟火三餐。</p>
+        <p>坚守传统匠心烹饪，传承地道饮食风味，还原食材原生鲜香，用心做好每一味健康佳肴，让食客尽享最纯粹美味。</p>
+      </div>
+
+      <div class="p2-body-en">
+        Chao Baba inherits classic Teochew flavors, uses fresh premium ingredients and refined cooking, focusing on mild and nourishing food. Local staples are authentic Teochew traditional tastes, bringing warm homely flavour for daily dining. We uphold traditional craftsmanship to retain original ingredient freshness, serving wholesome delicacies with genuine pure taste.
+      </div>
+    </div>
+
+    <div class="p2-right">
+      <div class="p2-right-cap">— interior · 潮汕 wall mural</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 3 — THREE PILLARS ============ -->
+<div class="page p3">
+  <div class="page-num">iii · pillars</div>
+  <div class="p3-head">
+    <div class="pretitle">Chapter 二 · the three principles</div>
+    <h2 class="p3-h">鲜 · 嫩 · 养</h2>
+    <div class="p3-en">Fresh · Tender · Nourishing</div>
+  </div>
+
+  <div class="pillar-grid">
+    <div class="pillar">
+      <div class="p-num">PILLAR 一</div>
+      <div class="p-char">鲜</div>
+      <div class="p-en">Freshly Cut</div>
+      <div class="p-body">现切鸡煲。每只鸡都是精选。<br/>The chicken never sits on ice — cut today, in the pot tonight. JB factory → SG outlet → 砧板.</div>
+    </div>
+    <div class="pillar">
+      <div class="p-num">PILLAR 二</div>
+      <div class="p-char">嫩</div>
+      <div class="p-en">Tender Soul</div>
+      <div class="p-body">慢火细炖。山林走地鸡，有机凤梨鸡，<br/>每一口都嫩滑回甘。Slow simmered until tender, never overcooked.</div>
+    </div>
+    <div class="pillar">
+      <div class="p-num">PILLAR 三</div>
+      <div class="p-char">养</div>
+      <div class="p-en">Nourishing</div>
+      <div class="p-body">温润食补，<br/>滋补不上火。<br/>Stone olive for the lungs · ginseng for the cold · jujube for the family table.</div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>潮八八 · 鲜嫩养 · the three pillars</span>
+    <span>p. 03 / 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 4 — CHICKEN COOKING GUIDE (PDF EMBED) ============ -->
+<div class="page p4">
+  <div class="page-num" style="color: var(--paper);">iv · cooking guide</div>
+  <div class="p4-head">
+    <div class="pretitle">Chapter 三 · 一鸡入馔 · 百味生香</div>
+    <h2 class="p4-h">吃鸡图谱</h2>
+    <div class="p4-en">Chicken Cooking Guide</div>
+    <p class="p4-blurb">
+      Brand-owned IP that no other SG hotpot has — <em>a guide to every part of the chicken, with cook times.</em> 一鸡入馔, 百味生香 — In Teochew, one chicken unfolds a hundred different charms. From tender to crisp, from mellow to fall-off-the-bone soft, every bite is respect for the ingredients, and tenderness for life.
+    </p>
+  </div>
+
+  <div class="p4-img">
+    <img src="assets/brand-page-3.jpg" alt="Chicken Cooking Guide 吃鸡图谱" loading="lazy">
+  </div>
+
+  <div class="p4-notes">
+    <div class="p4-note">
+      <div class="label">CONTENT PILLAR</div>
+      <div class="cn">每集教煮一个部位</div>
+      <div class="en">Use each chicken cut as a content episode. V3-V7 dish stories could lean on this — "this week: 鸡胗 cooked 5-8 min, paired with stone olive broth."</div>
+    </div>
+    <div class="p4-note">
+      <div class="label">XHS / 小红书 ANGLE</div>
+      <div class="cn">教育型内容易传播</div>
+      <div class="en">小红书 audience loves "教煮 / 教吃" infographic-style 笔记. The chicken parts guide repurposes into a 9-slide carousel naturally.</div>
+    </div>
+    <div class="p4-note">
+      <div class="label">IN-STORE</div>
+      <div class="cn">既是教学也是装饰</div>
+      <div class="en">The guide already exists as a wall mural in your outlets — leverage that. Photograph + show in social content for "look around when you visit" prompts.</div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>chicken cooking guide · brand-owned ip</span>
+    <span>p. 04 / 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 5 — DIPPING PHILOSOPHY ============ -->
+<div class="page p5">
+  <div class="page-num" style="color: var(--gold-light);">v · dipping philosophy</div>
+  <div class="p5-content">
+    <div class="pretitle" style="color: var(--gold-light);">Chapter 四 · the sauce</div>
+    <h2 class="p5-h">蘸料哲学</h2>
+    <div class="p5-en">Dipping Philosophy</div>
+    <div class="p5-divider"></div>
+
+    <div class="p5-poem-cn">
+      潮八八 鸡火锅，<br/>
+      <span class="accent">蘸料永远是配角。</span><br/>
+      <br/>
+      一勺沙姜、蒜蓉，<br/>
+      一点生抽，<br/>
+      不为掩盖鸡肉的鲜，<br/>
+      <span class="accent">只为把本味轻轻托起。</span><br/>
+      <br/>
+      潮八八 坚持，<br/>
+      用最朴素蘸料，<br/>
+      <span class="accent">还原跑山鸡最本真的鲜甜。</span>
+    </div>
+
+    <div class="p5-poem-en">
+      <em>Chao Baba Chicken Hot Pot lets ingredients shine. A spoonful of ginger sauce and garlic, with a dash of soy sauce — we never overpower fresh chicken, only lift its natural taste. With our simple signature combo, we retain the most authentic flavor of free-range chicken.</em>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 6 — THE MENU ============ -->
+<div class="page p6">
+  <div class="page-num">vi · menu</div>
+  <div class="p6-head">
+    <div class="pretitle">Chapter 五 · the menu universe</div>
+    <h2 class="p6-h">现切鸡煲 · 七大锅</h2>
+    <div class="p6-en">Seven signature pots · two chickens</div>
+    <p class="p6-blurb">
+      Built on two chickens — 山林走地鸡 (mountain free-range) and 有机凤梨鸡 (organic pineapple) — Chao 88's seven signature broths range from mild and tonic (五指毛桃, 石橄榄, 椰子) to deeply flavoured (黑金麻辣, 港式生焗, 玛莎曼).
+    </p>
+  </div>
+
+  <!-- Signature broths grid -->
+  <div class="menu-section">
+    <h3 class="menu-h">招牌好汤 <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--gold); font-weight: 500; letter-spacing: 0.2em;">SIGNATURE SOUP POTS</span></h3>
+    <div class="menu-h-en">— 滋补养生 · tonic broths —</div>
+
+    <div class="broth-grid">
+      <div class="broth-card featured">
+        <div class="stamp-sig">招牌</div>
+        <div class="cn-name">无花果滋补鸡煲</div>
+        <div class="en-name">Fig Chicken Soup Pot</div>
+        <div class="desc">招牌之作。无花果 + 跑山鸡，温润不寒，老少皆宜。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">走地鸡 半</span><strong>$19.8</strong></div>
+          <div class="price-cell"><span class="price-label">走地鸡 一</span><strong>$36.8</strong></div>
+          <div class="price-cell"><span class="price-label">凤梨鸡 半</span><strong>$29.8</strong></div>
+          <div class="price-cell"><span class="price-label">凤梨鸡 一</span><strong>$56.8</strong></div>
+        </div>
+      </div>
+
+      <div class="broth-card">
+        <div class="cn-name">冰炖椰子鸡</div>
+        <div class="en-name">Coconut Chicken Pot</div>
+        <div class="desc">椰子原汁慢炖，清润甘甜，自然温补。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">凤梨 半</span><strong>$36.8</strong></div>
+          <div class="price-cell"><span class="price-label">凤梨 一</span><strong>$66.8</strong></div>
+        </div>
+      </div>
+
+      <div class="broth-card">
+        <div class="cn-name">野生石橄榄鸡煲</div>
+        <div class="en-name">Stone Olive Chicken</div>
+        <div class="desc">野生石橄榄 — 清肺润喉，止咳化痰。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">走地 半</span><strong>$19.8</strong></div>
+          <div class="price-cell"><span class="price-label">走地 一</span><strong>$36.8</strong></div>
+        </div>
+      </div>
+
+      <div class="broth-card">
+        <div class="cn-name">药膳五指毛桃鸡煲</div>
+        <div class="en-name">Herbal Root Chicken</div>
+        <div class="desc">五指毛桃 — 健脾益气，扶阳固本。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">走地 半</span><strong>$19.8</strong></div>
+          <div class="price-cell"><span class="price-label">走地 一</span><strong>$36.8</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flavour-forward broths -->
+  <div class="menu-section">
+    <h3 class="menu-h">风味鸡煲 <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--gold); font-weight: 500; letter-spacing: 0.2em;">FLAVOUR-FORWARD POTS</span></h3>
+    <div class="menu-h-en">— 浓香重口 · bolder pots —</div>
+
+    <div class="broth-grid">
+      <div class="broth-card">
+        <div class="cn-name">玛莎曼鸡煲</div>
+        <div class="en-name">Massaman Chicken Hot Pot</div>
+        <div class="desc">泰式马沙曼咖喱，浓郁醇香。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">凤梨 小</span><strong>$31.8</strong></div>
+          <div class="price-cell"><span class="price-label">凤梨 大</span><strong>$60.8</strong></div>
+        </div>
+      </div>
+
+      <div class="broth-card">
+        <div class="cn-name">港式生焗鸡煲</div>
+        <div class="en-name">Hong Kong Style Chicken</div>
+        <div class="desc">港式风味，焗香入味，鲜嫩多汁。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">凤梨 小</span><strong>$31.8</strong></div>
+          <div class="price-cell"><span class="price-label">凤梨 大</span><strong>$60.8</strong></div>
+        </div>
+      </div>
+
+      <div class="broth-card featured">
+        <div class="stamp-sig">招牌</div>
+        <div class="cn-name">川式黑金麻辣鸡煲</div>
+        <div class="en-name">Sichuan Black Mala</div>
+        <div class="desc">川式麻辣，黑金汤底，层层香辣。爆款。</div>
+        <div class="price-row">
+          <div class="price-cell"><span class="price-label">走地 小</span><strong>$21.8</strong></div>
+          <div class="price-cell"><span class="price-label">走地 大</span><strong>$40.8</strong></div>
+        </div>
+      </div>
+
+      <div class="broth-card" style="background: var(--cream-deep);">
+        <div class="cn-name">两鸡之选</div>
+        <div class="en-name">Two-Chicken Choice</div>
+        <div class="desc"><strong style="color: var(--red-deep);">山林走地鸡</strong> — leaner, gamier, traditional.<br/><strong style="color: var(--red-deep);">有机凤梨鸡</strong> — fattier, sweeter, organic feed.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local snacks -->
+  <div class="menu-section">
+    <h3 class="menu-h">特色小吃 <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--gold); font-weight: 500; letter-spacing: 0.2em;">LOCAL SNACKS</span></h3>
+    <div class="menu-h-en">— 经典复刻 · 主厨匠心之作 · classic snacks, chef-led —</div>
+
+    <div class="sides-grid">
+      <div class="side-card"><div><span class="name">川香酥肉</span><span class="name-en">Sichuan crispy pork</span></div><div class="price">$12</div></div>
+      <div class="side-card"><div><span class="name">如意金球</span><span class="name-en">Golden pork ball</span></div><div class="price">$12</div></div>
+      <div class="side-card"><div><span class="name">炸掌中宝</span><span class="name-en">Chicken soft bone</span></div><div class="price">$12</div></div>
+      <div class="side-card"><div><span class="name">椒盐玉米</span><span class="name-en">Salted pepper corn</span></div><div class="price">$12</div></div>
+      <div class="side-card"><div><span class="name">香辣角螺</span><span class="name-en">Spicy zhu zhu</span></div><div class="price">$10</div></div>
+      <div class="side-card"><div><span class="name">手打年糕</span><span class="name-en">Handmade rice cake</span></div><div class="price">$10</div></div>
+      <div class="side-card"><div><span class="name">炸馒头片</span><span class="name-en">Deep fried mantou</span></div><div class="price">$10</div></div>
+      <div class="side-card"><div><span class="name">炸牛肉串</span><span class="name-en">Fried beef skewers</span></div><div class="price">$10</div></div>
+      <div class="side-card"><div><span class="name">炸羊肉串</span><span class="name-en">Fried lamb skewers</span></div><div class="price">$10</div></div>
+      <div class="side-card"><div><span class="name">五花肉串</span><span class="name-en">Pork belly skewers</span></div><div class="price">$10</div></div>
+      <div class="side-card"><div><span class="name">爆汁豆腐</span><span class="name-en">Bursting tofu</span></div><div class="price">$8</div></div>
+      <div class="side-card"><div><span class="name">锅巴土豆</span><span class="name-en">Fried potato</span></div><div class="price">$8</div></div>
+    </div>
+  </div>
+
+  <!-- Staples -->
+  <div class="menu-section">
+    <h3 class="menu-h">主食 <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--gold); font-weight: 500; letter-spacing: 0.2em;">STAPLE FOOD</span></h3>
+    <div class="menu-h-en">— 碳水的快乐, 懂的都懂 · the carb finale —</div>
+
+    <div class="sides-grid">
+      <div class="side-card"><div><span class="name">黄金海鲜炒饭</span><span class="name-en">Seafood fried rice</span></div><div class="price">$12</div></div>
+      <div class="side-card"><div><span class="name">蛋炒饭</span><span class="name-en">Egg fried rice</span></div><div class="price">$8</div></div>
+      <div class="side-card"><div><span class="name">炒牛肉河粉</span><span class="name-en">Beef hor fun</span></div><div class="price">$7.5</div></div>
+      <div class="side-card"><div><span class="name">广味炸鹌鹑</span><span class="name-en">Roast quail (2 pcs)</span></div><div class="price">$16</div></div>
+      <div class="side-card"><div><span class="name">菠菜面</span><span class="name-en">Spinach noodles</span></div><div class="price">$2</div></div>
+      <div class="side-card"><div><span class="name">北京方便面</span><span class="name-en">Beijing noodles</span></div><div class="price">$2</div></div>
+      <div class="side-card"><div><span class="name">白米饭</span><span class="name-en">Rice</span></div><div class="price">$1.5</div></div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>menu · 7 broths · 12 snacks · 7 staples</span>
+    <span>p. 06 / 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 7 — CHICKEN CUTS DETAIL ============ -->
+<div class="page p7">
+  <div class="page-num" style="color: var(--cream);">vii · cuts</div>
+
+  <div class="p7-img">
+    <img src="assets/brand-page-2.jpg" alt="In-store cooking guide signage" loading="lazy">
+  </div>
+
+  <div class="p7-overlay">
+    <div class="lead">
+      <div class="pretitle">CHAPTER 六 · the parts</div>
+      <h3 class="p7-h">六大部位 · 六种时间</h3>
+      <div class="p7-en">Six cuts · six cook times</div>
+      <p style="font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.7; color: var(--soft-ink); margin-top: 24px;">
+        Each chicken part has its own personality and its own cook window. Built into your wall art already — turn it into content.
+      </p>
+    </div>
+
+    <div class="cuts-grid">
+      <div class="cut">
+        <div class="cn">鸡胸肉</div>
+        <div class="en">Chicken Breast</div>
+        <div class="time">20 分钟</div>
+        <div class="note">低脂浓滑 · 口感紧实 · lean, firm, tender</div>
+      </div>
+      <div class="cut">
+        <div class="cn">鸡腿肉</div>
+        <div class="en">Chicken Thigh</div>
+        <div class="time">8–10 分钟</div>
+        <div class="note">鲜嫩多汁 · 肉滑弹牙 · juicy &amp; springy</div>
+      </div>
+      <div class="cut">
+        <div class="cn">鸡肝</div>
+        <div class="en">Chicken Liver</div>
+        <div class="time">5–8 分钟</div>
+        <div class="note">绵密粉糯 · 鲜香入味 · soft, rich</div>
+      </div>
+      <div class="cut">
+        <div class="cn">鸡胗</div>
+        <div class="en">Chicken Gizzard</div>
+        <div class="time">5–8 分钟</div>
+        <div class="note">爽脆弹牙 · 下酒神器 · ideal drink match</div>
+      </div>
+      <div class="cut">
+        <div class="cn">鸡皮</div>
+        <div class="en">Chicken Skin</div>
+        <div class="time">3–5 秒</div>
+        <div class="note">金黄脆嫩 · 香而不腻 · crisp, not greasy</div>
+      </div>
+      <div class="cut">
+        <div class="cn">鸡翅 / 鸡块</div>
+        <div class="en">Wings / Chunks</div>
+        <div class="time">8–10 分钟</div>
+        <div class="note">软糯醇厚 · 满口肉香 · soft, full meat aroma</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>chicken cuts · 6 parts · 6 cook times</span>
+    <span>p. 07 / 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 8 — CULTURAL HERITAGE ============ -->
+<div class="page p8">
+  <div class="page-num" style="color: var(--cream);">viii · heritage</div>
+  <div class="p8-overlay">
+    <div class="p8-top">
+      <div class="p8-tag">CHAPTER 七 · 潮汕非遗 · CULTURE LAYER</div>
+      <div></div>
+    </div>
+    <div class="p8-bottom">
+      <div class="p8-h">interior · wall of Teochew</div>
+      <div class="p8-big">不仅是火锅, 是潮汕一面墙</div>
+      <p class="p8-en">Every outlet hangs Teochew Yingge dance posters, lion-dance prints, traditional old-house photography. The restaurant <em>is</em> a small Chaoshan museum. Use it as content scenery.</p>
+
+      <div class="p8-chips">
+        <div class="p8-chip">英歌舞 <em>Yingge dance</em></div>
+        <div class="p8-chip">鱼舞 <em>Fish dance</em></div>
+        <div class="p8-chip">舞狮 <em>Lion dance</em></div>
+        <div class="p8-chip">老厝 <em>Old house arch.</em></div>
+        <div class="p8-chip">关老爷 <em>Lord Guan</em></div>
+        <div class="p8-chip">龙门天 <em>Dragon gate</em></div>
+        <div class="p8-chip">益生救神 <em>Local deities</em></div>
+        <div class="p8-chip">灯笼 <em>Red lanterns</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 9 — VISUAL SYSTEM ============ -->
+<div class="page p9">
+  <div class="page-num">ix · system</div>
+  <div class="p9-head">
+    <div class="pretitle">Chapter 八 · the build</div>
+    <h2 class="p9-h">视觉系统</h2>
+    <div class="p9-en">Visual system · locked from existing assets</div>
+  </div>
+
+  <!-- Colour palette -->
+  <div class="sys-block">
+    <h3>色彩 · By Usage Proportion</h3>
+    <div class="h3-en">Brand-locked palette</div>
+    <div class="color-bar">
+      <div class="cb" style="background: var(--cream); color: var(--ink);"><div class="name">米色</div><div><div>#F5E8D0</div><div class="pct">60% base</div></div></div>
+      <div class="cb" style="background: var(--red-deep); color: var(--cream);"><div class="name">深红</div><div><div>#8B1A14</div><div class="pct">20% hero</div></div></div>
+      <div class="cb" style="background: var(--green-deep); color: var(--cream);"><div class="name">墨绿</div><div><div>#143A2D</div><div class="pct">10% pillar</div></div></div>
+      <div class="cb" style="background: var(--gold); color: var(--ink);"><div class="name">古金</div><div><div>#C89A5B</div><div class="pct">7% accent</div></div></div>
+      <div class="cb" style="background: var(--ink); color: var(--cream);"><div class="name">墨</div><div><div>#1A1A1A</div><div class="pct">3%</div></div></div>
+    </div>
+  </div>
+
+  <!-- Stamps library (SVG recreations of brand's existing chops) -->
+  <div class="sys-block">
+    <h3>装饰图谱 · Decorative Library</h3>
+    <div class="h3-en">Brand chops · opera masks · pagodas — recreated from existing assets</div>
+
+    <div class="stamps-grid">
+      <!-- Opera mask -->
+      <div class="stamp-box">
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="28" fill="#B7342A"/>
+          <path d="M16 24 L24 18 L24 28 Z M40 28 L40 18 L48 24 Z" fill="#1A1A1A"/>
+          <path d="M22 42 Q32 50 42 42" stroke="#F5E8D0" stroke-width="2.5" fill="none"/>
+          <path d="M32 28 L29 38 L35 38 Z" fill="#F5E8D0"/>
+          <circle cx="32" cy="14" r="2" fill="#C89A5B"/>
+        </svg>
+        <div class="stamp-label">川剧脸谱 · opera</div>
+      </div>
+      <!-- Pagoda -->
+      <div class="stamp-box">
+        <svg viewBox="0 0 64 64">
+          <path d="M14 54 L50 54 L48 48 L16 48 Z M18 48 L46 48 L44 40 L20 40 Z M22 40 L42 40 L40 32 L24 32 Z M26 32 L38 32 L36 24 L28 24 Z M30 24 L34 24 L34 16 L32 12 L30 16 Z" fill="none" stroke="#B7342A" stroke-width="2"/>
+          <circle cx="32" cy="54" r="2" fill="#C89A5B"/>
+        </svg>
+        <div class="stamp-label">老厝 · pagoda</div>
+      </div>
+      <!-- 鲜 stamp -->
+      <div class="stamp-box" style="background: var(--red-deep);">
+        <svg viewBox="0 0 64 64" style="overflow: visible;">
+          <rect x="8" y="8" width="48" height="48" fill="#B7342A" stroke="#F5E8D0" stroke-width="1.5"/>
+          <text x="32" y="44" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="32" fill="#F5E8D0" font-weight="900">鲜</text>
+        </svg>
+        <div class="stamp-label" style="color: var(--cream);">鲜 · fresh chop</div>
+      </div>
+      <!-- 八 stamp -->
+      <div class="stamp-box" style="background: var(--cream-deep);">
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="26" fill="none" stroke="#B7342A" stroke-width="2"/>
+          <circle cx="32" cy="32" r="22" fill="none" stroke="#B7342A" stroke-width="1" stroke-dasharray="2,2"/>
+          <text x="32" y="40" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="22" fill="#B7342A" font-weight="900">潮八</text>
+        </svg>
+        <div class="stamp-label">潮八八 · brand chop</div>
+      </div>
+      <!-- Rooster icon -->
+      <div class="stamp-box">
+        <svg viewBox="0 0 64 64">
+          <path d="M32 14c-3 0-5 1.5-6 4l-2-3-2 4-3-1 1 4-3 1 3 2-1 4 4-1 1 3 2-3 3 2c0 5-4 9-9 12h28c-5-3-9-7-9-12l3-2 2 3 1-3 4 1-1-4 3-2-3-1 1-4-3 1-2-4-2 3c-1-2.5-3-4-6-4z" fill="#B7342A"/>
+          <circle cx="34" cy="20" r="1.5" fill="#1A1A1A"/>
+          <path d="M38 24l5-2-4-1z" fill="#C89A5B"/>
+        </svg>
+        <div class="stamp-label">公鸡 · rooster mark</div>
+      </div>
+      <!-- Banner stamp -->
+      <div class="stamp-box">
+        <svg viewBox="0 0 64 64">
+          <path d="M8 16 L56 16 L52 32 L56 48 L8 48 L12 32 Z" fill="#B7342A"/>
+          <text x="32" y="38" text-anchor="middle" font-family="Noto Serif SC, serif" font-size="14" fill="#F5E8D0" font-weight="900">正宗</text>
+        </svg>
+        <div class="stamp-label">正宗 · authentic</div>
+      </div>
+      <!-- Cloud wave -->
+      <div class="stamp-box">
+        <svg viewBox="0 0 64 64">
+          <path d="M8 32 Q16 24 24 32 Q32 40 40 32 Q48 24 56 32" stroke="#B7342A" stroke-width="2" fill="none"/>
+          <path d="M8 40 Q16 32 24 40 Q32 48 40 40 Q48 32 56 40" stroke="#1E5A44" stroke-width="2" fill="none"/>
+          <circle cx="24" cy="32" r="2.5" fill="#C89A5B"/>
+          <circle cx="40" cy="32" r="2.5" fill="#C89A5B"/>
+        </svg>
+        <div class="stamp-label">潮汕云纹 · waves</div>
+      </div>
+      <!-- Lantern -->
+      <div class="stamp-box">
+        <svg viewBox="0 0 64 64">
+          <ellipse cx="32" cy="34" rx="14" ry="18" fill="#B7342A" stroke="#1A1A1A" stroke-width="1.5"/>
+          <line x1="18" y1="34" x2="46" y2="34" stroke="#1A1A1A" stroke-width="1"/>
+          <rect x="28" y="10" width="8" height="6" fill="#C89A5B"/>
+          <line x1="32" y1="52" x2="32" y2="58" stroke="#1A1A1A" stroke-width="2"/>
+          <path d="M28 58 L36 58 M30 58 L30 62 M34 58 L34 62" stroke="#C89A5B" stroke-width="1.5"/>
+          <text x="32" y="38" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="12" fill="#F5E8D0" font-weight="900">福</text>
+        </svg>
+        <div class="stamp-label">灯笼 · lantern</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <div class="sys-block">
+    <h3>字体规范 · Typography</h3>
+    <div class="h3-en">Four families · CN brush + serif + sans + EN Cormorant</div>
+
+    <div class="type-stack">
+      <div class="role">CN BRUSH<strong>Ma Shan Zheng</strong></div>
+      <div class="sample cn-brush">鲜 · 嫩 · 养</div>
+      <div class="when">Hero calligraphy. One character at a time. Pillars, stamps.</div>
+    </div>
+    <div class="type-stack">
+      <div class="role">CN DISPLAY<strong>Noto Serif SC 900</strong></div>
+      <div class="sample cn-display">潮八八现切鸡煲</div>
+      <div class="when">Brand mark, page titles, poster headlines.</div>
+    </div>
+    <div class="type-stack">
+      <div class="role">CN BODY<strong>Noto Sans SC 400</strong></div>
+      <div class="sample cn-body">温润食补养生 · 跑山鸡最本真的鲜甜</div>
+      <div class="when">Captions, social, subtitles. Never bold.</div>
+    </div>
+    <div class="type-stack">
+      <div class="role">EN DISPLAY<strong>Cormorant Italic 700</strong></div>
+      <div class="sample en-display">A bowl that lets things shine</div>
+      <div class="when">English titles, loglines, decorative.</div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>visual system · brand-locked</span>
+    <span>p. 09 / 10</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 10 — EXTENSIONS ============ -->
+<div class="page p10">
+  <div class="page-num" style="color: var(--gold-light);">x · extensions</div>
+  <div class="p10-head">
+    <div class="pretitle">Chapter 九 · two creative explorations</div>
+    <h2 class="p10-h">两个延伸方向</h2>
+    <div class="p10-en">Two creative extensions of this bible</div>
+  </div>
+  <p class="p10-blurb">
+    The Brand Bible above is the constant. Below are two ways the bible <em>plays</em> — for video content, ads, and the 90-day rollout. Both build on the same colour, type, and pillars locked above. Pick one as the lead, or blend them by content pillar.
+  </p>
+
+  <div class="ext-grid">
+    <a class="ext-card" href="v4-picturebook.html">
+      <div class="ext-label">EXTENSION 01 · ILLUSTRATED</div>
+      <div class="ext-cn">绘本宇宙</div>
+      <div class="ext-en">Picturebook Universe</div>
+      <p class="ext-body">An illustrated world the brand owns. Brother 八 mascot, Ah-Mah, Lil' Eight. Watercolour palette over warm paper. Family-first, comic-strip storytelling. Best for mum + kid audience, merch IP, repeatable assets.</p>
+      <div class="ext-cta">View v4 picturebook →</div>
+    </a>
+
+    <a class="ext-card" href="v5-cinema.html">
+      <div class="ext-label">EXTENSION 02 · CINEMATIC</div>
+      <div class="ext-cn">潮八八映画</div>
+      <div class="ext-en">Cinema</div>
+      <p class="ext-body">Wong Kar-wai colour grade — amber, teal, velvet. Each broth as a film title with logline. Editorial subtitles, timecodes, 2.35:1 letterbox. Higgsfield-native. Best for emotional adult audience, PR, awards, premium positioning.</p>
+      <div class="ext-cta">View v5 cinema →</div>
+    </a>
+  </div>
+
+  <div class="closer">
+    <div class="closer-cn">让一锅鸡, 讲一座城的故事</div>
+    <div class="closer-en">Let one pot of chicken tell a city's story</div>
+    <a class="download-link" href="assets/brand-book.pdf" target="_blank">⬇ Download original brand PDF</a>
+  </div>
+
+  <div class="page-foot" style="background: transparent; border-top: 1px solid rgba(245,232,208,0.15);">
+    <span>brand bible · v6 · 22 may 2026</span>
+    <span>end · chao 88 × nextgen marketing</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

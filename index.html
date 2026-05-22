@@ -2,58 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>潮八八 · Chao 88 Moodboard — Choose Your Direction</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700;900&family=ZCOOL+QingKe+HuangYou&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>潮八八 · Chao 88 — Brand Materials</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700;900&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #FEFCF5;
-    --paper-deep: #F4EAD3;
+    --paper: #FAF3DD;
+    --cream: #F5E8D0;
+    --cream-deep: #E8D6B5;
+    --red: #B7342A;
+    --red-deep: #8B1A14;
+    --red-soft: #D14A3F;
+    --green: #1E5A44;
+    --green-deep: #143A2D;
+    --gold: #C89A5B;
+    --gold-light: #DEB97D;
+    --ink: #1A1A1A;
+    --soft-ink: #4A4540;
     --film: #1A1612;
-    --ink: #0A0A0A;
-    --amber: #C8854A;
-    --neon: #F0B040;
-    --red: #D85048;
-    --red-deep: #B7342A;
-    --moss: #3A7860;
-    --moss-deep: #1E5A44;
-    --teal: #2C4A52;
-    --velvet: #5A1A1F;
-    --gold: #E5C290;
     --blush: #F5C8C2;
-    --parchment: #E8DDC3;
+    --moss-deep: #1E5A44;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #1a1a1f 0%, #0e0a08 100%);
-    color: var(--parchment);
+    background: linear-gradient(135deg, #1F1A14 0%, #0E0A08 100%);
+    color: var(--cream);
     min-height: 100vh;
-    padding: 48px 32px;
+    padding: 48px 24px;
     line-height: 1.5;
   }
-  .wrap { max-width: 1280px; margin: 0 auto; }
+  .wrap { max-width: 1400px; margin: 0 auto; }
 
-  /* Header */
+  /* HEADER */
   header {
     text-align: center;
     margin-bottom: 64px;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(232,221,195,0.15);
+    border-bottom: 1px solid rgba(245,232,208,0.15);
   }
   .pretitle {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
-    color: var(--amber);
+    color: var(--gold-light);
     letter-spacing: 0.4em;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  .pretitle::before { content: '◉ '; color: var(--red); }
+  .pretitle::before { content: '◉ '; color: var(--red-soft); }
   .h1 {
     font-family: 'Noto Serif SC', serif;
     font-weight: 200;
     font-size: 88px;
-    color: var(--parchment);
+    color: var(--cream);
     letter-spacing: 0.1em;
     line-height: 1;
     margin-bottom: 16px;
@@ -63,7 +63,7 @@
     font-style: italic;
     font-weight: 500;
     font-size: 28px;
-    color: var(--amber);
+    color: var(--gold-light);
     letter-spacing: 0.15em;
     margin-bottom: 24px;
   }
@@ -71,34 +71,156 @@
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 15px;
-    color: rgba(232,221,195,0.7);
-    max-width: 640px;
+    color: rgba(245,232,208,0.75);
+    max-width: 720px;
     margin: 0 auto;
     line-height: 1.7;
   }
-  .deck-sub strong { color: var(--parchment); font-weight: 500; }
+  .deck-sub strong { color: var(--cream); font-weight: 500; }
 
-  /* The two cards */
+  /* PRIMARY — Brand Bible */
+  .primary-card {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 48px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    transition: transform 0.3s;
+  }
+  .primary-card:hover { transform: translateY(-4px); }
+  .primary-img {
+    background: url('assets/brand-page-1.jpg') center / cover no-repeat;
+    position: relative;
+  }
+  .primary-img::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.2) 100%);
+  }
+  .primary-img-tag {
+    position: absolute; top: 24px; left: 24px;
+    background: var(--red-deep);
+    color: var(--cream);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    padding: 6px 12px;
+    z-index: 2;
+  }
+  .primary-body {
+    padding: 56px 48px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+  }
+  .primary-body .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--red-deep);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .primary-body .label::before { content: '★ '; color: var(--gold); }
+  .primary-body h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 56px;
+    color: var(--red-deep);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .primary-body .en-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--green-deep);
+    margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+  .primary-body p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--soft-ink);
+    margin-bottom: 28px;
+  }
+  .primary-body p strong { color: var(--ink); font-weight: 600; }
+  .primary-features {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+  .primary-features li {
+    padding: 8px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    display: flex; gap: 12px;
+  }
+  .primary-features li::before { content: '◆'; color: var(--red); flex-shrink: 0; }
+  .primary-cta {
+    align-self: flex-start;
+    background: var(--red-deep);
+    color: var(--cream);
+    padding: 14px 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    transition: all 0.2s;
+  }
+  .primary-card:hover .primary-cta { background: var(--red); }
+
+  /* SECTION HEADER */
+  .section-h {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .section-h .h-pre {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-h h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--cream);
+    letter-spacing: 0.1em;
+  }
+
+  /* EXTENSION CARDS */
   .options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-bottom: 64px;
+    gap: 24px;
+    margin-bottom: 48px;
   }
   .opt {
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
   }
-  .opt:hover { transform: translateY(-8px); box-shadow: 0 32px 80px rgba(0,0,0,0.6); }
+  .opt:hover { transform: translateY(-6px); }
 
-  /* Option A — Picturebook */
   .opt-a { background: var(--paper); color: var(--ink); }
   .opt-a .preview {
     aspect-ratio: 16/9;
@@ -109,7 +231,6 @@
     position: relative;
     overflow: hidden;
     display: flex; align-items: center; justify-content: center;
-    border-bottom: 1px solid var(--paper-deep);
   }
   .opt-a .preview::after {
     content: ''; position: absolute; right: -40px; top: -40px;
@@ -118,7 +239,7 @@
     border-radius: 50%;
     opacity: 0.4;
   }
-  .opt-b { background: var(--ink); color: var(--parchment); }
+  .opt-b { background: var(--ink); color: var(--cream); }
   .opt-b .preview {
     aspect-ratio: 16/9;
     background:
@@ -127,272 +248,223 @@
       linear-gradient(180deg, var(--film) 0%, #0a0805 100%);
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid var(--amber);
   }
-  .opt-b .preview::before {
-    content: ''; position: absolute; left: 0; right: 0; height: 22px; top: 0;
+  .opt-b .preview::before, .opt-b .preview::after {
+    content: ''; position: absolute; left: 0; right: 0; height: 22px;
     background: var(--ink);
   }
-  .opt-b .preview::after {
-    content: ''; position: absolute; left: 0; right: 0; height: 22px; bottom: 0;
-    background: var(--ink);
-  }
-  .opt-grain {
-    position: absolute; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.85 0 0 0 0 0.75 0 0 0 0.15 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)'/%3E%3C/svg%3E");
-    opacity: 0.5;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-  }
+  .opt-b .preview::before { top: 0; }
+  .opt-b .preview::after { bottom: 0; }
 
-  /* Preview content */
   .preview-content {
     text-align: center;
     position: relative; z-index: 2;
   }
-
-  /* Option A preview — illustrated mascot mini */
-  .mascot-mini {
-    width: 100px; height: 110px;
-    margin: 0 auto 16px;
-  }
-
-  /* Option B preview — title card */
-  .filmtitle {
-    text-align: center;
-  }
-  .filmtitle .ft-cn {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 200;
-    font-size: 72px;
-    color: var(--parchment);
-    letter-spacing: 0.12em;
-    line-height: 1;
-    text-shadow: 0 0 30px rgba(232,221,195,0.2), 0 0 60px rgba(200,133,74,0.2);
-    margin-bottom: 12px;
-  }
-  .filmtitle .ft-en {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 20px;
-    color: var(--amber);
-    letter-spacing: 0.2em;
-  }
-  .filmtitle .ft-tc {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    color: var(--amber);
-    letter-spacing: 0.3em;
-    margin-top: 16px;
-    opacity: 0.7;
-  }
-
-  /* A preview content */
-  .a-title {
-    text-align: center;
-  }
+  .mascot-mini { width: 90px; height: 100px; margin: 0 auto 12px; }
   .a-title .at-cn {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-size: 62px;
-    color: var(--moss-deep);
+    font-size: 48px;
+    color: var(--green-deep);
     letter-spacing: 0.05em;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .a-title .at-en {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
     color: var(--red);
     letter-spacing: 0.05em;
   }
   .a-bubble {
     position: absolute;
-    top: 24px; left: 32px;
-    background: var(--paper-deep);
+    top: 18px; left: 24px;
+    background: var(--cream-deep);
     border: 2px solid var(--ink);
-    padding: 8px 14px;
-    border-radius: 18px;
+    padding: 6px 12px;
+    border-radius: 14px;
     font-family: 'Ma Shan Zheng', cursive;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--ink);
     transform: rotate(-4deg);
-    box-shadow: 3px 3px 0 var(--moss-deep);
+    box-shadow: 2px 2px 0 var(--moss-deep);
     z-index: 3;
   }
 
+  .filmtitle .ft-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 200;
+    font-size: 56px;
+    color: var(--cream);
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(245,232,208,0.2), 0 0 60px rgba(200,133,74,0.2);
+    margin-bottom: 10px;
+  }
+  .filmtitle .ft-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+  }
+  .filmtitle .ft-tc {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+  .filmtitle .ft-tc::before { content: '◉ '; color: var(--red-soft); }
+
   .meta-row {
-    padding: 12px 28px;
-    background: rgba(0,0,0,0.04);
+    padding: 10px 24px;
     display: flex; justify-content: space-between; align-items: center;
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
   }
-  .opt-a .meta-row { background: var(--paper-deep); color: var(--red-deep); }
-  .opt-b .meta-row { background: var(--film); color: var(--amber); border-top: 1px solid var(--amber-deep); }
+  .opt-a .meta-row { background: var(--cream-deep); color: var(--red-deep); }
+  .opt-b .meta-row { background: var(--film); color: var(--gold); border-top: 1px solid var(--gold); }
 
   .body-content {
-    padding: 36px 36px 32px;
+    padding: 28px 28px 24px;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
   .opt .label {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .opt-a .label { color: var(--red); }
-  .opt-b .label { color: var(--amber); }
+  .opt-b .label { color: var(--gold); }
 
   .opt-name-cn {
     font-family: 'Noto Serif SC', serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 28px;
     letter-spacing: 0.08em;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     line-height: 1.1;
   }
-  .opt-a .opt-name-cn { color: var(--moss-deep); font-family: 'ZCOOL QingKe HuangYou', cursive; font-weight: 400; }
-  .opt-b .opt-name-cn { color: var(--parchment); font-weight: 200; }
+  .opt-a .opt-name-cn { color: var(--green-deep); font-family: 'ZCOOL QingKe HuangYou', cursive; font-weight: 400; }
+  .opt-b .opt-name-cn { color: var(--cream); font-weight: 200; }
 
   .opt-name-en {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 14px;
   }
   .opt-a .opt-name-en { color: var(--red); }
-  .opt-b .opt-name-en { color: var(--amber); }
+  .opt-b .opt-name-en { color: var(--gold); }
 
   .opt .blurb {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.75;
-    margin-bottom: 24px;
-  }
-  .opt-a .blurb { color: rgba(10,10,10,0.7); }
-  .opt-b .blurb { color: rgba(232,221,195,0.75); }
-
-  .bullets {
-    list-style: none;
-    margin-bottom: 28px;
-  }
-  .bullets li {
-    padding: 10px 0;
-    font-family: 'Inter', sans-serif;
     font-size: 13px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    line-height: 1.5;
-    display: flex; gap: 12px;
+    line-height: 1.65;
+    margin-bottom: 14px;
   }
-  .opt-b .bullets li { border-bottom-color: rgba(232,221,195,0.1); }
-  .bullets li::before { flex-shrink: 0; }
-  .opt-a .bullets li::before { content: '◆'; color: var(--red); }
-  .opt-b .bullets li::before { content: '◇'; color: var(--amber); }
-  .opt-a .bullets li { color: var(--ink); }
-  .opt-b .bullets li { color: var(--parchment); }
+  .opt-a .blurb { color: rgba(26,26,26,0.7); }
+  .opt-b .blurb { color: rgba(245,232,208,0.75); }
+  .opt .blurb strong { font-weight: 600; }
+  .opt-a .blurb strong { color: var(--ink); }
+  .opt-b .blurb strong { color: var(--cream); }
 
   .opt .cta {
     margin-top: auto;
-    padding: 16px 24px;
+    padding: 12px 20px;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 4px;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.1em;
+    font-size: 14px;
+    letter-spacing: 0.15em;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 0.2s;
   }
-  .opt-a .cta { background: var(--moss-deep); color: var(--paper); }
+  .opt-a .cta { background: var(--green-deep); color: var(--cream); }
   .opt-a:hover .cta { background: var(--red-deep); }
-  .opt-b .cta { background: var(--amber); color: var(--ink); border: 1px solid var(--amber); }
-  .opt-b:hover .cta { background: var(--neon); color: var(--ink); }
-  .cta::after { content: ' →'; margin-left: 8px; }
+  .opt-b .cta { background: var(--gold); color: var(--ink); }
+  .opt-b:hover .cta { background: var(--gold-light); }
+  .cta::after { content: ' →'; margin-left: 6px; }
 
   .best-for {
-    margin-top: 14px;
-    padding-top: 14px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px dashed rgba(0,0,0,0.15);
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5;
   }
-  .opt-a .best-for { color: rgba(10,10,10,0.55); border-top-color: rgba(10,10,10,0.15); }
-  .opt-b .best-for { color: rgba(232,221,195,0.5); border-top-color: rgba(232,221,195,0.15); }
-  .best-for strong { color: inherit; font-style: normal; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; display: block; margin-bottom: 4px; }
-  .opt-a .best-for strong { color: var(--red-deep); }
-  .opt-b .best-for strong { color: var(--amber); }
-
-  /* Compare table */
-  .compare {
-    margin: 64px 0;
-    background: rgba(232,221,195,0.04);
-    border: 1px solid rgba(232,221,195,0.15);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .compare-title {
-    text-align: center;
-    padding: 28px 32px 16px;
-    border-bottom: 1px solid rgba(232,221,195,0.1);
-  }
-  .compare-title .cn {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 300;
-    font-size: 32px;
-    color: var(--parchment);
-    letter-spacing: 0.1em;
-    margin-bottom: 6px;
-  }
-  .compare-title .en {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--amber);
-    letter-spacing: 0.2em;
-  }
-  .compare-rows { padding: 0 32px 24px; }
-  .crow {
-    display: grid;
-    grid-template-columns: 240px 1fr 1fr;
-    padding: 18px 0;
-    border-bottom: 1px dotted rgba(232,221,195,0.1);
-    align-items: center;
-    gap: 32px;
-  }
-  .crow:last-child { border-bottom: 0; }
-  .crow .axis {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--amber);
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-  }
-  .crow .col-a, .crow .col-b {
+  .opt-a .best-for { color: rgba(26,26,26,0.55); }
+  .opt-b .best-for { color: rgba(245,232,208,0.5); border-top-color: rgba(245,232,208,0.15); }
+  .best-for strong {
+    color: inherit;
+    font-style: normal;
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .opt-a .best-for strong { color: var(--red-deep); }
+  .opt-b .best-for strong { color: var(--gold); }
+
+  /* QUICK INFO STRIP */
+  .info-strip {
+    background: rgba(245,232,208,0.05);
+    border: 1px solid rgba(245,232,208,0.15);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .info-cell .info-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .info-cell .info-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .info-cell .info-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgba(245,232,208,0.6);
     line-height: 1.6;
-    color: rgba(232,221,195,0.85);
   }
 
   /* Footer */
   footer {
     text-align: center;
     padding: 40px 0 16px;
-    border-top: 1px solid rgba(232,221,195,0.1);
+    border-top: 1px solid rgba(245,232,208,0.1);
     font-family: 'DM Mono', monospace;
     font-size: 10px;
-    color: rgba(232,221,195,0.5);
+    color: rgba(245,232,208,0.5);
     letter-spacing: 0.3em;
   }
   .archive {
@@ -400,15 +472,15 @@
     margin-top: 24px;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
-    color: rgba(232,221,195,0.4);
+    color: rgba(245,232,208,0.4);
   }
   .archive a {
-    color: var(--amber);
+    color: var(--gold-light);
     text-decoration: none;
-    border-bottom: 1px dotted var(--amber);
+    border-bottom: 1px dotted var(--gold-light);
     margin: 0 8px;
   }
-  .archive a:hover { color: var(--neon); }
+  .archive a:hover { color: var(--red-soft); }
 </style>
 </head>
 <body>
@@ -416,45 +488,85 @@
 <div class="wrap">
 
   <header>
-    <div class="pretitle">CHAO 88 · 潮八八现切鸡煲 · MOODBOARD COMPARISON</div>
-    <h1 class="h1">两个方向 · 一个选择</h1>
-    <div class="h1-en">Two creative directions. One brand. Your call.</div>
+    <div class="pretitle">CHAO 88 · 潮八八现切鸡煲 · BRAND MATERIALS</div>
+    <h1 class="h1">品牌全集</h1>
+    <div class="h1-en">Brand Bible · plus two creative extensions</div>
     <p class="deck-sub">
-      Both proposals are fully developed alternatives for the Chao 88 social media campaign. They start from the same brief — Chaoshan chicken hotpot, family + wellness audience, 4 outlets, SGD 35-60 — and end up <strong>worlds apart</strong>. Click into either deck to explore. We can also blend them, but pick a lead first.
+      Master brand documentation pulled from Joanna's existing assets (the wall calligraphy, chicken cooking guide, dipping philosophy, menu), plus <strong>two creative extensions</strong> — Picturebook Universe and Cinema — to express that brand across video, social, and ads. Built for the 90-day NextGen campaign starting 28 May 2026.
     </p>
   </header>
 
-  <div class="options">
+  <!-- PRIMARY — Brand Bible -->
+  <a class="primary-card" href="v6-brand-bible.html">
+    <div class="primary-img">
+      <div class="primary-img-tag">★ PRIMARY DELIVERABLE</div>
+    </div>
+    <div class="primary-body">
+      <div class="label">v6 · MASTER BRAND BIBLE</div>
+      <h2>品牌全集</h2>
+      <div class="en-title">The Chao 88 Brand Bible</div>
+      <p>10-page master doc built from your <strong>actual brand assets</strong> — the 潮汕 wall, the 吃鸡图谱 chicken cooking guide, the 蘸料哲学 dipping philosophy. Real menu with all 7 broths and prices. Cultural heritage layer (英歌舞, 老厝). Locked visual system.</p>
+      <ul class="primary-features">
+        <li>Verbatim brand copy extracted from your PDF</li>
+        <li>Real menu: 7 signature pots + 12 snacks + 7 staples with prices</li>
+        <li>Chicken cooking guide (6 cuts × cook times) — your owned IP</li>
+        <li>Dipping philosophy as a full feature page (poetic typography)</li>
+        <li>Heritage chips: 英歌舞 · 鱼舞 · 老厝 · 灯笼 · 关老爷 · 龙门天</li>
+        <li>8 brand stamps recreated as SVG library</li>
+      </ul>
+      <span class="primary-cta">Open Brand Bible →</span>
+    </div>
+  </a>
 
-    <!-- ============ OPTION A — PICTUREBOOK ============ -->
+  <!-- Quick info -->
+  <div class="info-strip">
+    <div class="info-cell">
+      <div class="info-label">BRAND</div>
+      <div class="info-cn">潮八八 · Chao Baba</div>
+      <div class="info-detail">Chaoshan freshly-cut chicken hot pot. Singapore's first.</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">PILLARS</div>
+      <div class="info-cn">鲜 · 嫩 · 养</div>
+      <div class="info-detail">Fresh-cut · tender · nourishing. The three principles.</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">SIGNATURE</div>
+      <div class="info-cn">无花果鸡煲 · 黑金麻辣</div>
+      <div class="info-detail">Two招牌 — Fig Tonic (mild) and Sichuan Black Mala (bold).</div>
+    </div>
+    <div class="info-cell">
+      <div class="info-label">SAUCE</div>
+      <div class="info-cn">沙姜 · 蒜蓉 · 生抽</div>
+      <div class="info-detail">蘸料永远是配角。 The dip never overpowers.</div>
+    </div>
+  </div>
+
+  <!-- SECTION HEADER -->
+  <div class="section-h">
+    <div class="h-pre">two creative extensions</div>
+    <h3>How the bible plays in content</h3>
+  </div>
+
+  <div class="options">
     <a class="opt opt-a" href="v4-picturebook.html">
       <div class="preview">
         <div class="a-bubble">早呀！来碗汤？</div>
         <div class="preview-content">
-          <!-- Mini mascot illustration -->
           <svg class="mascot-mini" viewBox="0 0 200 220">
-            <!-- chef hat -->
             <path d="M75 50 Q65 5 90 5 Q90 -5 110 5 Q135 -5 135 5 Q160 5 150 50 Z" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
             <path d="M75 50 L150 50" stroke="#1A1A1A" stroke-width="2"/>
-            <!-- head -->
             <ellipse cx="112" cy="100" rx="50" ry="46" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
-            <!-- comb -->
             <path d="M88 60 Q92 48 102 56 Q112 44 122 56 Q132 48 136 60" fill="#D85048" stroke="#1A1A1A" stroke-width="1.5"/>
-            <!-- eyes -->
             <circle cx="98" cy="98" r="5" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="1.5"/>
             <circle cx="100" cy="100" r="2.5" fill="#1A1A1A"/>
             <circle cx="124" cy="98" r="5" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="1.5"/>
             <circle cx="126" cy="100" r="2.5" fill="#1A1A1A"/>
-            <!-- beak -->
             <path d="M120 112 L138 117 L122 122 Z" fill="#E5C290" stroke="#1A1A1A" stroke-width="1.5"/>
-            <!-- cheeks -->
             <ellipse cx="82" cy="115" rx="6" ry="4" fill="#F5C8C2" opacity="0.7"/>
             <ellipse cx="142" cy="115" rx="6" ry="4" fill="#F5C8C2" opacity="0.7"/>
-            <!-- smile -->
             <path d="M115 128 Q120 132 125 128" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
-            <!-- body -->
             <ellipse cx="112" cy="180" rx="58" ry="34" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
-            <!-- apron -->
             <path d="M88 155 Q112 148 136 155 L142 195 Q112 200 82 195 Z" fill="#D85048" stroke="#1A1A1A" stroke-width="2"/>
             <text x="112" y="180" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="16" fill="#FEFCF5" font-weight="900">八</text>
           </svg>
@@ -465,126 +577,57 @@
         </div>
       </div>
       <div class="meta-row">
-        <span>OPTION A · v4</span>
-        <span>8 PAGES · ILLUSTRATED</span>
+        <span>EXTENSION 01 · v4</span>
+        <span>ILLUSTRATED · 8 PAGES</span>
       </div>
       <div class="body-content">
-        <div class="label">CREATIVE DIRECTION 01</div>
+        <div class="label">CREATIVE EXTENSION 01</div>
         <div class="opt-name-cn">潮八八绘本宇宙</div>
         <div class="opt-name-en">Chao 88 · Storybook Universe</div>
-        <p class="blurb">A whole illustrated world the brand owns. <strong>Brother 八</strong> (the chef-chicken mascot), Ah-Mah, Lil' Eight, Mr Broth — characters that become assets. Every video script becomes a 4-panel comic. Watercolour palette, picturebook warmth.</p>
-
-        <ul class="bullets">
-          <li>8-character illustrated cast — reusable IP across video / posts / merch</li>
-          <li>4 broth portraits in jar-illustrations (Mala, Stone Olive, Pineapple, Black Chicken)</li>
-          <li>Sample 4-panel comic strip for IG carousels</li>
-          <li>WhatsApp sticker pack + menu cards + posters from one library</li>
-          <li>One illustrator commission (~SGD 2.5-4.5k) covers years of content</li>
-        </ul>
-
-        <div class="cta">View Picturebook moodboard</div>
-
+        <p class="blurb">An illustrated world the brand owns. <strong>Brother 八</strong> (chef-chicken mascot), Ah-Mah, Lil' Eight, Mr Broth. Every video becomes a 4-panel comic. Watercolour, picturebook warmth, family-first.</p>
+        <div class="cta">View Picturebook</div>
         <div class="best-for">
           <strong>BEST FOR</strong>
-          Mass-market family chain · IP-driven growth · merch potential · cost-efficient long-term · broad mum + kid + grandparent appeal
+          Family chain · merch IP · mum + kid + grandparent audience
         </div>
       </div>
     </a>
 
-    <!-- ============ OPTION B — CINEMA ============ -->
     <a class="opt opt-b" href="v5-cinema.html">
       <div class="preview">
-        <div class="opt-grain"></div>
         <div class="preview-content">
           <div class="filmtitle">
-            <div class="ft-tc" style="margin-top: 0; margin-bottom: 12px;">◉ REC · 01:00:00:00</div>
+            <div class="ft-tc">REC · 01:00:00:00</div>
             <div class="ft-cn">潮八八映画</div>
             <div class="ft-en">Chao 88 · Cinema</div>
           </div>
         </div>
       </div>
       <div class="meta-row">
-        <span>OPTION B · v5</span>
-        <span>8 SCENES · CINEMATIC</span>
+        <span>EXTENSION 02 · v5</span>
+        <span>CINEMATIC · 8 SCENES</span>
       </div>
       <div class="body-content">
-        <div class="label">CREATIVE DIRECTION 02</div>
+        <div class="label">CREATIVE EXTENSION 02</div>
         <div class="opt-name-cn">潮八八映画</div>
         <div class="opt-name-en">Chao 88 · Cinema</div>
-        <p class="blurb">Every bowl is a short film. Wong Kar-wai colour grade — amber, teal, velvet red. <strong>Each broth becomes a film title</strong> with logline + DP notes. Editorial subtitle bars, timecodes, cinematic 2.35:1 letterboxes. Higgsfield-native aesthetic.</p>
-
-        <ul class="bullets">
-          <li>4 broths treated as film titles with loglines + colour-grade notes</li>
-          <li>3-act chapter structure: 鲜 · 养 · 家 — every video maps to one</li>
-          <li>6-frame storyboard example for V1 "现切" — no dialogue, all atmosphere</li>
-          <li>Custom LUT spec (Chao88_Heritage_Cinema) — drop into Higgsfield prompts</li>
-          <li>Movie-poster + neon outlet signage + 9:16 reel applications mocked</li>
-        </ul>
-
-        <div class="cta">View Cinema moodboard</div>
-
+        <p class="blurb">Every bowl is a short film. Wong Kar-wai colour grade. <strong>Each broth as a film title</strong> with logline. Editorial subtitles, timecodes, 2.35:1 letterbox. Higgsfield-native aesthetic.</p>
+        <div class="cta">View Cinema</div>
         <div class="best-for">
           <strong>BEST FOR</strong>
-          Premium perceived value · Higgsfield-native production · award + PR potential · brand-led growth · emotional adult audience
+          Premium positioning · Higgsfield production · PR + awards
         </div>
       </div>
     </a>
-
-  </div>
-
-  <!-- COMPARE TABLE -->
-  <div class="compare">
-    <div class="compare-title">
-      <div class="cn">两个方向 · 对比</div>
-      <div class="en">SIDE-BY-SIDE · the same brief, two outcomes</div>
-    </div>
-    <div class="compare-rows">
-      <div class="crow">
-        <div class="axis">Visual Language</div>
-        <div class="col-a">Hand-illustrated · watercolour · paper textures · mascot-driven</div>
-        <div class="col-b">Cinematic photography · chiaroscuro · film grain · letterbox crops</div>
-      </div>
-      <div class="crow">
-        <div class="axis">Emotional Register</div>
-        <div class="col-a">Warm, playful, friendly. Light enough for kids' menus.</div>
-        <div class="col-b">Slow, romantic, adult. The brand people quote, not just visit.</div>
-      </div>
-      <div class="crow">
-        <div class="axis">Hero Asset</div>
-        <div class="col-a">Brother 八 — chef-chicken mascot with a personality</div>
-        <div class="col-b">The colour grade itself — a recognisable Chao 88 LUT</div>
-      </div>
-      <div class="crow">
-        <div class="axis">Best Audience Fit</div>
-        <div class="col-a">Mums, kids, grandparents, weekend family bookings</div>
-        <div class="col-b">Couples, date-nights, foodie regulars, PR / press</div>
-      </div>
-      <div class="crow">
-        <div class="axis">Production Method</div>
-        <div class="col-a">One illustrator commission → endless variations from library</div>
-        <div class="col-b">Higgsfield AI + on-site shoots → cinematic LUT applied uniformly</div>
-      </div>
-      <div class="crow">
-        <div class="axis">Risk Profile</div>
-        <div class="col-a">Lower risk · proven family-brand playbook (think Hello Kitty for hotpot)</div>
-        <div class="col-b">Higher risk · higher ceiling · positions above current SGD 35-60 tier</div>
-      </div>
-      <div class="crow">
-        <div class="axis">What Joanna Says When Asked</div>
-        <div class="col-a">"We're the hotpot that feels like home — even for the kids."</div>
-        <div class="col-b">"Our chicken comes in across the causeway at 7am. We've made a film about it."</div>
-      </div>
-    </div>
   </div>
 
   <footer>
-    CHAO 88 × NEXTGEN MARKETING · MOODBOARD COMPARISON · 22 MAY 2026
+    CHAO 88 × NEXTGEN MARKETING · BRAND MATERIALS · 22 MAY 2026
     <div class="archive">
-      Archive: <a href="v2-reference-match.html">v2 reference-match</a> · <a href="v4-picturebook.html">v4 picturebook</a> · <a href="v5-cinema.html">v5 cinema</a>
+      Full archive: <a href="v6-brand-bible.html">v6 brand bible</a> · <a href="v4-picturebook.html">v4 picturebook</a> · <a href="v5-cinema.html">v5 cinema</a> · <a href="v2-reference-match.html">v2 reference</a> · <a href="assets/brand-book.pdf" target="_blank">brand PDF</a>
     </div>
   </footer>
 
 </div>
-
 </body>
 </html>

@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>潮八八映画 · Chao 88 Cinema — v5</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700;900&family=Noto+Sans+SC:wght@200;300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --amber: #C8854A;
+    --amber-deep: #8A5A28;
+    --teal: #2C4A52;
+    --teal-deep: #15252B;
+    --velvet: #5A1A1F;
+    --velvet-light: #8A2A30;
+    --parchment: #E8DDC3;
+    --parchment-deep: #C8B888;
+    --neon: #F0B040;
+    --ink: #0A0A0A;
+    --film: #1A1612;
+    --grain: rgba(232,221,195,0.03);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #050403;
+    color: var(--parchment);
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .deck { max-width: 1480px; margin: 0 auto; }
+
+  /* Film grain overlay */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.85 0 0 0 0 0.75 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23g)'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+  }
+
+  .scene {
+    margin-bottom: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .scene .timecode {
+    position: absolute; top: 28px; left: 36px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.2em;
+    z-index: 5;
+  }
+  .scene .scene-num {
+    position: absolute; top: 28px; right: 36px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--parchment);
+    opacity: 0.5;
+    letter-spacing: 0.4em;
+    z-index: 5;
+  }
+
+  /* ============ SCENE 01 — TITLE CARD ============ */
+  .s1 {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 25% 80%, rgba(200,133,74,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 30%, rgba(44,74,82,0.5) 0%, transparent 60%),
+      linear-gradient(180deg, var(--film) 0%, #0a0805 100%);
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    padding: 80px;
+    position: relative;
+  }
+  .s1::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+  }
+  .s1-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    position: relative; z-index: 2;
+  }
+  .s1-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.3em;
+  }
+  .s1-tag::before { content: '◉ REC '; color: var(--velvet-light); margin-right: 8px; }
+  .s1-credit {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.25em;
+    line-height: 1.8;
+  }
+  .s1-center { text-align: center; position: relative; z-index: 2; }
+  .s1-presents {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .s1-title-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 200;
+    font-size: 180px;
+    color: var(--parchment);
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 24px;
+    text-shadow:
+      0 0 40px rgba(232,221,195,0.2),
+      0 0 80px rgba(200,133,74,0.15);
+  }
+  .s1-title-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 56px;
+    color: var(--amber);
+    letter-spacing: 0.2em;
+    margin-bottom: 32px;
+  }
+  .s1-divider {
+    width: 60px; height: 1px;
+    background: var(--velvet-light);
+    margin: 0 auto 32px;
+  }
+  .s1-tagline {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--parchment);
+    letter-spacing: 0.3em;
+    opacity: 0.85;
+  }
+  .s1-tagline-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.25em;
+    margin-top: 8px;
+    opacity: 0.7;
+  }
+  .s1-bottom {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.3em;
+    opacity: 0.6;
+    position: relative; z-index: 2;
+  }
+
+  /* ============ SCENE 02 — THE OPPOSITION ============ */
+  .s2 {
+    padding: 120px 80px;
+    background: var(--film);
+    position: relative;
+  }
+  .s2-pretitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .s2-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: var(--parchment);
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+  }
+  .s2-sub {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--parchment-deep);
+    margin-bottom: 80px;
+  }
+  .duality {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    border: 1px solid var(--amber-deep);
+  }
+  .duality-side {
+    padding: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .duality-side.left {
+    background:
+      radial-gradient(circle at 70% 30%, rgba(216,80,72,0.15) 0%, transparent 50%),
+      var(--parchment);
+    color: var(--ink);
+  }
+  .duality-side.right {
+    background:
+      radial-gradient(circle at 30% 70%, rgba(200,133,74,0.2) 0%, transparent 50%),
+      var(--ink);
+    color: var(--parchment);
+  }
+  .duality-side .role {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    margin-bottom: 16px;
+    opacity: 0.6;
+  }
+  .duality-side .name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+  .duality-side .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    opacity: 0.8;
+    margin-bottom: 36px;
+  }
+  .duality-side ul { list-style: none; }
+  .duality-side li {
+    padding: 12px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    border-bottom: 1px solid currentColor;
+    opacity: 0.85;
+  }
+  .duality-side li::before { content: '— '; opacity: 0.5; }
+  .duality-side .lower {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px dashed currentColor;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+
+  /* ============ SCENE 03 — FOUR BROTHS AS FILM SCENES ============ */
+  .s3 {
+    padding: 120px 80px;
+    background: var(--ink);
+    border-top: 1px solid var(--amber-deep);
+  }
+  .s3-pretitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    margin-bottom: 12px;
+  }
+  .s3-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: var(--parchment);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  .s3-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--amber);
+    margin-bottom: 64px;
+  }
+  .scene-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .film-card {
+    background: var(--film);
+    border: 1px solid var(--amber-deep);
+    overflow: hidden;
+    position: relative;
+  }
+  .film-card .letterbox {
+    aspect-ratio: 2.35/1;
+    position: relative;
+    overflow: hidden;
+  }
+  .film-card .letterbox::before, .film-card .letterbox::after {
+    content: ''; position: absolute; left: 0; right: 0; height: 22px;
+    background: var(--ink); z-index: 3;
+  }
+  .film-card .letterbox::before { top: 0; }
+  .film-card .letterbox::after { bottom: 0; }
+  .film-card .scene-img {
+    position: absolute; inset: 0;
+  }
+  /* Broth 1 — mala — amber/red chiaroscuro */
+  .broth-1 { background:
+    radial-gradient(ellipse at 35% 50%, rgba(255,160,60,0.5) 0%, transparent 35%),
+    radial-gradient(circle at 60% 60%, rgba(216,80,72,0.4) 0%, transparent 50%),
+    linear-gradient(135deg, #1a0805 0%, #2a0e0a 60%, #0a0303 100%);
+  }
+  /* Broth 2 — stone olive — teal cool */
+  .broth-2 { background:
+    radial-gradient(ellipse at 55% 45%, rgba(180,210,180,0.4) 0%, transparent 40%),
+    radial-gradient(circle at 30% 70%, rgba(58,120,96,0.3) 0%, transparent 55%),
+    linear-gradient(160deg, #0a1812 0%, #152822 60%, #050a08 100%);
+  }
+  /* Broth 3 — pineapple — amber warm */
+  .broth-3 { background:
+    radial-gradient(ellipse at 50% 40%, rgba(240,176,64,0.45) 0%, transparent 40%),
+    radial-gradient(circle at 70% 70%, rgba(200,133,74,0.35) 0%, transparent 55%),
+    linear-gradient(180deg, #1a0e05 0%, #2a1808 60%, #0a0503 100%);
+  }
+  /* Broth 4 — black chicken — deep velvet */
+  .broth-4 { background:
+    radial-gradient(ellipse at 50% 50%, rgba(180,80,100,0.25) 0%, transparent 40%),
+    radial-gradient(circle at 30% 30%, rgba(90,26,31,0.4) 0%, transparent 55%),
+    linear-gradient(170deg, #050203 0%, #1a0a0c 60%, #050202 100%);
+  }
+  .film-card .scene-overlay {
+    position: absolute; inset: 22px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 20px 24px;
+    z-index: 4;
+  }
+  .scene-overlay .scene-tag {
+    align-self: flex-start;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--amber);
+    letter-spacing: 0.3em;
+    border: 1px solid var(--amber);
+    padding: 4px 8px;
+  }
+  .scene-overlay .scene-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--parchment);
+    line-height: 1.4;
+    max-width: 70%;
+    opacity: 0.85;
+    align-self: flex-end;
+    text-align: right;
+  }
+  .film-card .card-body {
+    padding: 28px 32px 32px;
+  }
+  .card-body .title-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--parchment);
+    margin-bottom: 4px;
+    letter-spacing: 0.06em;
+  }
+  .card-body .title-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--amber);
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .card-body .logline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--parchment);
+    opacity: 0.8;
+    border-left: 2px solid var(--velvet);
+    padding-left: 16px;
+  }
+  .card-body .credits {
+    margin-top: 20px;
+    display: flex; gap: 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+  }
+  .card-body .credits .key { color: var(--amber); margin-right: 8px; }
+
+  /* ============ SCENE 04 — THREE CHAPTERS ============ */
+  .s4 {
+    padding: 120px 80px;
+    background: linear-gradient(180deg, var(--ink) 0%, var(--teal-deep) 100%);
+  }
+  .s4-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    color: var(--parchment);
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+  .s4-title em {
+    color: var(--amber);
+    font-style: normal;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 200;
+  }
+  .s4-sub {
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    margin-bottom: 80px;
+  }
+  .chapter-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+  .chapter {
+    aspect-ratio: 4/5;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--amber-deep);
+  }
+  .chapter .ch-bg { position: absolute; inset: 0; }
+  .chapter.c1 .ch-bg { background:
+    radial-gradient(ellipse at 50% 40%, rgba(240,160,80,0.4) 0%, transparent 50%),
+    linear-gradient(180deg, #2a1810 0%, #050203 100%);
+  }
+  .chapter.c2 .ch-bg { background:
+    radial-gradient(ellipse at 50% 50%, rgba(180,200,180,0.3) 0%, transparent 50%),
+    linear-gradient(180deg, #0a1815 0%, #050a08 100%);
+  }
+  .chapter.c3 .ch-bg { background:
+    radial-gradient(ellipse at 40% 60%, rgba(245,180,120,0.35) 0%, transparent 55%),
+    linear-gradient(180deg, #1a0805 0%, #050202 100%);
+  }
+  .chapter .ch-content {
+    position: absolute; inset: 0;
+    padding: 56px 40px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+  .ch-content .ch-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--amber);
+    letter-spacing: 0.5em;
+  }
+  .ch-content .ch-center {
+    align-self: center;
+    text-align: center;
+  }
+  .ch-content .ch-big {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 200;
+    font-size: 200px;
+    line-height: 0.9;
+    color: var(--parchment);
+    margin-bottom: 20px;
+    text-shadow:
+      0 0 30px rgba(232,221,195,0.2),
+      0 0 60px rgba(200,133,74,0.2);
+  }
+  .ch-content .ch-en-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--amber);
+    letter-spacing: 0.15em;
+    line-height: 1.2;
+  }
+  .ch-content .ch-bottom {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--parchment);
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    max-width: 320px;
+    opacity: 0.85;
+  }
+  .ch-content .ch-bottom em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    display: block;
+    font-size: 12px;
+    color: var(--parchment-deep);
+    margin-top: 8px;
+    opacity: 0.7;
+  }
+
+  /* ============ SCENE 05 — STORYBOARD ============ */
+  .s5 { padding: 120px 80px; background: var(--ink); }
+  .s5-row {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+  .s5-row h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: var(--parchment);
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .s5-row .pre {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    margin-bottom: 12px;
+  }
+  .s5-row p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--parchment);
+    opacity: 0.8;
+  }
+  .storyboard {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+  .sb-frame {
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--amber-deep);
+  }
+  .sb-frame .sb-img { position: absolute; inset: 0; }
+  .sb-img.f1 { background:
+    radial-gradient(ellipse at 50% 70%, rgba(240,176,64,0.5) 0%, transparent 50%),
+    linear-gradient(0deg, #0a0805 0%, #050202 100%);
+  }
+  .sb-img.f2 { background:
+    radial-gradient(ellipse at 35% 50%, rgba(232,221,195,0.4) 0%, transparent 45%),
+    radial-gradient(circle at 70% 60%, rgba(90,26,31,0.4) 0%, transparent 55%),
+    #0a0503;
+  }
+  .sb-img.f3 { background:
+    radial-gradient(ellipse at 50% 50%, rgba(200,133,74,0.6) 0%, transparent 40%),
+    linear-gradient(180deg, #1a0805 0%, #050202 100%);
+  }
+  .sb-img.f4 { background:
+    radial-gradient(ellipse at 50% 55%, rgba(180,210,180,0.4) 0%, transparent 45%),
+    #0a1812;
+  }
+  .sb-img.f5 { background:
+    radial-gradient(ellipse at 30% 40%, rgba(232,221,195,0.5) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(216,80,72,0.3) 0%, transparent 50%),
+    #0a0503;
+  }
+  .sb-img.f6 { background:
+    radial-gradient(ellipse at 50% 50%, rgba(240,176,64,0.4) 0%, transparent 50%),
+    linear-gradient(180deg, #1a0e08 0%, #050202 100%);
+  }
+  .sb-frame .sb-tag {
+    position: absolute;
+    bottom: 8px; left: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--amber);
+    letter-spacing: 0.2em;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 6px;
+  }
+  .sb-frame .sb-line {
+    position: absolute;
+    bottom: 8px; right: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--parchment);
+    text-align: right;
+    max-width: 70%;
+    line-height: 1.3;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9);
+  }
+  .sb-frame .sb-num {
+    position: absolute;
+    top: 8px; left: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+  }
+
+  /* ============ SCENE 06 — SYSTEM ============ */
+  .s6 { padding: 120px 80px; background: var(--film); border-top: 1px solid var(--amber-deep); }
+  .s6 .pre {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    margin-bottom: 12px;
+  }
+  .s6 h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: var(--parchment);
+    margin-bottom: 64px;
+    letter-spacing: 0.1em;
+  }
+  .sys-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .sys-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--amber);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+  .sys-block .h3-cn {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.25em;
+    margin-bottom: 28px;
+  }
+
+  /* Color palette as film color-grade strip */
+  .color-strip {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+    margin-bottom: 16px;
+  }
+  .cs {
+    aspect-ratio: 1;
+    position: relative;
+  }
+  .cs::after {
+    content: attr(data-hex);
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--parchment-deep);
+    letter-spacing: 0.1em;
+  }
+  .cs span {
+    position: absolute; top: 8px; left: 8px;
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 11px; color: var(--parchment);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+  .grade-recipe {
+    margin-top: 56px;
+    background: var(--ink);
+    border: 1px solid var(--amber-deep);
+    padding: 24px 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--parchment);
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+  .grade-recipe .label { color: var(--amber); }
+
+  /* Type samples */
+  .type-block { padding: 24px 0; border-bottom: 1px solid rgba(232,221,195,0.1); }
+  .type-block:last-child { border-bottom: 0; }
+  .type-block .tb-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--amber);
+    letter-spacing: 0.3em;
+    margin-bottom: 8px;
+  }
+  .type-block .tb-sample {
+    color: var(--parchment);
+  }
+  .type-block .tb-sample.cn-display { font-family: 'Noto Serif SC', serif; font-weight: 200; font-size: 56px; letter-spacing: 0.1em; }
+  .type-block .tb-sample.en-display { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: 40px; letter-spacing: 0.05em; }
+  .type-block .tb-sample.cn-body { font-family: 'Noto Sans SC', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.7; }
+  .type-block .tb-sample.en-mono { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 14px; letter-spacing: 0.15em; color: var(--amber); }
+  .type-block .tb-note {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--parchment-deep);
+    margin-top: 8px;
+    opacity: 0.7;
+  }
+
+  /* ============ SCENE 07 — APPLICATIONS ============ */
+  .s7 { padding: 120px 80px; background: var(--ink); border-top: 1px solid var(--amber-deep); }
+  .s7 .pre {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.4em;
+    margin-bottom: 12px;
+  }
+  .s7 h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    font-size: 56px;
+    color: var(--parchment);
+    margin-bottom: 64px;
+    letter-spacing: 0.1em;
+  }
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+  .app {
+    background: var(--film);
+    border: 1px solid var(--amber-deep);
+    padding: 32px;
+  }
+  .app .app-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--amber);
+    letter-spacing: 0.3em;
+    margin-bottom: 24px;
+  }
+
+  /* Movie poster mock */
+  .poster {
+    aspect-ratio: 2/3;
+    background:
+      radial-gradient(ellipse at 50% 70%, rgba(200,133,74,0.4) 0%, transparent 45%),
+      radial-gradient(circle at 50% 30%, rgba(232,221,195,0.15) 0%, transparent 40%),
+      linear-gradient(180deg, var(--velvet) 0%, var(--ink) 80%);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--amber);
+  }
+  .poster .poster-content {
+    position: absolute; inset: 0;
+    padding: 24px 20px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    text-align: center;
+  }
+  .poster .poster-credit {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 11px; color: var(--amber); letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .poster .poster-mid { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .poster .poster-cn {
+    font-family: 'Noto Serif SC', serif; font-weight: 200;
+    font-size: 56px; color: var(--parchment); letter-spacing: 0.15em;
+    line-height: 1;
+  }
+  .poster .poster-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: var(--amber); letter-spacing: 0.15em;
+  }
+  .poster .poster-dir {
+    font-family: 'DM Mono', monospace; font-size: 9px;
+    color: var(--parchment-deep); letter-spacing: 0.25em;
+    opacity: 0.6;
+  }
+  .poster .poster-bottom { font-family: 'DM Mono', monospace; font-size: 8px; color: var(--parchment-deep); letter-spacing: 0.2em; opacity: 0.5; }
+
+  /* Reels mock */
+  .reels-mock {
+    aspect-ratio: 9/16;
+    background:
+      radial-gradient(ellipse at 50% 60%, rgba(200,133,74,0.4) 0%, transparent 50%),
+      linear-gradient(180deg, var(--teal-deep) 0%, var(--ink) 80%);
+    border-radius: 8px;
+    border: 1px solid var(--amber);
+    position: relative;
+    overflow: hidden;
+  }
+  .reels-mock::before, .reels-mock::after {
+    content: ''; position: absolute; left: 0; right: 0; height: 30px; z-index: 2;
+    background: var(--ink);
+  }
+  .reels-mock::before { top: 0; }
+  .reels-mock::after { bottom: 0; }
+  .reels-mock .subtitle-bar {
+    position: absolute;
+    bottom: 50px; left: 0; right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 8px 16px;
+    text-align: center;
+    z-index: 3;
+  }
+  .reels-mock .subtitle-bar .sub-cn {
+    font-family: 'Noto Serif SC', serif; font-weight: 400; font-size: 14px;
+    color: var(--parchment); letter-spacing: 0.05em;
+  }
+  .reels-mock .subtitle-bar .sub-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 10px;
+    color: var(--amber); margin-top: 2px; letter-spacing: 0.1em;
+  }
+  .reels-mock .reels-tc {
+    position: absolute; top: 38px; left: 14px; z-index: 3;
+    font-family: 'DM Mono', monospace; font-size: 9px;
+    color: var(--amber); letter-spacing: 0.2em;
+  }
+  .reels-mock .reels-tc::before { content: '◉ '; color: var(--velvet-light); }
+
+  /* Outlet signage mock */
+  .signage {
+    aspect-ratio: 4/3;
+    background: linear-gradient(180deg, #1a0805 0%, #050202 100%);
+    border: 1px solid var(--amber-deep);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .signage::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(240,176,64,0.2) 0%, transparent 60%);
+  }
+  .neon {
+    text-align: center;
+    position: relative; z-index: 2;
+  }
+  .neon-cn {
+    font-family: 'Noto Serif SC', serif; font-weight: 200;
+    font-size: 72px; color: var(--neon); letter-spacing: 0.1em; line-height: 1;
+    text-shadow:
+      0 0 8px var(--neon),
+      0 0 16px var(--neon),
+      0 0 32px rgba(240,176,64,0.7),
+      0 0 64px rgba(240,176,64,0.4);
+  }
+  .neon-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--neon); letter-spacing: 0.4em; margin-top: 16px;
+    text-shadow: 0 0 8px var(--neon), 0 0 16px rgba(240,176,64,0.6);
+  }
+
+  /* ============ SCENE 08 — BETS ============ */
+  .s8 { padding: 120px 80px; background: linear-gradient(180deg, var(--ink) 0%, var(--velvet) 100%); }
+  .s8 .pre {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--amber); letter-spacing: 0.4em; margin-bottom: 12px;
+  }
+  .s8 h2 {
+    font-family: 'Noto Serif SC', serif; font-weight: 300;
+    font-size: 72px; color: var(--parchment); margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  .s8 .h2-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 22px; color: var(--amber); margin-bottom: 64px;
+  }
+  .bet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .bet-card {
+    padding: 32px;
+    border-left: 2px solid var(--amber);
+    background: rgba(10,10,10,0.4);
+  }
+  .bet-card .bet-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--amber); letter-spacing: 0.4em; margin-bottom: 8px;
+  }
+  .bet-card h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 26px; color: var(--parchment); margin-bottom: 12px;
+  }
+  .bet-card p {
+    font-family: 'Inter', sans-serif; font-weight: 300;
+    font-size: 14px; line-height: 1.75; color: var(--parchment); opacity: 0.85;
+  }
+
+  .end-card {
+    margin-top: 80px;
+    text-align: center;
+    padding: 80px 40px;
+  }
+  .end-card .end-cn {
+    font-family: 'Noto Serif SC', serif; font-weight: 200;
+    font-size: 96px; color: var(--parchment); letter-spacing: 0.15em;
+    line-height: 1; margin-bottom: 24px;
+    text-shadow: 0 0 30px rgba(232,221,195,0.2), 0 0 80px rgba(200,133,74,0.2);
+  }
+  .end-card .end-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 24px; color: var(--amber); letter-spacing: 0.2em; margin-bottom: 56px;
+  }
+  .end-card .end-credits {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--parchment-deep); letter-spacing: 0.3em; line-height: 2;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+<div class="grain-overlay"></div>
+
+<div class="deck">
+
+<!-- ============ SCENE 01 — TITLE CARD ============ -->
+<div class="scene s1">
+  <div class="timecode">01:00:00:00 · TITLE</div>
+  <div class="scene-num">i / viii</div>
+
+  <div class="s1-top">
+    <div class="s1-tag">MOODBOARD v5 · CINEMA</div>
+    <div class="s1-credit">
+      A Chao 88 Production<br/>
+      <em>directed by NextGen</em>
+    </div>
+  </div>
+
+  <div class="s1-center">
+    <div class="s1-presents">NextGen Marketing presents</div>
+    <h1 class="s1-title-cn">潮八八映画</h1>
+    <div class="s1-title-en">Chao 88 · Cinema</div>
+    <div class="s1-divider"></div>
+    <div class="s1-tagline">每一锅汤 · 都是一部短片</div>
+    <div class="s1-tagline-en">every bowl, a short film</div>
+  </div>
+
+  <div class="s1-bottom">
+    <div>RUNTIME 8 SCENES · 22 MAY 2026 · CHAO 88 × NEXTGEN</div>
+    <div>v5 · ALTERNATIVE TO v4 · PICTUREBOOK</div>
+  </div>
+</div>
+
+<!-- ============ SCENE 02 — THE OPPOSITION ============ -->
+<div class="scene s2">
+  <div class="timecode">01:00:40:12 · OPPOSITION</div>
+  <div class="scene-num">ii / viii</div>
+
+  <div class="s2-pretitle">choose your weapon</div>
+  <h2 class="s2-title">绘本 · vs · 映画</h2>
+  <p class="s2-sub">Picturebook is bright, illustrated, broad. Cinema is dark, photographic, deep. Both real proposals. You choose.</p>
+
+  <div class="duality">
+    <div class="duality-side left">
+      <div class="role">OPTION A · v4</div>
+      <div class="name">绘本宇宙</div>
+      <div class="name-en">Picturebook Universe</div>
+      <ul>
+        <li>Illustrated mascot world — Brother 八, Ah-Mah, Lil' Eight</li>
+        <li>Watercolour palette · warm paper backgrounds</li>
+        <li>Broad family appeal · kids + mums + grandparents</li>
+        <li>Cost-efficient · one illustrator commission covers years</li>
+        <li>Easy to share · ig carousels and stickers</li>
+      </ul>
+      <div class="lower">Best for: mass-market family chain · IP-driven growth · merch potential</div>
+    </div>
+
+    <div class="duality-side right">
+      <div class="role">OPTION B · v5</div>
+      <div class="name">潮八八映画</div>
+      <div class="name-en">Chao 88 Cinema</div>
+      <ul>
+        <li>Cinematic film treatment · every video a short film</li>
+        <li>Wong Kar-wai colour grade · amber, teal, velvet, neon</li>
+        <li>Emotional, adult, premium · slow tempo, real silence</li>
+        <li>Higgsfield-native · AI video generation IS this aesthetic</li>
+        <li>Memorable · the brand people quote, not just visit</li>
+      </ul>
+      <div class="lower">Best for: positioning above SGD 35-60 perceived value · award-winning content · brand-led growth</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCENE 03 — BROTHS AS FILM SCENES ============ -->
+<div class="scene s3">
+  <div class="timecode">01:08:24:00 · ENSEMBLE</div>
+  <div class="scene-num">iii / viii</div>
+
+  <div class="s3-pretitle">FOUR BROTHS · FOUR FILMS</div>
+  <h2 class="s3-title">每一锅 · 都有片名</h2>
+  <div class="s3-en">Each broth treated like a short film — title card, logline, mood.</div>
+
+  <div class="scene-grid">
+    <!-- Broth 1 -->
+    <div class="film-card">
+      <div class="letterbox">
+        <div class="scene-img broth-1"></div>
+        <div class="scene-overlay">
+          <div class="scene-tag">FILM 01 · MALA</div>
+          <div class="scene-line">"the loud cousin who shows up uninvited and stays past midnight"</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="title-cn">川式黑金麻辣鸡煲</div>
+        <div class="title-en">Black Gold Mala — A Sichuan Romance</div>
+        <p class="logline">A slow-burn drama in chili oil. Layered, theatrical, unapologetic. Ends with everyone reaching for water and asking for more.</p>
+        <div class="credits">
+          <span><span class="key">DIR · </span>WARM AMBER</span>
+          <span><span class="key">DOP · </span>HARD KEY 45°</span>
+          <span><span class="key">RUN · </span>45 SEC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Broth 2 -->
+    <div class="film-card">
+      <div class="letterbox">
+        <div class="scene-img broth-2"></div>
+        <div class="scene-overlay">
+          <div class="scene-tag">FILM 02 · STONE OLIVE</div>
+          <div class="scene-line">"a love letter to the lungs, written in steam"</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="title-cn">野生石橄榄鸡煲</div>
+        <div class="title-en">Stone Olive — Letters from the Mountain</div>
+        <p class="logline">Quiet, herbal, restorative. Mum's first choice. A film without dialogue — just a bowl, soft light, and the sound of someone exhaling.</p>
+        <div class="credits">
+          <span><span class="key">DIR · </span>COOL TEAL</span>
+          <span><span class="key">DOP · </span>SOFT TOP</span>
+          <span><span class="key">RUN · </span>60 SEC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Broth 3 -->
+    <div class="film-card">
+      <div class="letterbox">
+        <div class="scene-img broth-3"></div>
+        <div class="scene-overlay">
+          <div class="scene-tag">FILM 03 · PINEAPPLE</div>
+          <div class="scene-line">"the morning sun caught between two friends laughing"</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="title-cn">凤梨鸡煲</div>
+        <div class="title-en">Pineapple Chicken — The First Bowl</div>
+        <p class="logline">Bright, sweet-tart, the gateway broth. The film a first-time hotpot diner could love. Golden hour light, kids' laughter, no subtitles needed.</p>
+        <div class="credits">
+          <span><span class="key">DIR · </span>GOLDEN HOUR</span>
+          <span><span class="key">DOP · </span>BACKLIT 60°</span>
+          <span><span class="key">RUN · </span>30 SEC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Broth 4 -->
+    <div class="film-card">
+      <div class="letterbox">
+        <div class="scene-img broth-4"></div>
+        <div class="scene-overlay">
+          <div class="scene-tag">FILM 04 · BLACK CHICKEN</div>
+          <div class="scene-line">"grandma's emergency-flu pot, returning to a winter kitchen"</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="title-cn">乌鸡养身鸡煲</div>
+        <div class="title-en">Black Chicken — The Inheritance</div>
+        <p class="logline">Slow-simmered until the bones soften. The film about coming home — older, quieter, grateful for the broth your grandmother left simmering.</p>
+        <div class="credits">
+          <span><span class="key">DIR · </span>VELVET RED</span>
+          <span><span class="key">DOP · </span>CANDLE SOURCE</span>
+          <span><span class="key">RUN · </span>75 SEC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCENE 04 — THREE CHAPTERS ============ -->
+<div class="scene s4">
+  <div class="timecode">01:18:11:00 · ACT STRUCTURE</div>
+  <div class="scene-num">iv / viii</div>
+
+  <h2 class="s4-title">three <em>chapters</em></h2>
+  <div class="s4-sub">EVERY VIDEO BELONGS TO ONE</div>
+
+  <div class="chapter-strip">
+    <!-- Chapter 1: 鲜 -->
+    <div class="chapter c1">
+      <div class="ch-bg"></div>
+      <div class="ch-content">
+        <div class="ch-num">CHAPTER 一</div>
+        <div class="ch-center">
+          <div class="ch-big">鲜</div>
+          <div class="ch-en-title">The Cleaver</div>
+        </div>
+        <div class="ch-bottom">
+          5am at the JB factory. Steel meets bone. Every cut is a goodbye to yesterday.
+          <em>— Pillar of process · V1, V2, V3</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter 2: 养 -->
+    <div class="chapter c2">
+      <div class="ch-bg"></div>
+      <div class="ch-content">
+        <div class="ch-num">CHAPTER 二</div>
+        <div class="ch-center">
+          <div class="ch-big" style="color: #B8D8C8;">养</div>
+          <div class="ch-en-title" style="color: #B8D8C8;">The Broth</div>
+        </div>
+        <div class="ch-bottom">
+          Stone olive for the lungs. Pineapple for the gut. Black chicken for the deep tired.
+          <em>— Pillar of wellness · V4, V5, V6, V7</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter 3: 家 -->
+    <div class="chapter c3">
+      <div class="ch-bg"></div>
+      <div class="ch-content">
+        <div class="ch-num">CHAPTER 三</div>
+        <div class="ch-center">
+          <div class="ch-big">家</div>
+          <div class="ch-en-title">The Table</div>
+        </div>
+        <div class="ch-bottom">
+          Mum picks a drumstick. Grandma sips broth. Dad pours wine. Chao 88 understands the quiet.
+          <em>— Pillar of family · V14, V15 + everyone's testimonial</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCENE 05 — STORYBOARD ============ -->
+<div class="scene s5">
+  <div class="timecode">01:24:50:08 · STORYBOARD</div>
+  <div class="scene-num">v / viii</div>
+
+  <div class="s5-row">
+    <div>
+      <div class="pre">STORYBOARD · V1 · "现切"</div>
+      <h2>6 frames, no dialogue.</h2>
+      <p>Every video opens with a title card, holds 4-5 cinematic frames, closes with a quiet brand sign-off. No karaoke subtitles. The viewer leans in.</p>
+    </div>
+    <div class="storyboard">
+      <div class="sb-frame">
+        <div class="sb-img f1"></div>
+        <div class="sb-num">FR 01</div>
+        <div class="sb-tag">EXT · JB FACTORY · 04:55</div>
+        <div class="sb-line">"before the city wakes"</div>
+      </div>
+      <div class="sb-frame">
+        <div class="sb-img f2"></div>
+        <div class="sb-num">FR 02</div>
+        <div class="sb-tag">INT · CLEAVER</div>
+        <div class="sb-line">macro · steel meets bone</div>
+      </div>
+      <div class="sb-frame">
+        <div class="sb-img f3"></div>
+        <div class="sb-num">FR 03</div>
+        <div class="sb-tag">EXT · CAUSEWAY · 06:30</div>
+        <div class="sb-line">"two hours across the strait"</div>
+      </div>
+      <div class="sb-frame">
+        <div class="sb-img f4"></div>
+        <div class="sb-num">FR 04</div>
+        <div class="sb-tag">INT · POT · 11:00</div>
+        <div class="sb-line">steam rises · slow motion</div>
+      </div>
+      <div class="sb-frame">
+        <div class="sb-img f5"></div>
+        <div class="sb-num">FR 05</div>
+        <div class="sb-tag">INT · TABLE · 18:30</div>
+        <div class="sb-line">"a family takes its seat"</div>
+      </div>
+      <div class="sb-frame">
+        <div class="sb-img f6"></div>
+        <div class="sb-num">FR 06</div>
+        <div class="sb-tag">TITLE · 18:40</div>
+        <div class="sb-line">"潮八八 · cut today"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCENE 06 — SYSTEM ============ -->
+<div class="scene s6">
+  <div class="timecode">01:36:00:00 · DESIGN SPECS</div>
+  <div class="scene-num">vi / viii</div>
+
+  <div class="pre">SYSTEM</div>
+  <h2>the colour grade · the type</h2>
+
+  <div class="sys-grid">
+    <!-- Color grade -->
+    <div class="sys-block">
+      <h3>The Colour Grade</h3>
+      <div class="h3-cn">六色 · 调色板 · 王家卫式</div>
+
+      <div class="color-strip" style="margin-bottom: 32px;">
+        <div class="cs" style="background: var(--amber);" data-hex="#C8854A"><span>琥珀</span></div>
+        <div class="cs" style="background: var(--amber-deep);" data-hex="#8A5A28"><span>古铜</span></div>
+        <div class="cs" style="background: var(--teal);" data-hex="#2C4A52"><span>湖青</span></div>
+        <div class="cs" style="background: var(--velvet);" data-hex="#5A1A1F"><span>绒红</span></div>
+        <div class="cs" style="background: var(--parchment); border: 1px solid var(--amber-deep);" data-hex="#E8DDC3"><span style="color: var(--ink); text-shadow: none;">米黄</span></div>
+        <div class="cs" style="background: var(--neon);" data-hex="#F0B040"><span style="color: var(--ink); text-shadow: none;">霓虹</span></div>
+      </div>
+
+      <div class="grade-recipe">
+        <div><span class="label">LUT_NAME:</span> Chao88_Heritage_Cinema</div>
+        <div><span class="label">SHADOWS:</span> Teal #2C4A52 — push -8</div>
+        <div><span class="label">MIDS:</span> Amber #C8854A — push +12</div>
+        <div><span class="label">HIGHLIGHTS:</span> Parchment #E8DDC3 — soften -4</div>
+        <div><span class="label">SATURATION:</span> -10 overall, +15 reds only</div>
+        <div><span class="label">GRAIN:</span> 35mm · 800 ASA simulation</div>
+        <div><span class="label">REFERENCE:</span> WKW · Christopher Doyle · Ang Lee · Eat Drink Man Woman</div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="sys-block">
+      <h3>Typography</h3>
+      <div class="h3-cn">字体 · 三体系 · 字距宽松</div>
+
+      <div class="type-block">
+        <div class="tb-role">CN · DISPLAY</div>
+        <div class="tb-sample cn-display">潮八八映画</div>
+        <div class="tb-note">Noto Serif SC ExtraLight 200 · letter-spacing 0.15em · light strokes, generous space, premium feel</div>
+      </div>
+
+      <div class="type-block">
+        <div class="tb-role">EN · TITLE / LOGLINE</div>
+        <div class="tb-sample en-display">A bowl that does something.</div>
+        <div class="tb-note">Cormorant Garamond Italic 500 · used for film titles, loglines, lyrical English</div>
+      </div>
+
+      <div class="type-block">
+        <div class="tb-role">CN · SUBTITLE / BODY</div>
+        <div class="tb-sample cn-body">现切, 慢炖, 五点钟的JB工厂还没醒。</div>
+        <div class="tb-note">Noto Sans SC Light 300 · 18pt · subtitle bar bottom, never centered loud</div>
+      </div>
+
+      <div class="type-block">
+        <div class="tb-role">CREDITS / TIMECODE</div>
+        <div class="tb-sample en-mono">01:24:50:08 · DIR. WARM AMBER · RUN 45 SEC</div>
+        <div class="tb-note">DM Mono Medium · letter-spacing 0.3em · for timecodes, credits, technical chyrons, behind-the-scenes annotations</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCENE 07 — APPLICATIONS ============ -->
+<div class="scene s7">
+  <div class="timecode">01:48:20:00 · APPLICATIONS</div>
+  <div class="scene-num">vii / viii</div>
+
+  <div class="pre">IN THE WILD</div>
+  <h2>where it lives</h2>
+
+  <div class="app-grid">
+    <!-- Movie poster -->
+    <div class="app">
+      <div class="app-label">▌POSTER · OUTLET WALL / IG GRID</div>
+      <div class="poster">
+        <div class="poster-content">
+          <div class="poster-credit">NextGen Presents</div>
+          <div class="poster-mid">
+            <div class="poster-cn">石橄榄</div>
+            <div class="poster-en">Stone Olive</div>
+            <div class="poster-dir">A FILM ABOUT BREATHING</div>
+          </div>
+          <div class="poster-bottom">CHAO 88 · 4 OUTLETS · SG</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IG Reels -->
+    <div class="app">
+      <div class="app-label">▌IG REEL / TIKTOK · 9:16</div>
+      <div class="reels-mock">
+        <div class="reels-tc">REC 01:24</div>
+        <div class="subtitle-bar">
+          <div class="sub-cn">现切, 不是新鲜的口号</div>
+          <div class="sub-en">CUT TODAY, NOT A SLOGAN</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outlet signage -->
+    <div class="app">
+      <div class="app-label">▌OUTLET SIGNAGE · NIGHT</div>
+      <div class="signage">
+        <div class="neon">
+          <div class="neon-cn">潮八八</div>
+          <div class="neon-en">CHAO 88</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grade-recipe" style="margin-top: 56px;">
+    <div><span class="label">EXTENDS TO:</span> menu booklet (matte parchment, letterpress amber) · gift box (velvet red) · staff aprons (deep teal) · WhatsApp messages (typewriter timecodes) · Higgsfield AI prompts (preset: Chao88_Heritage_Cinema LUT)</div>
+  </div>
+</div>
+
+<!-- ============ SCENE 08 — BETS ============ -->
+<div class="scene s8">
+  <div class="timecode">02:00:00:00 · END</div>
+  <div class="scene-num">viii / viii</div>
+
+  <div class="pre">WHY THIS</div>
+  <h2>四个理由 · 押注映画</h2>
+  <div class="h2-en">— four reasons to bet on the cinema —</div>
+
+  <div class="bet-grid">
+    <div class="bet-card">
+      <div class="bet-num">REASON · 一</div>
+      <h4>感性高于功能</h4>
+      <p>Family / wellness diners are emotionally driven. A cinematic short delivers feeling per second far higher than a recipe shot. People share what makes them feel something — discount codes don't viral, films do.</p>
+    </div>
+
+    <div class="bet-card">
+      <div class="bet-num">REASON · 二</div>
+      <h4>Higgsfield原生</h4>
+      <p>AI video generation excels at chiaroscuro, slow-motion, food close-ups, steam — exactly this aesthetic. Your new Higgsfield subscription becomes a production studio. One LUT, infinite scenes.</p>
+    </div>
+
+    <div class="bet-card">
+      <div class="bet-num">REASON · 三</div>
+      <h4>定位向上一个档</h4>
+      <p>Mid-tier SGD 35-60 brands all look the same — bright, cluttered, loud. Cinema-grade content lifts the perceived value 1.5-2 tiers. Same dish, different signal. Customers pay for the story they're walking into.</p>
+    </div>
+
+    <div class="bet-card">
+      <div class="bet-num">REASON · 四</div>
+      <h4>奖项与PR可能</h4>
+      <p>Picturebook is loved. Cinema is reviewed. Films get talked about in F&B trade press, restaurant award juries, design blogs. Joanna ends up on stage at SG Restaurant Week, not behind a counter.</p>
+    </div>
+  </div>
+
+  <div class="end-card">
+    <div class="end-cn">慢一点 · 鲜一点</div>
+    <div class="end-en">— slower. fresher. cinema. —</div>
+    <div class="end-credits">
+      MOODBOARD v5 · 22 MAY 2026 · NEXTGEN MARKETING SOLUTIONS<br/>
+      A PROPOSAL FOR CHAO 88 · 潮八八现切鸡煲<br/>
+      <br/>
+      DIRECTED BY · LAWRENCE OOI<br/>
+      WITH · CHAO 88 · JOANNA SEET<br/>
+      RUNTIME · 8 SCENES · UNRATED · NOT FOR PUBLIC RELEASE YET
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

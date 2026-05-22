@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>潮八八绘本宇宙 · Chao 88 Storybook Universe — v4</title>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Caveat:wght@500;700&family=Fraunces:ital,wght@0,500;0,700;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D85048;
+    --red-deep: #B7342A;
+    --paper: #FEFCF5;
+    --paper-deep: #F4EAD3;
+    --moss: #3A7860;
+    --moss-deep: #1E5A44;
+    --gold: #E5C290;
+    --gold-deep: #C89A5B;
+    --ink: #1A1A1A;
+    --soft-ink: #4A4A48;
+    --blush: #F5C8C2;
+    --sky: #C8D8D0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background: #2A2520;
+    color: var(--ink);
+    padding: 40px 20px;
+    line-height: 1.5;
+  }
+  .deck { max-width: 1400px; margin: 0 auto; }
+  .spread {
+    background: var(--paper);
+    border-radius: 8px;
+    margin-bottom: 28px;
+    padding: 80px 96px;
+    box-shadow: 0 28px 60px rgba(0,0,0,0.45);
+    position: relative;
+    overflow: hidden;
+  }
+  .spread::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='paper'%3E%3CfeTurbulence baseFrequency='0.04' numOctaves='5'/%3E%3CfeColorMatrix values='0 0 0 0 0.85 0 0 0 0 0.78 0 0 0 0 0.6 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23paper)'/%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+  .pg { position: absolute; top: 32px; right: 36px; font-family: 'Fraunces', serif; font-style: italic; font-size: 13px; color: var(--gold-deep); letter-spacing: 0.3em; }
+  .foot { position: absolute; bottom: 28px; left: 36px; font-family: 'Caveat', cursive; font-size: 18px; color: var(--moss); }
+  .foot-r { position: absolute; bottom: 28px; right: 36px; font-family: 'Fraunces', serif; font-style: italic; font-size: 11px; color: var(--soft-ink); letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.7; }
+
+  /* ============ PAGE 1 — HERO ============ */
+  .p1 {
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 48px;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(216,80,72,0.07) 0%, transparent 40%),
+      radial-gradient(circle at 80% 20%, rgba(58,120,96,0.08) 0%, transparent 40%),
+      var(--paper);
+  }
+  .p1::after {
+    content: ''; position: absolute; right: -80px; top: -80px;
+    width: 240px; height: 240px;
+    background: var(--blush);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 0;
+  }
+  .p1-text { position: relative; z-index: 2; }
+  .p1-tag {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    color: var(--red);
+    transform: rotate(-3deg);
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 4px 16px;
+    background: var(--blush);
+    border-radius: 30px;
+    opacity: 0.95;
+  }
+  .p1-title {
+    font-family: 'ZCOOL QingKe HuangYou', 'Ma Shan Zheng', cursive;
+    font-size: 96px;
+    color: var(--moss-deep);
+    line-height: 0.95;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+  .p1-en-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--red);
+    margin-bottom: 32px;
+    line-height: 1.05;
+  }
+  .p1-tagline {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+  .p1-tagline-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--soft-ink);
+    line-height: 1.6;
+    max-width: 460px;
+  }
+  .p1-meta {
+    margin-top: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--gold-deep);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+
+  /* Big mascot */
+  .mascot-wrap { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; }
+  .speech-bubble {
+    position: absolute;
+    top: 30px; left: 0;
+    background: var(--paper-deep);
+    border: 2px solid var(--ink);
+    padding: 14px 20px;
+    border-radius: 24px;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 22px;
+    color: var(--ink);
+    transform: rotate(-4deg);
+    box-shadow: 4px 4px 0 var(--moss-deep);
+  }
+  .speech-bubble::after {
+    content: ''; position: absolute;
+    bottom: -14px; left: 30px;
+    width: 0; height: 0;
+    border: 8px solid transparent;
+    border-top-color: var(--ink);
+  }
+  .speech-bubble::before {
+    content: ''; position: absolute;
+    bottom: -10px; left: 32px;
+    width: 0; height: 0;
+    border: 6px solid transparent;
+    border-top-color: var(--paper-deep);
+    z-index: 1;
+  }
+  .floating-ingredient {
+    position: absolute;
+    width: 60px; height: 60px;
+  }
+  .float-1 { top: 50px; right: 30px; animation: float 4s ease-in-out infinite; }
+  .float-2 { bottom: 80px; right: 60px; animation: float 4s ease-in-out infinite 1s; }
+  .float-3 { bottom: 130px; left: 20px; animation: float 4s ease-in-out infinite 2s; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+  /* ============ PAGE 2 — WHY ============ */
+  .p2 { padding-top: 80px; padding-bottom: 80px; }
+  .p2-pretitle {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .p2-title {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 56px;
+    color: var(--moss-deep);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+  .p2-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--soft-ink);
+    margin-bottom: 56px;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .why-card {
+    background: var(--paper-deep);
+    border-radius: 6px;
+    padding: 32px 28px;
+    position: relative;
+    border: 1.5px dashed var(--moss);
+  }
+  .why-card .num {
+    position: absolute; top: -18px; left: 24px;
+    background: var(--red);
+    color: var(--paper);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-style: italic;
+    font-size: 16px;
+    box-shadow: 0 4px 0 var(--red-deep);
+  }
+  .why-card .cn {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 26px;
+    color: var(--moss-deep);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+  .why-card .en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--red);
+    margin-bottom: 14px;
+  }
+  .why-card .body {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .why-vs {
+    margin-top: 48px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 6px;
+    padding: 28px 36px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .why-vs .vs-side {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .why-vs .vs-side strong {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+  }
+  .why-vs .vs-side.right { text-align: right; }
+  .why-vs .vs-side.right strong { color: var(--red); }
+  .vs-divider {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    color: var(--gold);
+  }
+
+  /* ============ PAGE 3 — CHARACTER UNIVERSE ============ */
+  .p3 .header-row { display: grid; grid-template-columns: 1fr auto; align-items: end; margin-bottom: 48px; }
+  .p3-title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 64px;
+    color: var(--red);
+    line-height: 1;
+  }
+  .p3-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--moss);
+    margin-top: 8px;
+  }
+  .p3-handnote {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--soft-ink);
+    transform: rotate(-2deg);
+    text-align: right;
+    max-width: 240px;
+    line-height: 1.3;
+  }
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .character {
+    background: var(--paper);
+    border-radius: 8px;
+    border: 2px solid var(--ink);
+    padding: 24px 16px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 6px 6px 0 var(--moss-deep);
+  }
+  .character:nth-child(2n) { box-shadow: 6px 6px 0 var(--red-deep); }
+  .character:nth-child(3n) { box-shadow: 6px 6px 0 var(--gold-deep); }
+  .character svg { width: 100%; height: 130px; margin-bottom: 12px; }
+  .character .ch-name {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 22px;
+    color: var(--moss-deep);
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+  .character .ch-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .character .ch-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--soft-ink);
+    line-height: 1.5;
+    min-height: 60px;
+  }
+  .character .ch-tag {
+    margin-top: 10px;
+    display: inline-block;
+    background: var(--blush);
+    color: var(--red-deep);
+    font-family: 'Caveat', cursive;
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 20px;
+  }
+
+  /* ============ PAGE 4 — BROTH PORTRAITS ============ */
+  .p4-title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 64px;
+    color: var(--moss-deep);
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .p4-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .p4-blurb {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--soft-ink);
+    margin-bottom: 56px;
+    max-width: 620px;
+    line-height: 1.7;
+  }
+  .broths-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .broth {
+    text-align: center;
+    background: var(--paper-deep);
+    padding: 28px 20px 24px;
+    border-radius: 6px;
+    position: relative;
+    border-top: 4px solid var(--ink);
+  }
+  .broth.b1 { border-top-color: var(--red-deep); }
+  .broth.b2 { border-top-color: var(--moss-deep); }
+  .broth.b3 { border-top-color: var(--gold-deep); }
+  .broth.b4 { border-top-color: var(--ink); }
+  .broth svg { width: 100%; height: 180px; margin-bottom: 16px; }
+  .broth .label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold-deep);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .broth .name {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 32px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+  .broth .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--soft-ink);
+    line-height: 1.6;
+    min-height: 70px;
+  }
+  .broth .benefit {
+    margin-top: 12px;
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    color: var(--moss-deep);
+    padding-top: 12px;
+    border-top: 1px dashed var(--gold-deep);
+  }
+
+  /* ============ PAGE 5 — COMIC STRIP ============ */
+  .p5-title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 64px;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .p5-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--moss);
+    margin-bottom: 56px;
+  }
+  .comic-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .panel {
+    aspect-ratio: 1;
+    background: var(--paper-deep);
+    border: 2.5px solid var(--ink);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .panel .panel-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .panel .panel-cap {
+    position: absolute;
+    bottom: 12px; left: 12px; right: 12px;
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    padding: 6px 10px;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 16px;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1.2;
+  }
+  .panel .panel-num {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: var(--red);
+    color: var(--paper);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-style: italic;
+    font-size: 14px;
+  }
+  .panel .panel-text {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    color: var(--ink);
+    max-width: 130px;
+    transform: rotate(2deg);
+  }
+  .panel-text-2 { top: auto !important; right: 14px; bottom: 70px; transform: rotate(-3deg) !important; }
+  .strip-note {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 20px 28px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .strip-note strong { color: var(--gold); font-family: 'Fraunces', serif; font-style: italic; }
+
+  /* ============ PAGE 6 — SYSTEM ============ */
+  .p6-title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 64px;
+    color: var(--moss-deep);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .p6-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--red);
+    margin-bottom: 48px;
+  }
+  .sys { margin-bottom: 48px; }
+  .sys h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .sys h3-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold-deep);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  /* Watercolor palette */
+  .wc-palette { display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; }
+  .wc-swatch {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    background-image: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.4), transparent 55%);
+  }
+  .wc-swatch .wc-label {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'Inter', monospace;
+    font-size: 10px;
+    color: var(--soft-ink);
+    letter-spacing: 0.05em;
+  }
+  .wc-swatch .wc-label strong {
+    display: block;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 2px;
+    letter-spacing: 0.1em;
+  }
+  .palette-section { padding-bottom: 56px; }
+  /* Type samples */
+  .type-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 2px dotted var(--moss);
+    align-items: center;
+  }
+  .type-row:last-child { border-bottom: 0; }
+  .type-row .role {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--moss-deep);
+  }
+  .type-row .role strong {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--gold-deep);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .type-row .sample.cn-display { font-family: 'ZCOOL QingKe HuangYou', cursive; font-size: 60px; color: var(--ink); }
+  .type-row .sample.cn-brush { font-family: 'Ma Shan Zheng', cursive; font-size: 52px; color: var(--red); }
+  .type-row .sample.cn-body { font-family: 'Noto Sans SC', sans-serif; font-weight: 500; font-size: 18px; line-height: 1.7; color: var(--ink); }
+  .type-row .sample.en-display { font-family: 'Fraunces', serif; font-style: italic; font-weight: 700; font-size: 42px; color: var(--moss-deep); }
+  .type-row .sample.en-hand { font-family: 'Caveat', cursive; font-size: 36px; color: var(--red); }
+  .type-row .when {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--soft-ink);
+    line-height: 1.6;
+    text-align: right;
+  }
+
+  /* ============ PAGE 7 — APPLICATIONS ============ */
+  .p7-title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 64px;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .p7-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--moss);
+    margin-bottom: 56px;
+  }
+  .apps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .app-card {
+    background: var(--paper-deep);
+    border-radius: 8px;
+    padding: 24px;
+    border: 2px solid var(--ink);
+  }
+  .app-card .app-label {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .app-card .app-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--gold-deep);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  /* IG carousel mock */
+  .ig-mock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+  .ig-tile {
+    aspect-ratio: 1;
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Sticker pack */
+  .sticker-pack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .sticker {
+    aspect-ratio: 1;
+    background: var(--paper);
+    border-radius: 8px;
+    padding: 8px;
+    border: 1.5px dashed var(--moss);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sticker svg { width: 100%; height: 100%; }
+  /* Menu card */
+  .menu-card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 4px 4px 0 var(--red-deep);
+  }
+  .menu-card svg { width: 100%; height: 120px; }
+  .menu-card .menu-name {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 22px;
+    color: var(--ink);
+    margin-top: 8px;
+  }
+  .menu-card .menu-price {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--red);
+    margin-top: 4px;
+  }
+
+  /* ============ PAGE 8 — BETTING ON ============ */
+  .p8 { background:
+    radial-gradient(circle at 80% 20%, rgba(216,80,72,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(58,120,96,0.08) 0%, transparent 50%),
+    var(--paper);
+  }
+  .p8-title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 80px;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .p8-title em {
+    color: var(--red);
+    font-style: normal;
+  }
+  .p8-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--moss-deep);
+    margin-bottom: 48px;
+  }
+  .bet-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .bet {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: var(--paper-deep);
+    border-radius: 8px;
+    border-left: 4px solid var(--red);
+  }
+  .bet .icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .bet .body h4 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .bet .body p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--soft-ink);
+  }
+  .closer {
+    margin-top: 64px;
+    padding: 40px;
+    background: var(--ink);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--paper);
+  }
+  .closer .big-cn {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 64px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .closer .big-en {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--paper);
+    opacity: 0.85;
+    letter-spacing: 0.1em;
+  }
+  .closer .sign {
+    margin-top: 32px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: var(--red);
+  }
+
+  /* Decorative stamps */
+  .stamp-decor {
+    position: absolute;
+    border: 2px solid var(--red);
+    color: var(--red);
+    padding: 6px 12px;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 14px;
+    transform: rotate(-8deg);
+    background: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+<!-- ============ PAGE 1 ============ -->
+<div class="spread p1">
+  <div class="pg">i · concept</div>
+
+  <div class="p1-text">
+    <div class="p1-tag">🐔 a whole new creative direction</div>
+    <div class="p1-title">潮八八<br/>绘本宇宙</div>
+    <div class="p1-en-title">The Chao 88<br/>Storybook Universe</div>
+    <div class="p1-tagline">不只是一家餐厅 — 是一个会讲故事的世界。</div>
+    <div class="p1-tagline-en">Not a restaurant. A picturebook where every chicken, every broth, every grandma has a name and a small adventure to share.</div>
+    <div class="p1-meta">MOODBOARD v4 · ILLUSTRATED · NEXTGEN MARKETING</div>
+  </div>
+
+  <div class="mascot-wrap">
+    <div class="speech-bubble">早呀！来碗汤？</div>
+
+    <!-- Floating ingredients -->
+    <svg class="floating-ingredient float-1" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="34" rx="14" ry="20" fill="#B7342A"/>
+      <path d="M30 14 L30 22" stroke="#3A7860" stroke-width="2"/>
+      <path d="M28 22 L30 14 L32 22" fill="#3A7860"/>
+      <ellipse cx="26" cy="30" rx="2" ry="3" fill="#D85048"/>
+    </svg>
+    <svg class="floating-ingredient float-2" viewBox="0 0 60 60">
+      <circle cx="20" cy="28" r="5" fill="#D85048"/>
+      <circle cx="32" cy="22" r="4" fill="#D85048"/>
+      <circle cx="40" cy="32" r="5" fill="#D85048"/>
+      <circle cx="26" cy="40" r="4" fill="#D85048"/>
+      <path d="M20 28 Q28 24 32 22 Q38 28 40 32 Q34 38 26 40 Q20 32 20 28" stroke="#3A7860" stroke-width="1" fill="none" opacity="0.5"/>
+    </svg>
+    <svg class="floating-ingredient float-3" viewBox="0 0 60 60">
+      <path d="M30 12 Q40 24 36 36 Q34 46 30 50 Q26 46 24 36 Q20 24 30 12" fill="#E5C290" stroke="#1A1A1A" stroke-width="1.5"/>
+      <path d="M30 18 L30 46" stroke="#1A1A1A" stroke-width="1"/>
+    </svg>
+
+    <!-- Main mascot: Brother 8 (Chef Chicken) -->
+    <svg viewBox="0 0 400 460" width="100%" style="max-width: 460px;">
+      <!-- Pot underneath -->
+      <ellipse cx="200" cy="410" rx="160" ry="14" fill="#1A1A1A" opacity="0.15"/>
+      <path d="M80 380 Q80 440 200 440 Q320 440 320 380 Z" fill="#1A1A1A"/>
+      <ellipse cx="200" cy="380" rx="120" ry="14" fill="#E5C290"/>
+      <ellipse cx="200" cy="378" rx="116" ry="10" fill="#B7342A" opacity="0.6"/>
+
+      <!-- Steam wisps -->
+      <path d="M150 350 Q145 320 150 290 Q155 270 145 250" stroke="#3A7860" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M200 340 Q205 310 200 280 Q195 250 205 230" stroke="#3A7860" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M250 350 Q255 320 250 290 Q245 270 255 250" stroke="#3A7860" stroke-width="2" fill="none" opacity="0.5"/>
+
+      <!-- Mascot body -->
+      <ellipse cx="200" cy="280" rx="90" ry="100" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="3"/>
+      <!-- Wing -->
+      <path d="M130 280 Q120 320 140 340 Q160 330 155 290 Z" fill="#F4EAD3" stroke="#1A1A1A" stroke-width="2.5"/>
+      <!-- Apron / neckerchief -->
+      <path d="M170 230 Q200 220 230 230 L240 280 Q200 290 160 280 Z" fill="#D85048" stroke="#1A1A1A" stroke-width="2.5"/>
+      <path d="M170 230 Q200 220 230 230" stroke="#1A1A1A" stroke-width="2.5" fill="none"/>
+      <!-- Apron text -->
+      <text x="200" y="262" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="22" fill="#FEFCF5" font-weight="900">八</text>
+
+      <!-- Head -->
+      <ellipse cx="200" cy="160" rx="78" ry="72" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="3"/>
+      <!-- Comb -->
+      <path d="M165 100 Q170 80 185 90 Q195 75 210 90 Q225 80 230 100" fill="#D85048" stroke="#1A1A1A" stroke-width="2.5"/>
+      <!-- Wattle -->
+      <ellipse cx="195" cy="200" rx="10" ry="14" fill="#D85048" stroke="#1A1A1A" stroke-width="2"/>
+      <!-- Beak -->
+      <path d="M205 175 L228 180 L208 188 Z" fill="#E5C290" stroke="#1A1A1A" stroke-width="2"/>
+      <!-- Eyes -->
+      <circle cx="178" cy="155" r="8" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+      <circle cx="180" cy="158" r="4" fill="#1A1A1A"/>
+      <circle cx="208" cy="155" r="8" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+      <circle cx="210" cy="158" r="4" fill="#1A1A1A"/>
+      <!-- Cheek blush -->
+      <ellipse cx="160" cy="175" rx="10" ry="6" fill="#F5C8C2" opacity="0.7"/>
+      <ellipse cx="240" cy="175" rx="10" ry="6" fill="#F5C8C2" opacity="0.7"/>
+      <!-- Eyebrows (dignified) -->
+      <path d="M170 140 Q178 135 188 142" stroke="#1A1A1A" stroke-width="2.5" fill="none"/>
+      <path d="M198 142 Q208 135 218 140" stroke="#1A1A1A" stroke-width="2.5" fill="none"/>
+      <!-- Smile under beak -->
+      <path d="M195 195 Q200 200 205 195" stroke="#1A1A1A" stroke-width="2" fill="none"/>
+      <!-- Chef hat -->
+      <path d="M150 100 Q140 50 170 50 Q170 30 200 40 Q230 30 230 50 Q260 50 250 100 Z" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="3"/>
+      <path d="M150 100 L250 100" stroke="#1A1A1A" stroke-width="3"/>
+      <ellipse cx="180" cy="80" rx="6" ry="4" fill="#F4EAD3"/>
+      <ellipse cx="215" cy="65" rx="8" ry="5" fill="#F4EAD3"/>
+
+      <!-- Holding ladle -->
+      <line x1="280" y1="320" x2="320" y2="240" stroke="#1A1A1A" stroke-width="3"/>
+      <ellipse cx="324" cy="232" rx="20" ry="14" fill="#E5C290" stroke="#1A1A1A" stroke-width="2.5"/>
+      <ellipse cx="324" cy="230" rx="14" ry="8" fill="#B7342A"/>
+
+      <!-- Feet -->
+      <line x1="180" y1="380" x2="170" y2="410" stroke="#1A1A1A" stroke-width="3"/>
+      <path d="M165 410 L175 410 M170 410 L168 414 M172 410 L176 414" stroke="#1A1A1A" stroke-width="2.5"/>
+      <line x1="220" y1="380" x2="230" y2="410" stroke="#1A1A1A" stroke-width="3"/>
+      <path d="M225 410 L235 410 M230 410 L232 414 M228 410 L224 414" stroke="#1A1A1A" stroke-width="2.5"/>
+    </svg>
+
+    <div class="stamp-decor" style="bottom: 30px; left: 0;">八哥 · Brother 8</div>
+  </div>
+
+  <div class="foot">Lawrence Ooi · NextGen Marketing</div>
+  <div class="foot-r">22 may 2026 · v4</div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="spread p2">
+  <div class="pg">ii · why this</div>
+
+  <div class="p2-pretitle">why a picturebook?</div>
+  <div class="p2-title">because nobody else dares.</div>
+  <div class="p2-sub">Every SG hotpot brand fights with the same red+gold dragons. We hand-draw our own world.</div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="num">1</div>
+      <div class="cn">自创IP</div>
+      <div class="en">Owned Universe</div>
+      <div class="body">A chicken mascot (Brother 八), a recurring grandma, a curious kid. Characters that become assets — stickers, plushies, kids menus, AR filters. Every video is a new chapter.</div>
+    </div>
+    <div class="why-card">
+      <div class="num">2</div>
+      <div class="cn">家庭友好</div>
+      <div class="en">Family-First</div>
+      <div class="body">Joanna's positioning: women, children, family gatherings. Illustration beats food porn for that audience — kids can read it, mums can share it, grandma understands it.</div>
+    </div>
+    <div class="why-card">
+      <div class="num">3</div>
+      <div class="cn">省成本</div>
+      <div class="en">Repeatable IP</div>
+      <div class="body">One illustration pack = thousands of variations. No need to re-shoot food every campaign. Comic strips for IG carousels. Stickers for WhatsApp. Animations for TikTok. One asset, many homes.</div>
+    </div>
+  </div>
+
+  <div class="why-vs">
+    <div class="vs-side">
+      <strong>Every other SG hotpot brand</strong>
+      Red lanterns. Gold dragons. Steaming food in saturated colour. Bold sans-serif text shouting "限时优惠". You blink, you've forgotten which brand.
+    </div>
+    <div class="vs-divider">vs.</div>
+    <div class="vs-side right">
+      <strong>潮八八 · Chao 88</strong>
+      A chicken in a tiny chef's hat ladling soup for a cartoon grandma. You smile. You remember. You tag a friend whose mum would love it.
+    </div>
+  </div>
+
+  <div class="foot">Page 2 of 8 · the strategy</div>
+  <div class="foot-r">moodboard v4</div>
+</div>
+
+<!-- ============ PAGE 3 — CHARACTERS ============ -->
+<div class="spread p3">
+  <div class="pg">iii · cast</div>
+
+  <div class="header-row">
+    <div>
+      <div class="p3-title">主角阵容</div>
+      <div class="p3-en">Meet the cast · 8 illustrated characters</div>
+    </div>
+    <div class="p3-handnote">"every restaurant should have characters, not just dishes."</div>
+  </div>
+
+  <div class="character-grid">
+    <!-- Brother 8 (mascot) -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="80" rx="32" ry="38" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2.5"/>
+        <ellipse cx="70" cy="46" rx="28" ry="26" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M58 24 Q62 14 70 20 Q78 14 82 24" fill="#D85048" stroke="#1A1A1A" stroke-width="2"/>
+        <path d="M60 18 Q55 8 75 8 Q70 0 85 5 Q90 0 90 18 Z" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+        <path d="M60 18 L90 18" stroke="#1A1A1A" stroke-width="2"/>
+        <circle cx="62" cy="44" r="3" fill="#1A1A1A"/>
+        <circle cx="78" cy="44" r="3" fill="#1A1A1A"/>
+        <path d="M74 52 L86 54 L76 60 Z" fill="#E5C290" stroke="#1A1A1A" stroke-width="1.5"/>
+        <ellipse cx="56" cy="56" rx="5" ry="3" fill="#F5C8C2"/>
+        <ellipse cx="84" cy="56" rx="5" ry="3" fill="#F5C8C2"/>
+        <text x="70" y="92" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="18" fill="#D85048" font-weight="900">八</text>
+      </svg>
+      <div class="ch-name">八哥</div>
+      <div class="ch-en">Brother Eight</div>
+      <div class="ch-desc">Head chef, brand mascot, philosophical-but-warm. Always wearing an apron with 八. Speaks in short proverbs.</div>
+      <div class="ch-tag">leads every video</div>
+    </div>
+
+    <!-- Grandma -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="80" rx="30" ry="36" fill="#3A7860" stroke="#1A1A1A" stroke-width="2.5"/>
+        <circle cx="70" cy="46" r="28" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M44 36 Q42 22 70 18 Q98 22 96 36 Q90 30 70 30 Q50 30 44 36" fill="#E5E5E5" stroke="#1A1A1A" stroke-width="2"/>
+        <circle cx="60" cy="44" r="2" fill="#1A1A1A"/>
+        <circle cx="80" cy="44" r="2" fill="#1A1A1A"/>
+        <path d="M58 50 Q60 52 62 50" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+        <path d="M78 50 Q80 52 82 50" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+        <path d="M64 58 Q70 62 76 58" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+        <ellipse cx="55" cy="54" rx="4" ry="2.5" fill="#D85048" opacity="0.4"/>
+        <ellipse cx="85" cy="54" rx="4" ry="2.5" fill="#D85048" opacity="0.4"/>
+      </svg>
+      <div class="ch-name">阿嬷</div>
+      <div class="ch-en">Ah-Mah</div>
+      <div class="ch-desc">The grandma who taught Brother Eight everything. Appears in flashbacks and "the recipe story" content.</div>
+      <div class="ch-tag">heritage / wellness posts</div>
+    </div>
+
+    <!-- Kid -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="86" rx="26" ry="30" fill="#D85048" stroke="#1A1A1A" stroke-width="2.5"/>
+        <circle cx="70" cy="50" r="26" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M44 40 Q44 24 70 24 Q96 24 96 40 Q88 36 70 36 Q52 36 44 40" fill="#1A1A1A"/>
+        <circle cx="60" cy="50" r="3" fill="#1A1A1A"/>
+        <circle cx="80" cy="50" r="3" fill="#1A1A1A"/>
+        <circle cx="61" cy="48" r="1" fill="#FEFCF5"/>
+        <circle cx="81" cy="48" r="1" fill="#FEFCF5"/>
+        <path d="M64 64 Q70 70 76 64" stroke="#1A1A1A" stroke-width="2" fill="#FEFCF5"/>
+        <ellipse cx="54" cy="58" rx="5" ry="3" fill="#D85048" opacity="0.5"/>
+        <ellipse cx="86" cy="58" rx="5" ry="3" fill="#D85048" opacity="0.5"/>
+        <!-- chopstick -->
+        <line x1="50" y1="92" x2="36" y2="100" stroke="#E5C290" stroke-width="2.5"/>
+      </svg>
+      <div class="ch-name">小八</div>
+      <div class="ch-en">Lil' Eight</div>
+      <div class="ch-desc">Brother Eight's apprentice / curious kid. Asks the "why" questions in stories — kids in the audience identify.</div>
+      <div class="ch-tag">kids menu &amp; carousel</div>
+    </div>
+
+    <!-- Mum -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="82" rx="28" ry="34" fill="#E5C290" stroke="#1A1A1A" stroke-width="2.5"/>
+        <circle cx="70" cy="48" r="26" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M42 38 Q40 18 70 14 Q100 18 98 38 Q90 28 70 26 Q50 28 42 38 Z" fill="#4A2818" stroke="#1A1A1A" stroke-width="2"/>
+        <path d="M42 38 Q40 56 50 70 M98 38 Q100 56 90 70" fill="#4A2818" stroke="#1A1A1A" stroke-width="2"/>
+        <circle cx="60" cy="50" r="2.5" fill="#1A1A1A"/>
+        <circle cx="80" cy="50" r="2.5" fill="#1A1A1A"/>
+        <path d="M60 56 Q62 58 64 56" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+        <path d="M76 56 Q78 58 80 56" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+        <path d="M66 64 Q70 66 74 64" stroke="#1A1A1A" stroke-width="2" fill="none"/>
+        <ellipse cx="55" cy="58" rx="4" ry="2.5" fill="#D85048" opacity="0.5"/>
+        <ellipse cx="85" cy="58" rx="4" ry="2.5" fill="#D85048" opacity="0.5"/>
+      </svg>
+      <div class="ch-name">阿妈</div>
+      <div class="ch-en">Mama</div>
+      <div class="ch-desc">Modern working mum who brings the family on weekends. The buyer persona — caring, time-strapped, values wellness.</div>
+      <div class="ch-tag">primary audience proxy</div>
+    </div>
+
+    <!-- Free range chicken -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="74" rx="34" ry="28" fill="#3A7860" stroke="#1A1A1A" stroke-width="2.5"/>
+        <ellipse cx="50" cy="58" rx="22" ry="20" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M40 38 Q42 28 50 34" fill="#D85048" stroke="#1A1A1A" stroke-width="1.5"/>
+        <circle cx="44" cy="56" r="2" fill="#1A1A1A"/>
+        <path d="M34 60 L24 62 L34 66 Z" fill="#E5C290" stroke="#1A1A1A" stroke-width="1.5"/>
+        <ellipse cx="46" cy="64" rx="4" ry="2" fill="#D85048" opacity="0.4"/>
+        <path d="M100 80 Q120 70 115 50 Q110 60 100 70" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+        <line x1="60" y1="100" x2="56" y2="116" stroke="#1A1A1A" stroke-width="2.5"/>
+        <line x1="76" y1="100" x2="78" y2="116" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M52 116 L58 118 M56 116 L54 120" stroke="#1A1A1A" stroke-width="2"/>
+        <path d="M74 116 L82 118 M78 116 L80 120" stroke="#1A1A1A" stroke-width="2"/>
+      </svg>
+      <div class="ch-name">走地鸡</div>
+      <div class="ch-en">Free-Range Hen</div>
+      <div class="ch-desc">Background character in JB factory scenes. Cute but reminds us where the chicken comes from. Used in V1, V2 process content.</div>
+      <div class="ch-tag">process / sourcing posts</div>
+    </div>
+
+    <!-- Tonic pot -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <path d="M40 60 Q40 110 70 110 Q100 110 100 60 Z" fill="#1A1A1A"/>
+        <ellipse cx="70" cy="60" rx="32" ry="6" fill="#E5C290"/>
+        <ellipse cx="70" cy="58" rx="28" ry="4" fill="#B7342A" opacity="0.6"/>
+        <path d="M55 50 Q53 36 58 28 M70 48 Q68 32 72 22 M85 50 Q88 36 84 28" stroke="#3A7860" stroke-width="2" fill="none" opacity="0.7"/>
+        <circle cx="60" cy="60" r="2" fill="#D85048"/>
+        <circle cx="78" cy="60" r="2" fill="#D85048"/>
+        <!-- face on pot -->
+        <circle cx="60" cy="80" r="3" fill="#FEFCF5"/>
+        <circle cx="61" cy="80" r="1.5" fill="#1A1A1A"/>
+        <circle cx="80" cy="80" r="3" fill="#FEFCF5"/>
+        <circle cx="81" cy="80" r="1.5" fill="#1A1A1A"/>
+        <path d="M62 90 Q70 96 78 90" stroke="#FEFCF5" stroke-width="2" fill="none"/>
+        <ellipse cx="54" cy="86" rx="4" ry="2" fill="#D85048" opacity="0.5"/>
+        <ellipse cx="86" cy="86" rx="4" ry="2" fill="#D85048" opacity="0.5"/>
+      </svg>
+      <div class="ch-name">汤先生</div>
+      <div class="ch-en">Mr Broth</div>
+      <div class="ch-desc">A talking soup pot. Narrates "what's bubbling today" content. Each of the 4 broths has a personality.</div>
+      <div class="ch-tag">menu education</div>
+    </div>
+
+    <!-- Jujube (red date) -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="74" rx="28" ry="40" fill="#B7342A" stroke="#1A1A1A" stroke-width="2.5"/>
+        <ellipse cx="62" cy="60" rx="6" ry="10" fill="#D85048"/>
+        <line x1="70" y1="34" x2="70" y2="22" stroke="#3A7860" stroke-width="2.5"/>
+        <path d="M62 28 L70 22 L78 28" fill="#3A7860"/>
+        <!-- face -->
+        <circle cx="62" cy="72" r="3" fill="#FEFCF5"/>
+        <circle cx="63" cy="72" r="1.5" fill="#1A1A1A"/>
+        <circle cx="78" cy="72" r="3" fill="#FEFCF5"/>
+        <circle cx="79" cy="72" r="1.5" fill="#1A1A1A"/>
+        <path d="M65 84 Q70 88 75 84" stroke="#FEFCF5" stroke-width="2" fill="none"/>
+        <ellipse cx="55" cy="78" rx="4" ry="2" fill="#1A1A1A" opacity="0.2"/>
+        <ellipse cx="85" cy="78" rx="4" ry="2" fill="#1A1A1A" opacity="0.2"/>
+      </svg>
+      <div class="ch-name">红枣弟</div>
+      <div class="ch-en">Lil Jujube</div>
+      <div class="ch-desc">One of the ingredient mascots. Each broth has its own gang — goji, ginseng, stone olive. Cute, info-friendly.</div>
+      <div class="ch-tag">ingredient explainers</div>
+    </div>
+
+    <!-- Customer (Dad) -->
+    <div class="character">
+      <svg viewBox="0 0 140 130">
+        <ellipse cx="70" cy="82" rx="32" ry="34" fill="#1E5A44" stroke="#1A1A1A" stroke-width="2.5"/>
+        <circle cx="70" cy="46" r="26" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="2.5"/>
+        <path d="M44 34 Q42 22 70 18 Q98 22 96 34 Q90 28 70 28 Q50 28 44 34" fill="#1A1A1A"/>
+        <circle cx="60" cy="48" r="2.5" fill="#1A1A1A"/>
+        <circle cx="80" cy="48" r="2.5" fill="#1A1A1A"/>
+        <!-- glasses -->
+        <circle cx="60" cy="48" r="8" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+        <circle cx="80" cy="48" r="8" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+        <line x1="68" y1="48" x2="72" y2="48" stroke="#1A1A1A" stroke-width="2"/>
+        <path d="M64 62 Q70 66 76 62" stroke="#1A1A1A" stroke-width="2" fill="none"/>
+        <ellipse cx="55" cy="58" rx="4" ry="2.5" fill="#D85048" opacity="0.4"/>
+        <ellipse cx="85" cy="58" rx="4" ry="2.5" fill="#D85048" opacity="0.4"/>
+      </svg>
+      <div class="ch-name">老爸</div>
+      <div class="ch-en">Lao Ba</div>
+      <div class="ch-desc">The dad. Quiet, makes the bookings, sneaks the second helping. Soft humour audience point.</div>
+      <div class="ch-tag">comic relief</div>
+    </div>
+  </div>
+
+  <div class="foot">8 characters · infinite stories</div>
+  <div class="foot-r">page 3 · the cast</div>
+</div>
+
+<!-- ============ PAGE 4 — BROTH PORTRAITS ============ -->
+<div class="spread">
+  <div class="pg">iv · the menu</div>
+
+  <div class="p4-title">四种鸡煲 · 四个故事</div>
+  <div class="p4-en">Four broths · four illustrated portraits</div>
+  <div class="p4-blurb">Each of the 4 signature chicken broths becomes a character of its own. Same illustrated jar / pot frame, different ingredient cast inside, different colour temperament. Reusable across menus, posters, IG carousels.</div>
+
+  <div class="broths-grid">
+    <!-- Mala / Black Gold -->
+    <div class="broth b1">
+      <svg viewBox="0 0 200 220">
+        <path d="M40 80 Q40 180 100 180 Q160 180 160 80 Z" fill="#1A1A1A"/>
+        <ellipse cx="100" cy="80" rx="60" ry="10" fill="#1A1A1A" stroke="#E5C290" stroke-width="2"/>
+        <ellipse cx="100" cy="78" rx="54" ry="6" fill="#B7342A"/>
+        <!-- chilies & oil shimmer -->
+        <ellipse cx="80" cy="78" rx="6" ry="3" fill="#D85048"/>
+        <ellipse cx="115" cy="76" rx="5" ry="3" fill="#D85048"/>
+        <circle cx="92" cy="80" r="3" fill="#E5C290"/>
+        <!-- chili pepper -->
+        <path d="M70 60 Q72 50 80 52 L78 60 Z" fill="#D85048" stroke="#1A1A1A" stroke-width="1.5"/>
+        <!-- steam -->
+        <path d="M70 60 Q66 40 70 24" stroke="#D85048" stroke-width="2" fill="none"/>
+        <path d="M100 60 Q104 40 100 20" stroke="#D85048" stroke-width="2" fill="none"/>
+        <path d="M130 60 Q126 40 130 24" stroke="#D85048" stroke-width="2" fill="none"/>
+        <!-- jar label -->
+        <rect x="58" y="120" width="84" height="38" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+        <text x="100" y="138" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="14" fill="#B7342A" font-weight="900">黑金麻辣</text>
+        <text x="100" y="152" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#1A1A1A">BLACK GOLD MALA</text>
+      </svg>
+      <div class="label">Broth 01</div>
+      <div class="name">黑金麻辣鸡煲</div>
+      <div class="desc">The one for the Sichuan-curious. Layered chili oil, slow-built numb-spicy. Brother Eight calls it "the loud cousin".</div>
+      <div class="benefit">辣 · 火 · 痛快</div>
+    </div>
+
+    <!-- Stone Olive -->
+    <div class="broth b2">
+      <svg viewBox="0 0 200 220">
+        <path d="M40 80 Q40 180 100 180 Q160 180 160 80 Z" fill="#3A7860"/>
+        <ellipse cx="100" cy="80" rx="60" ry="10" fill="#1A1A1A" stroke="#E5C290" stroke-width="2"/>
+        <ellipse cx="100" cy="78" rx="54" ry="6" fill="#D8E5C8"/>
+        <!-- olive ingredients -->
+        <circle cx="80" cy="78" r="4" fill="#3A7860" stroke="#1A1A1A" stroke-width="1"/>
+        <circle cx="100" cy="80" r="4" fill="#3A7860" stroke="#1A1A1A" stroke-width="1"/>
+        <circle cx="118" cy="78" r="4" fill="#3A7860" stroke="#1A1A1A" stroke-width="1"/>
+        <!-- steam -->
+        <path d="M70 60 Q66 40 72 24" stroke="#3A7860" stroke-width="2" fill="none"/>
+        <path d="M100 60 Q104 40 100 20" stroke="#3A7860" stroke-width="2" fill="none"/>
+        <path d="M130 60 Q126 40 132 24" stroke="#3A7860" stroke-width="2" fill="none"/>
+        <!-- jar label -->
+        <rect x="58" y="120" width="84" height="38" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+        <text x="100" y="138" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="14" fill="#3A7860" font-weight="900">石橄榄</text>
+        <text x="100" y="152" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#1A1A1A">STONE OLIVE</text>
+      </svg>
+      <div class="label">Broth 02</div>
+      <div class="name">野生石橄榄鸡煲</div>
+      <div class="desc">The wellness one. Wild olives clear the lungs, soothe the throat. Mum's favourite, doctor-approved.</div>
+      <div class="benefit">清 · 润 · 养肺</div>
+    </div>
+
+    <!-- Pineapple -->
+    <div class="broth b3">
+      <svg viewBox="0 0 200 220">
+        <path d="M40 80 Q40 180 100 180 Q160 180 160 80 Z" fill="#E5C290"/>
+        <ellipse cx="100" cy="80" rx="60" ry="10" fill="#1A1A1A" stroke="#E5C290" stroke-width="2"/>
+        <ellipse cx="100" cy="78" rx="54" ry="6" fill="#FFE4A8"/>
+        <!-- pineapple chunks -->
+        <rect x="76" y="75" width="6" height="6" fill="#E5C290" stroke="#1A1A1A" stroke-width="1"/>
+        <rect x="92" y="76" width="6" height="6" fill="#E5C290" stroke="#1A1A1A" stroke-width="1"/>
+        <rect x="112" y="74" width="6" height="6" fill="#E5C290" stroke="#1A1A1A" stroke-width="1"/>
+        <!-- steam -->
+        <path d="M70 60 Q66 40 72 24" stroke="#E5C290" stroke-width="2" fill="none"/>
+        <path d="M100 60 Q104 40 100 20" stroke="#E5C290" stroke-width="2" fill="none"/>
+        <path d="M130 60 Q126 40 132 24" stroke="#E5C290" stroke-width="2" fill="none"/>
+        <!-- jar label -->
+        <rect x="58" y="120" width="84" height="38" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+        <text x="100" y="138" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="14" fill="#C89A5B" font-weight="900">凤梨鸡</text>
+        <text x="100" y="152" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#1A1A1A">PINEAPPLE CHICKEN</text>
+      </svg>
+      <div class="label">Broth 03</div>
+      <div class="name">凤梨鸡煲</div>
+      <div class="desc">The bright one. Sweet-tart pineapple cuts the richness. Kids love it. The first hotpot for first-time-hotpot diners.</div>
+      <div class="benefit">甘 · 鲜 · 开胃</div>
+    </div>
+
+    <!-- Black Chicken -->
+    <div class="broth b4">
+      <svg viewBox="0 0 200 220">
+        <path d="M40 80 Q40 180 100 180 Q160 180 160 80 Z" fill="#2A2520"/>
+        <ellipse cx="100" cy="80" rx="60" ry="10" fill="#1A1A1A" stroke="#E5C290" stroke-width="2"/>
+        <ellipse cx="100" cy="78" rx="54" ry="6" fill="#5A4838"/>
+        <!-- black chicken pieces -->
+        <ellipse cx="82" cy="78" rx="6" ry="3" fill="#2A2520" stroke="#1A1A1A" stroke-width="1"/>
+        <ellipse cx="100" cy="80" rx="6" ry="3" fill="#2A2520" stroke="#1A1A1A" stroke-width="1"/>
+        <ellipse cx="118" cy="78" rx="6" ry="3" fill="#2A2520" stroke="#1A1A1A" stroke-width="1"/>
+        <!-- red dates -->
+        <ellipse cx="92" cy="80" rx="3" ry="2" fill="#B7342A"/>
+        <ellipse cx="110" cy="80" rx="3" ry="2" fill="#B7342A"/>
+        <!-- steam -->
+        <path d="M70 60 Q66 40 72 24" stroke="#E5C290" stroke-width="2" fill="none"/>
+        <path d="M100 60 Q104 40 100 20" stroke="#E5C290" stroke-width="2" fill="none"/>
+        <path d="M130 60 Q126 40 132 24" stroke="#E5C290" stroke-width="2" fill="none"/>
+        <!-- jar label -->
+        <rect x="58" y="120" width="84" height="38" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+        <text x="100" y="138" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="14" fill="#1A1A1A" font-weight="900">乌鸡养身</text>
+        <text x="100" y="152" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#1A1A1A">BLACK CHICKEN TONIC</text>
+      </svg>
+      <div class="label">Broth 04</div>
+      <div class="name">乌鸡养身鸡煲</div>
+      <div class="desc">The deep one. Black chicken, jujubes, codonopsis. Slow-simmered until the bones soften. Grandma's emergency-flu pot.</div>
+      <div class="benefit">补 · 暖 · 滋养</div>
+    </div>
+  </div>
+
+  <div class="foot">4 broths · 4 personalities</div>
+  <div class="foot-r">page 4 · menu portraits</div>
+</div>
+
+<!-- ============ PAGE 5 — COMIC STRIP ============ -->
+<div class="spread p5">
+  <div class="pg">v · stories</div>
+
+  <div class="p5-title">每条贴文都是一段故事</div>
+  <div class="p5-en">Every post = a 4-panel comic. Example: "Why we cut chicken every morning."</div>
+
+  <div class="comic-strip">
+    <!-- Panel 1: Brother 8 at 5am -->
+    <div class="panel">
+      <div class="panel-num">1</div>
+      <svg class="panel-svg" viewBox="0 0 200 200">
+        <!-- night sky background -->
+        <rect width="200" height="200" fill="#1A1A1A"/>
+        <circle cx="170" cy="40" r="14" fill="#FEFCF5"/>
+        <circle cx="174" cy="38" r="3" fill="#1A1A1A"/>
+        <circle cx="40" cy="30" r="2" fill="#FEFCF5"/>
+        <circle cx="80" cy="20" r="1.5" fill="#FEFCF5"/>
+        <circle cx="60" cy="50" r="1" fill="#FEFCF5"/>
+        <!-- factory building -->
+        <rect x="20" y="100" width="160" height="80" fill="#3A7860" stroke="#FEFCF5" stroke-width="2"/>
+        <rect x="40" y="120" width="20" height="20" fill="#E5C290"/>
+        <rect x="80" y="120" width="20" height="20" fill="#E5C290"/>
+        <rect x="120" y="120" width="20" height="20" fill="#E5C290"/>
+        <!-- chimney smoke -->
+        <rect x="140" y="80" width="20" height="20" fill="#3A7860" stroke="#FEFCF5" stroke-width="2"/>
+        <path d="M150 80 Q150 60 145 50 Q150 40 150 30" stroke="#FEFCF5" stroke-width="2" fill="none"/>
+      </svg>
+      <div class="panel-text">凌晨5点的<br/>JB工厂</div>
+      <div class="panel-cap">天还没亮, 鸡先到</div>
+    </div>
+
+    <!-- Panel 2: Cutting board -->
+    <div class="panel">
+      <div class="panel-num">2</div>
+      <svg class="panel-svg" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#F4EAD3"/>
+        <!-- cutting board -->
+        <rect x="30" y="100" width="140" height="60" rx="6" fill="#C89A5B" stroke="#1A1A1A" stroke-width="2"/>
+        <!-- chicken pieces -->
+        <ellipse cx="70" cy="130" rx="14" ry="8" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="1.5"/>
+        <ellipse cx="110" cy="128" rx="14" ry="8" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="1.5"/>
+        <ellipse cx="150" cy="130" rx="14" ry="8" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="1.5"/>
+        <!-- cleaver mid-swing -->
+        <path d="M40 30 L80 30 L80 70 L40 70 Z" fill="#E5E5E5" stroke="#1A1A1A" stroke-width="2"/>
+        <rect x="40" y="65" width="40" height="6" fill="#1A1A1A"/>
+        <rect x="48" y="30" width="6" height="50" fill="#1A1A1A"/>
+        <!-- motion lines -->
+        <path d="M80 75 L100 95 M85 80 L105 100" stroke="#1A1A1A" stroke-width="2"/>
+      </svg>
+      <div class="panel-text panel-text-2">咔嚓!<br/>每天150只</div>
+      <div class="panel-cap">现切, 不是新鲜的口号</div>
+    </div>
+
+    <!-- Panel 3: Brother 8 inspecting -->
+    <div class="panel">
+      <div class="panel-num">3</div>
+      <svg class="panel-svg" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#FEFCF5"/>
+        <!-- truck -->
+        <rect x="40" y="120" width="120" height="40" fill="#D85048" stroke="#1A1A1A" stroke-width="2"/>
+        <rect x="40" y="100" width="40" height="20" fill="#D85048" stroke="#1A1A1A" stroke-width="2"/>
+        <circle cx="60" cy="170" r="12" fill="#1A1A1A"/>
+        <circle cx="140" cy="170" r="12" fill="#1A1A1A"/>
+        <circle cx="60" cy="170" r="5" fill="#E5C290"/>
+        <circle cx="140" cy="170" r="5" fill="#E5C290"/>
+        <!-- "88" on truck side -->
+        <text x="120" y="148" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="22" fill="#FEFCF5" font-weight="900">88</text>
+        <!-- map / route -->
+        <path d="M170 60 Q150 80 130 60 Q110 40 90 60 Q70 80 50 60" stroke="#3A7860" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+        <circle cx="170" cy="60" r="4" fill="#3A7860"/>
+        <text x="170" y="50" text-anchor="middle" font-family="Caveat, cursive" font-size="11" fill="#3A7860">SG</text>
+        <circle cx="50" cy="60" r="4" fill="#D85048"/>
+        <text x="50" y="50" text-anchor="middle" font-family="Caveat, cursive" font-size="11" fill="#D85048">JB</text>
+      </svg>
+      <div class="panel-text">JB → SG<br/>2 hours</div>
+      <div class="panel-cap">两小时, 跨海到桌</div>
+    </div>
+
+    <!-- Panel 4: Family eating -->
+    <div class="panel">
+      <div class="panel-num">4</div>
+      <svg class="panel-svg" viewBox="0 0 200 200">
+        <rect width="200" height="200" fill="#F5C8C2" opacity="0.4"/>
+        <rect width="200" height="200" fill="url(#warmlight)"/>
+        <defs>
+          <radialGradient id="warmlight">
+            <stop offset="0%" stop-color="#E5C290" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#FEFCF5" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- table -->
+        <rect x="20" y="120" width="160" height="40" fill="#C89A5B" stroke="#1A1A1A" stroke-width="2"/>
+        <!-- pot -->
+        <path d="M70 100 Q70 140 100 140 Q130 140 130 100 Z" fill="#1A1A1A"/>
+        <ellipse cx="100" cy="100" rx="32" ry="6" fill="#E5C290"/>
+        <ellipse cx="100" cy="98" rx="28" ry="4" fill="#B7342A"/>
+        <!-- steam -->
+        <path d="M82 90 Q78 70 84 56" stroke="#3A7860" stroke-width="2" fill="none"/>
+        <path d="M100 90 Q104 70 100 50" stroke="#3A7860" stroke-width="2" fill="none"/>
+        <path d="M118 90 Q122 70 116 56" stroke="#3A7860" stroke-width="2" fill="none"/>
+        <!-- 3 small figures around the pot -->
+        <circle cx="40" cy="90" r="14" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="1.5"/>
+        <circle cx="36" cy="88" r="1.5" fill="#1A1A1A"/>
+        <circle cx="44" cy="88" r="1.5" fill="#1A1A1A"/>
+        <path d="M36 95 Q40 98 44 95" stroke="#1A1A1A" stroke-width="1.2" fill="none"/>
+        <rect x="32" y="100" width="16" height="20" fill="#3A7860"/>
+        <circle cx="160" cy="90" r="14" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="1.5"/>
+        <circle cx="156" cy="88" r="1.5" fill="#1A1A1A"/>
+        <circle cx="164" cy="88" r="1.5" fill="#1A1A1A"/>
+        <path d="M156 95 Q160 98 164 95" stroke="#1A1A1A" stroke-width="1.2" fill="none"/>
+        <rect x="152" y="100" width="16" height="20" fill="#D85048"/>
+        <!-- heart -->
+        <path d="M100 30 L96 25 Q90 25 90 30 Q90 35 100 45 Q110 35 110 30 Q110 25 104 25 Z" fill="#D85048"/>
+      </svg>
+      <div class="panel-text">傍晚6点<br/>家人围坐</div>
+      <div class="panel-cap">一锅汤, 一家人</div>
+    </div>
+  </div>
+
+  <div class="strip-note">
+    <strong>How it deploys:</strong>  Each video script (V1 — V15) becomes a 4-panel comic for IG carousel posts (slide-1: hook, slide-2: process, slide-3: payoff, slide-4: CTA + family moment). Same characters across all 30 deliverables. Same visual rhythm. Compounding brand recall.  &nbsp;·&nbsp;  Stickers + WhatsApp greetings spin off from the same character pack — zero additional shoots required.
+  </div>
+
+  <div class="foot">page 5 · narrative system</div>
+  <div class="foot-r">comic example for V1 · "现切"</div>
+</div>
+
+<!-- ============ PAGE 6 — SYSTEM ============ -->
+<div class="spread">
+  <div class="pg">vi · system</div>
+
+  <div class="p6-title">设计系统</div>
+  <div class="p6-en">Watercolour palette · 5 type families · texture &amp; line</div>
+
+  <!-- Palette -->
+  <div class="sys palette-section">
+    <h3>色彩 · watercolour wash</h3>
+    <div class="h3-en" style="font-family: 'Fraunces', serif; font-style: italic; font-size: 13px; color: var(--gold-deep); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 20px;">Soft brand colours · drawn as paint dots</div>
+    <div class="wc-palette">
+      <div class="wc-swatch" style="background: var(--red);"><div class="wc-label"><strong>朱红</strong>#D85048</div></div>
+      <div class="wc-swatch" style="background: var(--red-deep);"><div class="wc-label"><strong>胭脂</strong>#B7342A</div></div>
+      <div class="wc-swatch" style="background: var(--blush);"><div class="wc-label"><strong>桃</strong>#F5C8C2</div></div>
+      <div class="wc-swatch" style="background: var(--moss);"><div class="wc-label"><strong>苔绿</strong>#3A7860</div></div>
+      <div class="wc-swatch" style="background: var(--moss-deep);"><div class="wc-label"><strong>深绿</strong>#1E5A44</div></div>
+      <div class="wc-swatch" style="background: var(--gold);"><div class="wc-label"><strong>奶金</strong>#E5C290</div></div>
+      <div class="wc-swatch" style="background: var(--paper-deep);"><div class="wc-label"><strong>米纸</strong>#F4EAD3</div></div>
+      <div class="wc-swatch" style="background: var(--ink);"><div class="wc-label"><strong>墨</strong>#1A1A1A</div></div>
+    </div>
+  </div>
+
+  <!-- Type -->
+  <div class="sys">
+    <h3>字体 · five voices</h3>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 13px; color: var(--gold-deep); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 16px;">CN x EN type pairings · for posters, captions, hand-notes</div>
+
+    <div class="type-row">
+      <div class="role">CN display<strong>ZCool QingKe HuangYou</strong></div>
+      <div class="sample cn-display">潮八八</div>
+      <div class="when">Brand mark, big titles, comic panel captions. Friendly, chunky, picturebook energy.</div>
+    </div>
+    <div class="type-row">
+      <div class="role">CN brush<strong>Ma Shan Zheng</strong></div>
+      <div class="sample cn-brush">鲜 养 真</div>
+      <div class="when">Calligraphic ornament. ONE character at a time. Pillar headers, stamps, hand-painted moments.</div>
+    </div>
+    <div class="type-row">
+      <div class="role">CN body<strong>Noto Sans SC 500</strong></div>
+      <div class="sample cn-body">每一锅, 都是一封写给家人的信。慢一点, 鲜一点。</div>
+      <div class="when">All captions, subtitles, social copy. Readable, calm, never goes bold.</div>
+    </div>
+    <div class="type-row">
+      <div class="role">EN display<strong>Fraunces italic 700</strong></div>
+      <div class="sample en-display">A bowl for the family.</div>
+      <div class="when">English headlines, comic captions, manifesto lines. Warm, modern serif with personality.</div>
+    </div>
+    <div class="type-row">
+      <div class="role">Hand-note<strong>Caveat</strong></div>
+      <div class="sample en-hand">"early morning, fresh chicken"</div>
+      <div class="when">Margin notes, post-it style annotations, "Lawrence's voice" — keeps the picturebook feel.</div>
+    </div>
+  </div>
+
+  <div class="foot">page 6 · the build</div>
+  <div class="foot-r">colour · type · texture</div>
+</div>
+
+<!-- ============ PAGE 7 — APPLICATIONS ============ -->
+<div class="spread">
+  <div class="pg">vii · in the wild</div>
+
+  <div class="p7-title">资产能复用 · reusable IP</div>
+  <div class="p7-en">One character pack · many homes. Examples below.</div>
+
+  <div class="apps-grid">
+    <!-- IG carousel -->
+    <div class="app-card">
+      <div class="app-label">📱 Instagram carousel</div>
+      <div class="app-en">Slide 1 / 4 — hook</div>
+      <div class="ig-mock">
+        <div class="ig-tile" style="background: var(--blush);">
+          <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;">
+            <circle cx="50" cy="50" r="20" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="50" y="56" text-anchor="middle" font-family="Ma Shan Zheng" font-size="16" fill="#D85048">八</text>
+            <text x="50" y="85" text-anchor="middle" font-family="ZCOOL QingKe HuangYou" font-size="9" fill="#1A1A1A">早呀</text>
+          </svg>
+        </div>
+        <div class="ig-tile" style="background: var(--paper-deep);">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="22" fill="#3A7860"/><circle cx="50" cy="50" r="14" fill="#D8E5C8"/><text x="50" y="86" text-anchor="middle" font-family="Ma Shan Zheng" font-size="8" fill="#1A1A1A">石橄榄</text></svg>
+        </div>
+        <div class="ig-tile" style="background: var(--sky);">
+          <svg viewBox="0 0 100 100"><path d="M30 60 Q30 80 50 80 Q70 80 70 60 Z" fill="#1A1A1A"/><ellipse cx="50" cy="60" rx="22" ry="3" fill="#E5C290"/><path d="M40 50 Q38 35 42 25 M50 48 Q52 32 50 22 M60 50 Q62 35 58 25" stroke="#3A7860" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="ig-tile" style="background: var(--gold);">
+          <svg viewBox="0 0 100 100"><text x="50" y="60" text-anchor="middle" font-family="Ma Shan Zheng" font-size="40" fill="#1A1A1A">鲜</text></svg>
+        </div>
+        <div class="ig-tile" style="background: var(--paper);">
+          <svg viewBox="0 0 100 100"><circle cx="38" cy="48" r="10" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="1.5"/><circle cx="62" cy="48" r="10" fill="#F5C8C2" stroke="#1A1A1A" stroke-width="1.5"/><path d="M30 65 Q50 75 70 65" stroke="#1A1A1A" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="ig-tile" style="background: var(--moss);">
+          <svg viewBox="0 0 100 100"><text x="50" y="50" text-anchor="middle" font-family="Caveat" font-size="13" fill="#FEFCF5">tap to</text><text x="50" y="68" text-anchor="middle" font-family="Caveat" font-size="13" fill="#FEFCF5">see story →</text></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp stickers -->
+    <div class="app-card">
+      <div class="app-label">💬 WhatsApp sticker pack</div>
+      <div class="app-en">Free download · brand growth</div>
+      <div class="sticker-pack">
+        <div class="sticker">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/><circle cx="40" cy="45" r="3" fill="#1A1A1A"/><circle cx="60" cy="45" r="3" fill="#1A1A1A"/><path d="M40 58 Q50 66 60 58" stroke="#1A1A1A" stroke-width="2" fill="none"/><text x="50" y="93" text-anchor="middle" font-family="Caveat" font-size="13" fill="#D85048">早呀!</text></svg>
+        </div>
+        <div class="sticker">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/><circle cx="40" cy="45" r="3" fill="#1A1A1A"/><circle cx="60" cy="45" r="3" fill="#1A1A1A"/><path d="M40 56 L40 62 Q40 68 60 68 Q60 62 60 56 Z" fill="#D85048"/><text x="50" y="93" text-anchor="middle" font-family="Caveat" font-size="13" fill="#D85048">饿了!</text></svg>
+        </div>
+        <div class="sticker">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/><path d="M35 45 Q38 40 42 45 M58 45 Q62 40 65 45" stroke="#1A1A1A" stroke-width="2" fill="none"/><path d="M40 60 Q50 65 60 60" stroke="#1A1A1A" stroke-width="2" fill="none"/><text x="50" y="93" text-anchor="middle" font-family="Caveat" font-size="13" fill="#D85048">谢啦~</text></svg>
+        </div>
+        <div class="sticker">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="#FEFCF5" stroke="#1A1A1A" stroke-width="2"/><path d="M35 40 L45 50 M45 40 L35 50" stroke="#1A1A1A" stroke-width="2"/><path d="M55 40 L65 50 M65 40 L55 50" stroke="#1A1A1A" stroke-width="2"/><path d="M35 65 Q50 60 65 65" stroke="#1A1A1A" stroke-width="2" fill="none"/><text x="50" y="93" text-anchor="middle" font-family="Caveat" font-size="13" fill="#D85048">不要!</text></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu card -->
+    <div class="app-card">
+      <div class="app-label">🍲 Illustrated menu card</div>
+      <div class="app-en">Reusable · print + digital</div>
+      <div class="menu-card">
+        <svg viewBox="0 0 200 130">
+          <path d="M40 50 Q40 110 100 110 Q160 110 160 50 Z" fill="#1A1A1A"/>
+          <ellipse cx="100" cy="50" rx="60" ry="8" fill="#E5C290"/>
+          <ellipse cx="100" cy="48" rx="54" ry="5" fill="#D8E5C8"/>
+          <circle cx="80" cy="48" r="3" fill="#3A7860"/>
+          <circle cx="120" cy="50" r="3" fill="#3A7860"/>
+          <path d="M75 30 Q75 15 80 4 M100 30 Q100 12 100 2 M125 30 Q125 15 120 4" stroke="#3A7860" stroke-width="1.5" fill="none"/>
+        </svg>
+        <div class="menu-name">石橄榄鸡煲</div>
+        <div class="menu-price">SGD 48 · serves 2-3</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip-note" style="background: var(--paper-deep); color: var(--ink); border-left: 4px solid var(--red);">
+    <strong style="color: var(--red-deep);">Production note:</strong>  One illustrator commission (SGD 2,500-4,500) produces the full character pack (8 characters x 4 poses each = 32 base assets) + 4 broth portraits + scene backgrounds. Everything else (comic strips, stickers, posters) is composed from this library. No re-shoots, no IP licensing, fully owned by Chao 88.
+  </div>
+
+  <div class="foot">page 7 · applications</div>
+  <div class="foot-r">one pack · many uses</div>
+</div>
+
+<!-- ============ PAGE 8 — BETS ============ -->
+<div class="spread p8">
+  <div class="pg">viii · the bet</div>
+
+  <div class="p8-title">why we'd <em>bet on this</em></div>
+  <div class="p8-en">If you green-light this direction, here's what you're choosing.</div>
+
+  <div class="bet-list">
+    <div class="bet">
+      <div class="icon">01</div>
+      <div class="body">
+        <h4>占领家庭客户心智</h4>
+        <p>Mums + kids audiences click on illustrations 3-5x more than food photography (IG analytics norm). Picturebook content is shared with family group chats — your acquisition channel becomes free.</p>
+      </div>
+    </div>
+    <div class="bet">
+      <div class="icon">02</div>
+      <div class="body">
+        <h4>降低长期内容成本</h4>
+        <p>One illustration pack replaces 80% of future food shoots. Higgsfield + the character library = endless content variation at near-zero marginal cost. Year 2 marketing budget halves.</p>
+      </div>
+    </div>
+    <div class="bet">
+      <div class="icon">03</div>
+      <div class="body">
+        <h4>资产可商品化</h4>
+        <p>Sticker packs, kids menus, plushies, AR filters, t-shirts. The mascot universe doubles as merch IP. Brother Eight (八哥) is the asset you keep when you sell the business.</p>
+      </div>
+    </div>
+    <div class="bet">
+      <div class="icon">04</div>
+      <div class="body">
+        <h4>与对手拉开差距</h4>
+        <p>Every SG hotpot is fighting on price, on chili level, on outlet count. Chao 88 fights on story. Joanna can answer "what's different about your brand?" in a single sentence with this direction.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closer">
+    <div class="big-cn">先做不一样, 再做更好。</div>
+    <div class="big-en">Different first. Better follows. Picturebook universe v1.0 · Chao 88 · 22 May 2026.</div>
+    <div class="sign">— Lawrence + NextGen</div>
+  </div>
+
+  <div class="foot" style="color: var(--paper);">end · 8 pages</div>
+  <div class="foot-r" style="color: var(--gold);">moodboard v4 · picturebook universe</div>
+</div>
+
+</div>
+
+</body>
+</html>

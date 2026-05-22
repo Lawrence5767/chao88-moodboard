@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>潮八八 · Social Media Moodboard — v7</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #B7342A;
+    --red-deep: #8B1A14;
+    --cream: #F6E9D3;
+    --cream-deep: #EBDDC0;
+    --paper: #FBF3E0;
+    --green: #1E5A44;
+    --green-deep: #14402F;
+    --gold: #C89A5B;
+    --gold-light: #DEB97D;
+    --charcoal: #2D2D2D;
+    --ink: #1A1A1A;
+    --soft: #4A4540;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #2A1F18;
+    color: var(--ink);
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    padding: 40px 20px;
+    line-height: 1.4;
+  }
+  .canvas {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: var(--paper);
+    padding: 32px 40px 0;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    background-image:
+      radial-gradient(circle at 10% 5%, rgba(200,154,91,0.04) 0%, transparent 40%),
+      radial-gradient(circle at 90% 95%, rgba(30,90,68,0.05) 0%, transparent 40%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.55' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.45 0 0 0 0 0.3 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ============ HEADER ROW ============ */
+  .header {
+    display: grid;
+    grid-template-columns: 280px 1fr 110px 220px 240px 90px;
+    gap: 16px;
+    align-items: center;
+    padding: 8px 0 24px;
+    border-bottom: 1.5px solid var(--red);
+    margin-bottom: 16px;
+  }
+  .brandmark { line-height: 1; }
+  .brandmark .cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 64px;
+    color: var(--red);
+    letter-spacing: 0.08em;
+  }
+  .brandmark .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--charcoal);
+    letter-spacing: 0.5em;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+  .brandmark .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  .title-block .en-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--red);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .title-block .cn-tag {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: var(--charcoal);
+    margin-top: 8px;
+    letter-spacing: 0.18em;
+  }
+  .title-block .cn-tag span { color: var(--red); margin: 0 10px; }
+  .title-block .en-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--green);
+    margin-top: 4px;
+    letter-spacing: 0.28em;
+  }
+
+  /* Rooster medallion */
+  .medallion {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--red);
+    background: var(--cream);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .medallion::before {
+    content: ''; position: absolute; inset: 5px;
+    border: 1px dashed var(--red); border-radius: 50%;
+  }
+
+  /* Dim sum strip */
+  .mini-photo {
+    height: 100px;
+    background: url('assets/brand-page-1.jpg') center / cover;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mini-photo::after {
+    content: '潮汕 wall';
+    position: absolute;
+    bottom: 6px; left: 6px;
+    background: rgba(184,52,42,0.85);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    padding: 2px 6px;
+    text-transform: uppercase;
+  }
+
+  /* 4 badges */
+  .badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  .badge {
+    aspect-ratio: 1;
+    background: var(--cream);
+    border: 1.5px solid var(--red);
+    border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--red);
+    text-align: center;
+    line-height: 1;
+  }
+  .badge .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 6.5px;
+    color: var(--charcoal);
+    letter-spacing: 0.18em;
+    margin-top: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Vertical stamp */
+  .v-stamp {
+    background: var(--red);
+    color: var(--cream);
+    padding: 12px 6px;
+    height: 100%;
+    text-align: center;
+    display: flex; flex-direction: column; justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+  }
+  .v-stamp::before, .v-stamp::after {
+    content: ''; position: absolute; left: 4px; right: 4px;
+    height: 1px; background: var(--cream); opacity: 0.5;
+  }
+  .v-stamp::before { top: 6px; }
+  .v-stamp::after { bottom: 6px; }
+  .v-stamp .label {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 10px;
+    background: var(--cream);
+    color: var(--red);
+    padding: 2px 5px;
+    letter-spacing: 0.1em;
+  }
+  .v-stamp .vert {
+    writing-mode: vertical-rl;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    line-height: 1.5;
+  }
+
+  /* ============ HERO ROW ============ */
+  .hero-row {
+    display: grid;
+    grid-template-columns: 50px 1.4fr 180px 1fr 1fr 180px 50px;
+    grid-template-rows: repeat(6, 70px);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .v-decor {
+    grid-row: span 6;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    writing-mode: vertical-rl;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--red);
+    font-size: 13px;
+    letter-spacing: 0.6em;
+    text-align: center;
+    padding: 16px 4px;
+    line-height: 1.4;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .photo-cell {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-size: cover; background-position: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .photo-cell .tag {
+    position: absolute;
+    bottom: 6px; left: 6px;
+    background: rgba(184,52,42,0.9);
+    color: var(--cream);
+    padding: 3px 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-radius: 1px;
+  }
+
+  /* Hero photos using real PDF assets */
+  .photo-hero {
+    grid-row: span 6;
+    background-image: url('assets/brand-page-1.jpg');
+    background-position: 30% center;
+    background-size: 200%;
+  }
+  .photo-process {
+    grid-row: span 3;
+    background-image: url('assets/brand-page-1.jpg');
+    background-position: 70% 40%;
+    background-size: 250%;
+  }
+  .photo-chef {
+    grid-row: span 3;
+    background-image: url('assets/brand-page-5.jpg');
+    background-position: 50% 70%;
+    background-size: 180%;
+  }
+  .photo-soup {
+    grid-row: span 6;
+    background-image: url('assets/brand-page-5.jpg');
+    background-position: 90% center;
+    background-size: 180%;
+  }
+
+  .panel {
+    background: var(--cream);
+    border: 1px solid var(--red);
+    padding: 14px 10px;
+    border-radius: 3px;
+    grid-row: span 6;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .panel.green-border { border-color: var(--green); }
+  .panel .stamp-tag {
+    position: absolute; top: 8px; left: 8px;
+    background: var(--red);
+    color: var(--cream);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 9px;
+    padding: 2px 6px;
+    letter-spacing: 0.1em;
+  }
+  .panel.green-border .stamp-tag { background: var(--green); }
+  .panel-vert {
+    writing-mode: vertical-rl;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    color: var(--red);
+    font-size: 22px;
+    letter-spacing: 0.45em;
+    text-align: center;
+    margin: auto;
+    line-height: 1.5;
+  }
+  .panel.green-border .panel-vert { color: var(--green); }
+  .panel .panel-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* ============ DECORATIVE ICON STRIP ============ */
+  .icon-strip {
+    padding: 16px 0;
+    border-top: 1px solid rgba(45,45,45,0.18);
+    border-bottom: 1px solid rgba(45,45,45,0.18);
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .icon-strip svg { width: 100%; height: 60px; }
+  .icon-strip .stamp {
+    background: var(--cream);
+    border: 1.5px solid var(--red);
+    padding: 8px 6px;
+    text-align: center;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--red);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    border-radius: 1px;
+  }
+  .icon-strip .stamp .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 8px;
+    color: var(--green);
+    letter-spacing: 0.2em;
+    margin-top: 3px;
+    display: block;
+    text-transform: uppercase;
+  }
+  .icon-strip .stamp.green {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  /* ============ MID ROW — SCROLLS + PHOTOS ============ */
+  .mid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 100px) 1.4fr 1.4fr 1.4fr;
+    grid-template-rows: repeat(4, 70px);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .scroll {
+    grid-row: span 4;
+    background: var(--cream);
+    border: 2px double var(--red);
+    padding: 16px 8px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: space-between;
+    background-image:
+      linear-gradient(0deg, rgba(184,52,42,0.04) 0%, transparent 30%, transparent 70%, rgba(184,52,42,0.04) 100%);
+  }
+  .scroll .head {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .scroll .vert-text {
+    writing-mode: vertical-rl;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    color: var(--red);
+    font-size: 17px;
+    letter-spacing: 0.55em;
+    line-height: 1.4;
+    margin: auto 0;
+  }
+  .scroll .scroll-foot {
+    width: 30px; height: 30px;
+    border: 1px solid var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 11px;
+    color: var(--red);
+  }
+
+  .type-panel {
+    grid-row: span 4;
+    background: var(--green);
+    color: var(--cream);
+    padding: 22px 22px 18px;
+    border-radius: 3px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .type-panel::before {
+    content: ''; position: absolute; inset: 8px;
+    border: 1px solid rgba(246,233,211,0.25);
+    border-radius: 1px;
+    pointer-events: none;
+  }
+  .type-panel .stamp-corner {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 9px;
+    padding: 3px 6px;
+    letter-spacing: 0.1em;
+  }
+  .type-panel .big {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+  }
+  .type-panel .big .accent { color: var(--gold-light); }
+  .type-panel .big-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    margin-top: 10px;
+  }
+  .type-panel .small {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--cream);
+    opacity: 0.85;
+  }
+
+  .photo-mid {
+    grid-row: span 4;
+    border-radius: 4px;
+    background-size: cover; background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+  .photo-mid-2 {
+    background-image: url('assets/brand-page-2.jpg');
+    background-position: 70% center;
+    background-size: 220%;
+  }
+  .photo-mid-3 {
+    background-image: url('assets/brand-page-4.jpg');
+    background-position: center 30%;
+    background-size: 220%;
+  }
+
+  /* ============ MENU + CHICKEN GUIDE ROW ============ */
+  .menu-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .menu-block {
+    background: var(--red-deep);
+    color: var(--cream);
+    padding: 18px 22px 16px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+  .menu-block::before {
+    content: ''; position: absolute; inset: 6px;
+    border: 1px solid rgba(246,233,211,0.2);
+    pointer-events: none;
+  }
+  .menu-block .menu-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+    color: var(--cream);
+  }
+  .menu-block .menu-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold-light);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .menu-block .menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 18px;
+  }
+  .menu-block .item {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--cream);
+    line-height: 1.5;
+    display: flex; justify-content: space-between;
+    border-bottom: 1px dashed rgba(246,233,211,0.2);
+    padding: 2px 0;
+  }
+  .menu-block .item.featured { color: var(--gold-light); font-weight: 700; }
+  .menu-block .item .price { font-family: 'Inter', monospace; font-size: 10px; color: var(--gold-light); }
+
+  .chicken-block {
+    background: var(--cream);
+    border: 1.5px solid var(--red);
+    padding: 18px 22px;
+    border-radius: 3px;
+  }
+  .chicken-block .chicken-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--red);
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .chicken-block .chicken-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .chicken-block .cuts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .cut-cell {
+    border: 1px solid var(--red);
+    padding: 8px 6px;
+    text-align: center;
+    background: var(--paper);
+    border-radius: 2px;
+  }
+  .cut-cell .cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--red-deep);
+    margin-bottom: 2px;
+  }
+  .cut-cell .time {
+    font-family: 'Inter', monospace;
+    font-size: 10px;
+    color: var(--green);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* ============ DIPPING PHILOSOPHY BAND ============ */
+  .dip-band {
+    background:
+      linear-gradient(135deg, rgba(45,45,45,0.95) 0%, rgba(45,45,45,0.85) 60%, rgba(20,20,20,0.95) 100%),
+      url('assets/brand-page-5.jpg') center / cover;
+    color: var(--cream);
+    padding: 22px 32px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .dip-band .dip-title {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 52px;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .dip-band .dip-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cream);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .dip-band .dip-text {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+  .dip-band .dip-text .accent { color: var(--gold-light); font-weight: 700; }
+  .dip-band .dip-text .dip-en-line {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--cream);
+    opacity: 0.7;
+    margin-top: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ============ SERVICE ICONS ============ */
+  .service-row {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-bottom: 6px;
+  }
+  .service { text-align: center; }
+  .service .circle {
+    width: 56px; height: 56px;
+    border: 1.5px solid var(--charcoal);
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--charcoal);
+  }
+  .service .cn {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--charcoal);
+    letter-spacing: 0.1em;
+  }
+  .service .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 9px;
+    color: var(--green);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* ============ COLOR PALETTE STRIP ============ */
+  .palette-strip {
+    padding: 16px 0;
+    border-top: 1px solid rgba(45,45,45,0.15);
+    display: grid;
+    grid-template-columns: 280px repeat(5, 1fr);
+    gap: 10px;
+    align-items: center;
+  }
+  .palette-strip .lbl {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--green);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .palette-strip .lbl strong {
+    display: block;
+    font-style: normal;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 17px;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    margin-top: 2px;
+  }
+  .swatch {
+    height: 64px;
+    border-radius: 3px;
+    padding: 8px 10px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-family: 'Inter', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .swatch .name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ============ WAVE BORDER ============ */
+  .wave-border {
+    height: 64px;
+    margin: 18px -40px 0;
+    background: var(--red);
+    position: relative;
+    overflow: hidden;
+  }
+  .wave-svg { width: 100%; height: 100%; display: block; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 14px 40px;
+    margin: 0 -40px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  footer span { color: var(--gold-light); }
+</style>
+</head>
+<body>
+
+<div class="canvas">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brandmark">
+      <div class="cn">潮八八</div>
+      <div class="en">CHAO BA BA</div>
+      <div class="desc">ORGANIC FRESHLY CUT<br/>CHICKEN POT · 现切鸡煲</div>
+    </div>
+
+    <div class="title-block">
+      <div class="en-title">SOCIAL MEDIA MOODBOARD</div>
+      <div class="cn-tag">文化<span>·</span>鲜鸡<span>·</span>养身</div>
+      <div class="en-tag">CULTURE · FRESH CHICKEN · WELLNESS</div>
+    </div>
+
+    <div class="medallion">
+      <svg viewBox="0 0 60 60" width="64" height="64">
+        <path d="M30 12c-3 0-5 1.5-6 4l-2-3-2 4-3-1 1 4-3 1 3 2-1 4 4-1 1 3 2-3 3 2c0 5-4 9-9 12h28c-5-3-9-7-9-12l3-2 2 3 1-3 4 1-1-4 3-2-3-1 1-4-3 1-2-4-2 3c-1-2.5-3-4-6-4z" fill="#B7342A"/>
+        <circle cx="34" cy="20" r="1.5" fill="#1A1A1A"/>
+        <path d="M38 24l4-2-3-1z" fill="#C89A5B"/>
+      </svg>
+    </div>
+
+    <div class="mini-photo"></div>
+
+    <div class="badges">
+      <div class="badge">鲜<div class="en">Fresh</div></div>
+      <div class="badge">养<div class="en">Nourish</div></div>
+      <div class="badge">好<div class="en">Quality</div></div>
+      <div class="badge">真<div class="en">Authentic</div></div>
+    </div>
+
+    <div class="v-stamp">
+      <div class="label">正宗</div>
+      <div class="vert">潮汕美食</div>
+    </div>
+  </div>
+
+  <!-- HERO ROW -->
+  <div class="hero-row">
+    <div class="v-decor">鲜鸡现切 · 养身之选</div>
+
+    <div class="photo-cell photo-hero">
+      <span class="tag">Hero · 潮汕 wall</span>
+    </div>
+
+    <div class="panel">
+      <div class="stamp-tag">每日鲜切</div>
+      <div class="panel-vert">只为<br/>这一锅</div>
+      <div class="panel-en">Freshly cut · daily</div>
+    </div>
+
+    <div class="photo-cell photo-process">
+      <span class="tag">现切 · cleaver</span>
+    </div>
+
+    <div class="photo-cell photo-chef">
+      <span class="tag">蘸料 · sauce</span>
+    </div>
+
+    <div class="photo-cell photo-soup">
+      <span class="tag">温润 · broth</span>
+    </div>
+
+    <div class="panel green-border">
+      <div class="stamp-tag">养身推荐</div>
+      <div class="panel-vert">滋补好汤<br/>喝出好气色</div>
+      <div class="panel-en">Nourishing soup</div>
+    </div>
+
+    <div class="v-decor" style="border-color: var(--red); color: var(--charcoal);">温润食补 · 老少皆宜</div>
+  </div>
+
+  <!-- DECORATIVE ICON STRIP -->
+  <div class="icon-strip">
+    <!-- Opera mask -->
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#1E5A44"/><path d="M20 24 Q24 18 28 22 Q26 26 22 26 Z M44 24 Q40 18 36 22 Q38 26 42 26 Z" fill="#F6E9D3"/><path d="M22 40 Q32 50 42 40" stroke="#B7342A" stroke-width="3" fill="none"/><path d="M32 28 L30 34 L34 34 Z" fill="#C89A5B"/></svg>
+    <!-- Pagoda -->
+    <svg viewBox="0 0 64 64"><path d="M14 54 L50 54 L48 48 L16 48 Z M18 48 L46 48 L44 40 L20 40 Z M22 40 L42 40 L40 32 L24 32 Z M26 32 L38 32 L36 24 L28 24 Z M30 24 L34 24 L34 16 L32 12 L30 16 Z" fill="none" stroke="#B7342A" stroke-width="1.5"/><circle cx="32" cy="56" r="2" fill="#C89A5B"/></svg>
+    <!-- Stamp 新鲜 -->
+    <div class="stamp">新鲜食材<span class="en">Fresh Ingredients</span></div>
+    <!-- Pavilion -->
+    <svg viewBox="0 0 64 64"><path d="M10 50 L54 50 L48 42 L16 42 Z M16 42 L48 42 L44 34 L20 34 Z M24 34 L40 34 L36 26 L28 26 Z" fill="none" stroke="#1E5A44" stroke-width="1.5"/><rect x="26" y="42" width="4" height="8" fill="#1E5A44"/><rect x="34" y="42" width="4" height="8" fill="#1E5A44"/></svg>
+    <!-- Steam pot -->
+    <svg viewBox="0 0 64 64"><path d="M16 32 Q16 50 32 50 Q48 50 48 32 Z" fill="#2D2D2D"/><ellipse cx="32" cy="32" rx="18" ry="3" fill="#C89A5B"/><path d="M24 24 Q26 18 24 14 M32 22 Q34 16 32 12 M40 24 Q42 18 40 14" stroke="#1E5A44" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+    <!-- Lantern -->
+    <svg viewBox="0 0 64 64"><ellipse cx="32" cy="36" rx="14" ry="18" fill="#B7342A"/><line x1="18" y1="36" x2="46" y2="36" stroke="#1A1A1A" stroke-width="1"/><rect x="28" y="14" width="8" height="4" fill="#C89A5B"/><line x1="32" y1="54" x2="32" y2="60" stroke="#1A1A1A" stroke-width="2"/><text x="32" y="40" text-anchor="middle" font-family="Ma Shan Zheng, cursive" font-size="12" fill="#F6E9D3" font-weight="900">福</text></svg>
+    <!-- Stamp 天然 -->
+    <div class="stamp green">天然食材<span class="en">Natural</span></div>
+    <!-- Chaoshan opera 2 -->
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#B7342A"/><path d="M20 30 L26 24 L26 30 Z M44 30 L38 24 L38 30 Z" fill="#1A1A1A"/><path d="M24 42 Q32 48 40 42" stroke="#F6E9D3" stroke-width="2" fill="none"/><path d="M32 30 L30 36 L34 36 Z" fill="#F6E9D3"/></svg>
+    <!-- Steam bowl -->
+    <svg viewBox="0 0 64 64"><path d="M14 34 Q14 50 32 50 Q50 50 50 34 Z" fill="#1E5A44"/><ellipse cx="32" cy="34" rx="20" ry="3" fill="#C89A5B"/><path d="M22 26 Q24 20 22 16 M30 24 Q32 18 30 14 M38 26 Q40 20 38 16" stroke="#B7342A" stroke-width="1.5" fill="none"/></svg>
+  </div>
+
+  <!-- MID ROW: SCROLLS + COPY PANEL + PHOTOS -->
+  <div class="mid-row">
+    <div class="scroll">
+      <div class="head">章 · 01</div>
+      <div class="vert-text">精选食材<br/>真材实料</div>
+      <div class="scroll-foot">鲜</div>
+    </div>
+    <div class="scroll">
+      <div class="head">章 · 02</div>
+      <div class="vert-text">古法慢炖<br/>原汁原味</div>
+      <div class="scroll-foot">炖</div>
+    </div>
+    <div class="scroll">
+      <div class="head">章 · 03</div>
+      <div class="vert-text">温补养身<br/>老少皆宜</div>
+      <div class="scroll-foot">养</div>
+    </div>
+
+    <div class="type-panel">
+      <div class="stamp-corner">招牌</div>
+      <div>
+        <div class="big">慢火细煮<br/><span class="accent">锁住营养</span></div>
+        <div class="big-en">Slow-cooked · locked-in nutrition</div>
+      </div>
+      <div class="small">每一口都是满满的爱 — every sip is full of love. Caption voice: warm, quiet authority. CN leads, EN supports. No exclamation marks.</div>
+    </div>
+
+    <div class="photo-mid photo-mid-2">
+      <span class="tag" style="bottom: 8px; left: 8px; background: rgba(184,52,42,0.9); color: var(--cream); padding: 3px 8px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; border-radius: 1px; position: absolute;">吃鸡图谱 · 6 cuts</span>
+    </div>
+
+    <div class="photo-mid photo-mid-3">
+      <span class="tag" style="bottom: 8px; left: 8px; background: rgba(184,52,42,0.9); color: var(--cream); padding: 3px 8px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; border-radius: 1px; position: absolute;">店内 · 灯笼 · interior</span>
+    </div>
+  </div>
+
+  <!-- MENU ROW -->
+  <div class="menu-row">
+    <div class="menu-block">
+      <div class="menu-title">现切鸡煲 · 七大锅</div>
+      <div class="menu-en">7 signature pots · real menu</div>
+      <div class="menu-items">
+        <div class="item featured"><span>无花果滋补鸡煲 ★</span><span class="price">$19.8+</span></div>
+        <div class="item featured"><span>川式黑金麻辣 ★</span><span class="price">$21.8+</span></div>
+        <div class="item"><span>冰炖椰子鸡</span><span class="price">$36.8</span></div>
+        <div class="item"><span>野生石橄榄鸡煲</span><span class="price">$19.8+</span></div>
+        <div class="item"><span>药膳五指毛桃</span><span class="price">$19.8+</span></div>
+        <div class="item"><span>玛莎曼鸡煲</span><span class="price">$31.8</span></div>
+        <div class="item"><span>港式生焗鸡煲</span><span class="price">$31.8</span></div>
+        <div class="item"><span>两种鸡 · 走地/凤梨</span><span class="price">choice</span></div>
+      </div>
+    </div>
+
+    <div class="chicken-block">
+      <div class="chicken-title">吃鸡图谱 · 六大部位</div>
+      <div class="chicken-en">6 cuts · 6 cook times · brand IP</div>
+      <div class="cuts">
+        <div class="cut-cell"><div class="cn">鸡胸</div><div class="time">20 分</div></div>
+        <div class="cut-cell"><div class="cn">鸡腿</div><div class="time">8-10 分</div></div>
+        <div class="cut-cell"><div class="cn">鸡肝</div><div class="time">5-8 分</div></div>
+        <div class="cut-cell"><div class="cn">鸡胗</div><div class="time">5-8 分</div></div>
+        <div class="cut-cell"><div class="cn">鸡皮</div><div class="time">3-5 秒</div></div>
+        <div class="cut-cell"><div class="cn">鸡翅 / 块</div><div class="time">8-10 分</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIPPING PHILOSOPHY BAND -->
+  <div class="dip-band">
+    <div>
+      <div class="dip-title">蘸料哲学</div>
+      <div class="dip-en">Dipping Philosophy</div>
+    </div>
+    <div class="dip-text">
+      潮八八 鸡火锅，<span class="accent">蘸料永远是配角。</span>一勺沙姜、蒜蓉，一点生抽 — 不为掩盖鸡肉的鲜，<span class="accent">只为把本味轻轻托起。</span>
+      <span class="dip-en-line">— A spoonful of ginger sauce and garlic, with a dash of soy. We never overpower fresh chicken — only lift its natural taste.</span>
+    </div>
+  </div>
+
+  <!-- SERVICE ICONS -->
+  <div class="service-row">
+    <div class="service">
+      <div class="circle"><svg viewBox="0 0 32 32" width="32" height="32"><path d="M8 6 L24 6 L26 22 Q26 26 16 26 Q6 26 6 22 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 6 L10 4 M22 6 L22 4" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="cn">现切现煲</div>
+      <div class="en">Cut to order</div>
+    </div>
+    <div class="service">
+      <div class="circle"><svg viewBox="0 0 32 32" width="32" height="32"><path d="M16 6 Q22 10 22 18 Q22 24 16 26 Q10 24 10 18 Q10 10 16 6 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M16 6 L16 26" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="cn">新鲜食材</div>
+      <div class="en">Fresh ingredients</div>
+    </div>
+    <div class="service">
+      <div class="circle"><svg viewBox="0 0 32 32" width="32" height="32"><path d="M6 16 Q6 24 16 24 Q26 24 26 16 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="10" ry="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 12 Q13 9 12 6 M16 12 Q17 9 16 6 M20 12 Q21 9 20 6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+      <div class="cn">养身汤底</div>
+      <div class="en">Tonic broth</div>
+    </div>
+    <div class="service">
+      <div class="circle"><svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="16" y="20" text-anchor="middle" font-size="9" fill="currentColor" font-family="serif" font-weight="900">无</text></svg></div>
+      <div class="cn">无添加</div>
+      <div class="en">No additives</div>
+    </div>
+    <div class="service">
+      <div class="circle"><svg viewBox="0 0 32 32" width="32" height="32"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="22" cy="14" r="2.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6 26 Q6 18 12 18 Q18 18 18 26 M16 26 Q16 20 22 20 Q28 20 28 26" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+      <div class="cn">老少皆宜</div>
+      <div class="en">For all ages</div>
+    </div>
+  </div>
+
+  <!-- COLOR PALETTE -->
+  <div class="palette-strip">
+    <div class="lbl">5 brand colours<strong>locked palette</strong></div>
+    <div class="swatch" style="background: var(--red); color: var(--cream);"><div class="name">紫红 主色</div><div>#B7342A</div></div>
+    <div class="swatch" style="background: var(--cream); color: var(--ink); border: 1px solid rgba(0,0,0,0.08);"><div class="name">米色</div><div>#F6E9D3</div></div>
+    <div class="swatch" style="background: var(--green); color: var(--cream);"><div class="name">潮汕绿</div><div>#1E5A44</div></div>
+    <div class="swatch" style="background: var(--gold); color: var(--ink);"><div class="name">古铜金</div><div>#C89A5B</div></div>
+    <div class="swatch" style="background: var(--charcoal); color: var(--cream);"><div class="name">墨黑</div><div>#2D2D2D</div></div>
+  </div>
+
+  <!-- WAVE BORDER -->
+  <div class="wave-border">
+    <svg class="wave-svg" viewBox="0 0 1600 64" preserveAspectRatio="none">
+      <defs>
+        <pattern id="cw" width="100" height="64" patternUnits="userSpaceOnUse">
+          <path d="M0 32 Q12 16 25 32 Q37 48 50 32 Q62 16 75 32 Q87 48 100 32" stroke="#F6E9D3" stroke-width="2" fill="none"/>
+          <path d="M0 44 Q12 28 25 44 Q37 60 50 44 Q62 28 75 44 Q87 60 100 44" stroke="#1E5A44" stroke-width="2" fill="none" opacity="0.85"/>
+          <path d="M0 20 Q12 4 25 20 Q37 36 50 20 Q62 4 75 20 Q87 36 100 20" stroke="#C89A5B" stroke-width="1.5" fill="none" opacity="0.7"/>
+          <circle cx="25" cy="32" r="3" fill="#F6E9D3"/>
+          <circle cx="75" cy="32" r="3" fill="#F6E9D3"/>
+        </pattern>
+      </defs>
+      <rect width="1600" height="64" fill="url(#cw)"/>
+    </svg>
+  </div>
+
+  <footer>
+    <span>潮八八 · 现切鸡煲</span>
+    <div>SOCIAL MEDIA MOODBOARD · v7 · 22 MAY 2026</div>
+    <div>NEXTGEN MARKETING SOLUTIONS · LAWRENCE OOI</div>
+  </footer>
+
+</div>
+
+</body>
+</html>

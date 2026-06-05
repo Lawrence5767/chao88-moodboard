@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>潮八八 · Photo → Content Slot Match · Higgsfield Seed Pack</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #B7342A;
+    --red-deep: #8B1A14;
+    --cream: #F5E8D0;
+    --paper: #FAF3DD;
+    --gold: #C89A5B;
+    --gold-light: #DEB97D;
+    --green: #1E5A44;
+    --ink: #1A1A1A;
+    --soft: #4A4540;
+    --bg: #1F1A14;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--cream);
+    padding: 32px 24px;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1400px; margin: 0 auto; }
+
+  header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(245,232,208,0.15);
+  }
+  header .pretitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 56px;
+    color: var(--cream);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  header .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  header p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(245,232,208,0.7);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  header p strong { color: var(--cream); }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 16px;
+    background: rgba(245,232,208,0.04);
+    border-radius: 6px;
+  }
+  .stat { text-align: center; }
+  .stat .n {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--gold-light);
+  }
+  .stat .l {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+
+  .section-h {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--gold-light);
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(222,185,125,0.3);
+    letter-spacing: 0.08em;
+  }
+  .section-h .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    margin-left: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .slot {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    border-left: 6px solid var(--gold);
+  }
+  .slot.q5 { border-left-color: #2E8B57; }
+  .slot.q4 { border-left-color: var(--gold); }
+  .slot.q3 { border-left-color: #C89A5B; }
+  .slot.q2 { border-left-color: var(--red); }
+
+  .slot-head {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    padding: 16px 24px;
+    background: rgba(184,52,42,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    align-items: center;
+  }
+  .slot-id {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--red-deep);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .slot-info h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .slot-meta {
+    display: flex;
+    gap: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--soft);
+    flex-wrap: wrap;
+  }
+  .slot-meta .pillar {
+    background: var(--green);
+    color: var(--cream);
+    padding: 2px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.08em;
+  }
+  .slot-meta .quality { color: #2E8B57; font-weight: 600; letter-spacing: 0.05em; }
+
+  .slot-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    padding: 20px 24px;
+  }
+  .sheet-img img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+  .sheet-cap {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--soft);
+    text-align: center;
+    margin-top: 8px;
+    word-break: break-word;
+  }
+
+  .picks-label, .prompt-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--red-deep);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .picks {
+    background: var(--cream);
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  .pick {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 8px;
+    padding: 4px 0;
+    font-size: 12px;
+    border-bottom: 1px dotted rgba(0,0,0,0.08);
+  }
+  .pick:last-child { border-bottom: 0; }
+  .pick-idx {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  .pick code {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink);
+    word-break: break-all;
+  }
+  .prompt {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.65;
+    font-style: italic;
+  }
+  .slot.graphics .sheet-img { background: var(--ink); }
+
+  .legend {
+    display: flex;
+    gap: 24px;
+    font-size: 12px;
+    margin: 16px 0 24px;
+    color: rgba(245,232,208,0.7);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend .key { display: flex; align-items: center; gap: 6px; }
+  .legend .swatch {
+    width: 14px; height: 14px; border-radius: 2px;
+  }
+
+  .notes-box {
+    background: rgba(184,52,42,0.1);
+    border: 1px solid var(--red);
+    color: var(--cream);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .notes-box strong { color: var(--gold-light); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(245,232,208,0.1);
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(245,232,208,0.5);
+    letter-spacing: 0.25em;
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; color: black; }
+    .slot { break-inside: avoid; box-shadow: none; }
+    header, .section-h, .legend, .notes-box, footer { color: black; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="pretitle">CHAO 88 · PHOTOGRAPHER PHOTO MATCH · HIGGSFIELD SEED PACK</div>
+    <h1>照片配对 · Seed Pack</h1>
+    <div class="en">601 photos · 30 content slots · Higgsfield prompts ready</div>
+    <p>
+      Inventory of the photographer's Drive folder mapped to the 30 content slots in the Google Sheet (V1-V15 + S1-S15).
+      For each slot below: a <strong>candidate contact sheet</strong> showing the best photo picks, <strong>file paths</strong> to drag into Higgsfield, and a <strong>Higgsfield prompt suggestion</strong> aligned to the v7 visual direction. Drop the photos in as seed images, use the prompts, generate. Then upscale + export for posting.
+    </p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="n">332</div><div class="l">candidates surfaced</div></div>
+    <div class="stat"><div class="n">17</div><div class="l">strong-match slots (★★★★+)</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">partial / verify needed</div></div>
+    <div class="stat"><div class="n">601</div><div class="l">photos total (− 95 KAJIMA)</div></div>
+  </div>
+
+  <div class="notes-box">
+    <strong>How to use this:</strong> For each slot, preview the contact sheet on the left to spot the best photos. Note the <strong>filename</strong> from the picks list. Find that file in <code>~/Downloads/drive-download-20260605T021129Z-3-XXX/</code> and drag into Higgsfield. Paste the Higgsfield prompt suggestion to generate variations. KAJIMA office photos (#426-520) are a different shoot — ignored automatically.<br/><br/>
+    <strong>Confirm with Joanna:</strong> which outlet photos belong to which outlet (Horne Rd / Paya Lebar / Bukit Timah / SAFRA Punggol). I've grouped by visual cues only — she'll know which is which.
+  </div>
+
+  <div class="legend">
+    <div class="key"><div class="swatch" style="background: #2E8B57"></div>★★★★+ Strong match</div>
+    <div class="key"><div class="swatch" style="background: #C89A5B"></div>★★★ Moderate</div>
+    <div class="key"><div class="swatch" style="background: #B7342A"></div>★★ Partial — may need Higgsfield from scratch</div>
+  </div>
+
+  <h2 class="section-h">VIDEOS · V1 – V15 <span class="en">15 episodes · 90-day campaign</span></h2>
+  
+    <section class="slot q5" id="V1">
+      <div class="slot-head">
+        <div class="slot-id">V1</div>
+        <div class="slot-info">
+          <h3>From farm to pot</h3>
+          <div class="slot-meta">
+            <span class="pillar">Process · 鲜</span>
+            <span class="loc">📍 JB Factory</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V1-candidates.jpg" alt="V1 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#282</span><code>DSC03839.JPG</code></div><div class="pick"><span class="pick-idx">#293</span><code>DSC03850.JPG</code></div><div class="pick"><span class="pick-idx">#304</span><code>DSC03861.JPG</code></div><div class="pick"><span class="pick-idx">#315</span><code>DSC03872.JPG</code></div><div class="pick"><span class="pick-idx">#326</span><code>DSC03883.JPG</code></div><div class="pick"><span class="pick-idx">#337</span><code>DSC03894.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Cinematic dawn scene of free-range Chaoshan chickens roaming a rural farm at 5am, golden hour backlight, warm amber tones, shallow depth of field, slow motion 24fps, film grain — heritage brand &quot;潮八八现切鸡煲&quot; sourcing story</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="V2">
+      <div class="slot-head">
+        <div class="slot-id">V2</div>
+        <div class="slot-info">
+          <h3>Daily freshness BTS</h3>
+          <div class="slot-meta">
+            <span class="pillar">Process · 鲜</span>
+            <span class="loc">📍 JB Factory</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V2-candidates.jpg" alt="V2 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#181</span><code>DSC03738.JPG</code></div><div class="pick"><span class="pick-idx">#189</span><code>DSC03746.JPG</code></div><div class="pick"><span class="pick-idx">#197</span><code>DSC03754.JPG</code></div><div class="pick"><span class="pick-idx">#205</span><code>DSC03762.JPG</code></div><div class="pick"><span class="pick-idx">#213</span><code>DSC03770.JPG</code></div><div class="pick"><span class="pick-idx">#261</span><code>DSC03818.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Chef hands cleaning and prepping fresh chicken on a wooden cutting board under warm morning light, brass cleaver, macro detail of cut, steam, 35mm film aesthetic, warm amber + ink black palette, slow build</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q4" id="V3">
+      <div class="slot-head">
+        <div class="slot-id">V3</div>
+        <div class="slot-info">
+          <h3>Black Gold Mala — Sichuan story</h3>
+          <div class="slot-meta">
+            <span class="pillar">Dish · 川式</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V3-candidates.jpg" alt="V3 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#075</span><code>DSC03632.JPG</code></div><div class="pick"><span class="pick-idx">#079</span><code>DSC03636.JPG</code></div><div class="pick"><span class="pick-idx">#083</span><code>DSC03640.JPG</code></div><div class="pick"><span class="pick-idx">#087</span><code>DSC03644.JPG</code></div><div class="pick"><span class="pick-idx">#091</span><code>DSC03648.JPG</code></div><div class="pick"><span class="pick-idx">#095</span><code>DSC03652.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Steaming clay pot of Sichuan black-gold mala chicken hotpot, layered chili oil, glistening surface, dramatic chiaroscuro, low-angle 35° shot, warm amber key light from 11 o&#x27;clock, dark wood backdrop, premium food cinematography</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q2" id="V4">
+      <div class="slot-head">
+        <div class="slot-id">V4</div>
+        <div class="slot-info">
+          <h3>Stone Olive — health / TCM</h3>
+          <div class="slot-meta">
+            <span class="pillar">Dish · 养</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★ partial</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V4-candidates.jpg" alt="V4 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#211</span><code>DSC03768.JPG</code></div><div class="pick"><span class="pick-idx">#213</span><code>DSC03770.JPG</code></div><div class="pick"><span class="pick-idx">#215</span><code>DSC03772.JPG</code></div><div class="pick"><span class="pick-idx">#217</span><code>DSC03774.JPG</code></div><div class="pick"><span class="pick-idx">#219</span><code>DSC03776.JPG</code></div><div class="pick"><span class="pick-idx">#075</span><code>DSC03632.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Clear herbal broth of wild stone olive chicken pot, light amber-yellow color, jujubes and green herbs floating, soft cool light, gentle steam, TCM apothecary mood, served in dark clay pot, calm restorative vibe</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q2" id="V5">
+      <div class="slot-head">
+        <div class="slot-id">V5</div>
+        <div class="slot-info">
+          <h3>Signature dish 3 (TBD)</h3>
+          <div class="slot-meta">
+            <span class="pillar">Dish · 招牌</span>
+            <span class="loc">📍 Paya Lebar</span>
+            <span class="quality">★★ partial</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V5-candidates.jpg" alt="V5 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#075</span><code>DSC03632.JPG</code></div><div class="pick"><span class="pick-idx">#080</span><code>DSC03637.JPG</code></div><div class="pick"><span class="pick-idx">#085</span><code>DSC03642.JPG</code></div><div class="pick"><span class="pick-idx">#090</span><code>DSC03647.JPG</code></div><div class="pick"><span class="pick-idx">#095</span><code>DSC03652.JPG</code></div><div class="pick"><span class="pick-idx">#100</span><code>DSC03657.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Signature Chaoshan chicken hotpot in a black cast-iron clay pot, glossy broth surface, fresh ingredients visible, warm overhead light, 45° angle, cinematic shallow DOF, brand pillar story</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q2" id="V6">
+      <div class="slot-head">
+        <div class="slot-id">V6</div>
+        <div class="slot-info">
+          <h3>Signature dish 4 (TBD)</h3>
+          <div class="slot-meta">
+            <span class="pillar">Dish · 招牌</span>
+            <span class="loc">📍 Bukit Timah</span>
+            <span class="quality">★★ partial</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V6-candidates.jpg" alt="V6 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#075</span><code>DSC03632.JPG</code></div><div class="pick"><span class="pick-idx">#080</span><code>DSC03637.JPG</code></div><div class="pick"><span class="pick-idx">#085</span><code>DSC03642.JPG</code></div><div class="pick"><span class="pick-idx">#090</span><code>DSC03647.JPG</code></div><div class="pick"><span class="pick-idx">#095</span><code>DSC03652.JPG</code></div><div class="pick"><span class="pick-idx">#100</span><code>DSC03657.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Signature Chaoshan chicken hotpot variation, distinct broth color, dramatic steam, served in clay pot, warm key + cool fill light, premium hotpot photography</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="V7">
+      <div class="slot-head">
+        <div class="slot-id">V7</div>
+        <div class="slot-info">
+          <h3>Signature dipping sauce</h3>
+          <div class="slot-meta">
+            <span class="pillar">Dish · 蘸料哲学</span>
+            <span class="loc">📍 Bukit Timah</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V7-candidates.jpg" alt="V7 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#041</span><code>DSC03598.JPG</code></div><div class="pick"><span class="pick-idx">#043</span><code>DSC03600.JPG</code></div><div class="pick"><span class="pick-idx">#045</span><code>DSC03602.JPG</code></div><div class="pick"><span class="pick-idx">#047</span><code>DSC03604.JPG</code></div><div class="pick"><span class="pick-idx">#049</span><code>DSC03606.JPG</code></div><div class="pick"><span class="pick-idx">#051</span><code>DSC03608.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Top-down macro shot of &quot;蘸料哲学&quot; dipping sauce: a small dish of fresh sand ginger, minced garlic, light soy sauce — clean composition, brass spoon, wooden table, gentle natural light, editorial food photography</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q4" id="V8">
+      <div class="slot-head">
+        <div class="slot-id">V8</div>
+        <div class="slot-info">
+          <h3>Horne Rd outlet tour</h3>
+          <div class="slot-meta">
+            <span class="pillar">Design &amp; Hospitality</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V8-candidates.jpg" alt="V8 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#001</span><code>DSC03558.JPG</code></div><div class="pick"><span class="pick-idx">#007</span><code>DSC03564.JPG</code></div><div class="pick"><span class="pick-idx">#013</span><code>DSC03570.JPG</code></div><div class="pick"><span class="pick-idx">#019</span><code>DSC03576.JPG</code></div><div class="pick"><span class="pick-idx">#025</span><code>DSC03582.JPG</code></div><div class="pick"><span class="pick-idx">#031</span><code>DSC03588.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Walkthrough of Chao 88 Horne Rd outlet interior — Teochew heritage decor, red lanterns, English Yingge dance posters, dark wood, warm tungsten glow, smooth gimbal movement, premium restaurant tour vibe</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="V9">
+      <div class="slot-head">
+        <div class="slot-id">V9</div>
+        <div class="slot-info">
+          <h3>Paya Lebar outlet tour</h3>
+          <div class="slot-meta">
+            <span class="pillar">Design &amp; Hospitality</span>
+            <span class="loc">📍 Paya Lebar</span>
+            <span class="quality">★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V9-candidates.jpg" alt="V9 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#001</span><code>DSC03558.JPG</code></div><div class="pick"><span class="pick-idx">#005</span><code>DSC03562.JPG</code></div><div class="pick"><span class="pick-idx">#009</span><code>DSC03566.JPG</code></div><div class="pick"><span class="pick-idx">#013</span><code>DSC03570.JPG</code></div><div class="pick"><span class="pick-idx">#017</span><code>DSC03574.JPG</code></div><div class="pick"><span class="pick-idx">#021</span><code>DSC03578.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Walkthrough of Chao 88 Upper Paya Lebar outlet — same heritage style, different layout, warm lanterns, slow camera movement, golden hour exterior to interior transition</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="V10">
+      <div class="slot-head">
+        <div class="slot-id">V10</div>
+        <div class="slot-info">
+          <h3>Bukit Timah outlet tour</h3>
+          <div class="slot-meta">
+            <span class="pillar">Design &amp; Hospitality</span>
+            <span class="loc">📍 Bukit Timah</span>
+            <span class="quality">★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V10-candidates.jpg" alt="V10 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005 · drive-download-20260605T021129Z-3-006)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#001</span><code>DSC03558.JPG</code></div><div class="pick"><span class="pick-idx">#008</span><code>DSC03565.JPG</code></div><div class="pick"><span class="pick-idx">#015</span><code>DSC03572.JPG</code></div><div class="pick"><span class="pick-idx">#022</span><code>DSC03579.JPG</code></div><div class="pick"><span class="pick-idx">#029</span><code>DSC03586.JPG</code></div><div class="pick"><span class="pick-idx">#036</span><code>DSC03593.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Walkthrough of Chao 88 Bukit Timah outlet — heritage Teochew decor, private dining rooms with round tables, lantern light, calligraphy on walls</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="V11">
+      <div class="slot-head">
+        <div class="slot-id">V11</div>
+        <div class="slot-info">
+          <h3>SAFRA Punggol outlet tour</h3>
+          <div class="slot-meta">
+            <span class="pillar">Design &amp; Hospitality</span>
+            <span class="loc">📍 SAFRA Punggol</span>
+            <span class="quality">★★★ (fit-out only)</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V11-candidates.jpg" alt="V11 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#141</span><code>DSC03698.JPG</code></div><div class="pick"><span class="pick-idx">#146</span><code>DSC03703.JPG</code></div><div class="pick"><span class="pick-idx">#151</span><code>DSC03708.JPG</code></div><div class="pick"><span class="pick-idx">#156</span><code>DSC03713.JPG</code></div><div class="pick"><span class="pick-idx">#161</span><code>DSC03718.JPG</code></div><div class="pick"><span class="pick-idx">#166</span><code>DSC03723.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Walkthrough of brand new Chao 88 SAFRA Punggol outlet — pristine fit-out with red signage &quot;斩鸡房&quot;, traditional Teochew wood + cream decor, fresh opening energy, golden afternoon light</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="V12">
+      <div class="slot-head">
+        <div class="slot-id">V12</div>
+        <div class="slot-info">
+          <h3>Meet the head chef</h3>
+          <div class="slot-meta">
+            <span class="pillar">Chef &amp; Team</span>
+            <span class="loc">📍 Kitchen</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V12-candidates.jpg" alt="V12 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#079</span><code>DSC03636.JPG</code></div><div class="pick"><span class="pick-idx">#081</span><code>DSC03638.JPG</code></div><div class="pick"><span class="pick-idx">#083</span><code>DSC03640.JPG</code></div><div class="pick"><span class="pick-idx">#085</span><code>DSC03642.JPG</code></div><div class="pick"><span class="pick-idx">#087</span><code>DSC03644.JPG</code></div><div class="pick"><span class="pick-idx">#089</span><code>DSC03646.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Portrait of head chef in red apron and white chef hat, holding cleaver, beside black calligraphy &quot;鸡&quot; sign, 20+ years experience, warm tungsten studio light, shallow DOF, dignified mood, premium chef cinematography</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="V13">
+      <div class="slot-head">
+        <div class="slot-id">V13</div>
+        <div class="slot-info">
+          <h3>Day in the life of kitchen team</h3>
+          <div class="slot-meta">
+            <span class="pillar">Chef &amp; Team</span>
+            <span class="loc">📍 Kitchen</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V13-candidates.jpg" alt="V13 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005 · drive-download-20260605T021129Z-3-006)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#041</span><code>DSC03598.JPG</code></div><div class="pick"><span class="pick-idx">#054</span><code>DSC03611.JPG</code></div><div class="pick"><span class="pick-idx">#067</span><code>DSC03624.JPG</code></div><div class="pick"><span class="pick-idx">#080</span><code>DSC03637.JPG</code></div><div class="pick"><span class="pick-idx">#093</span><code>DSC03650.JPG</code></div><div class="pick"><span class="pick-idx">#106</span><code>DSC03663.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Day in the life of Chao 88 kitchen team — early morning prep, washing chicken, slow simmer broths, cutting, plating, multiple camera angles, fast-cut energetic but warm, Chef&#x27;s Table style</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q4" id="V14">
+      <div class="slot-head">
+        <div class="slot-id">V14</div>
+        <div class="slot-info">
+          <h3>Customer testimonials compilation</h3>
+          <div class="slot-meta">
+            <span class="pillar">Testimonials</span>
+            <span class="loc">📍 All 4 outlets</span>
+            <span class="quality">★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V14-candidates.jpg" alt="V14 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#521</span><code>DSC04078.JPG</code></div><div class="pick"><span class="pick-idx">#527</span><code>DSC04084.JPG</code></div><div class="pick"><span class="pick-idx">#533</span><code>DSC04090.JPG</code></div><div class="pick"><span class="pick-idx">#539</span><code>DSC04096.JPG</code></div><div class="pick"><span class="pick-idx">#545</span><code>DSC04102.JPG</code></div><div class="pick"><span class="pick-idx">#551</span><code>DSC04108.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Multi-generational Chinese family + couples + groups dining at round tables in Chao 88, eating hotpot, laughing, picking chicken with chopsticks, genuine candid moments, warm restaurant lighting, 35mm aesthetic</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q4" id="V15">
+      <div class="slot-head">
+        <div class="slot-id">V15</div>
+        <div class="slot-info">
+          <h3>Family dining moment (UGC-style)</h3>
+          <div class="slot-meta">
+            <span class="pillar">Testimonials · 家</span>
+            <span class="loc">📍 TBC</span>
+            <span class="quality">★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/V15-candidates.jpg" alt="V15 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#551</span><code>DSC04108.JPG</code></div><div class="pick"><span class="pick-idx">#555</span><code>DSC04112.JPG</code></div><div class="pick"><span class="pick-idx">#559</span><code>DSC04116.JPG</code></div><div class="pick"><span class="pick-idx">#563</span><code>DSC04120.JPG</code></div><div class="pick"><span class="pick-idx">#567</span><code>DSC04124.JPG</code></div><div class="pick"><span class="pick-idx">#571</span><code>DSC04128.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Three generations at one round table — grandma, parents, kids — sharing a steaming Chao 88 chicken hotpot, warm lantern light, lens flare, intimate emotional moment, slow zoom-out, golden hour mood</div>
+        </div>
+      </div>
+    </section>
+    
+
+  <h2 class="section-h">STILLS · S1 – S15 <span class="en">15 still posts</span></h2>
+  
+    <section class="slot q4" id="S1">
+      <div class="slot-head">
+        <div class="slot-id">S1</div>
+        <div class="slot-info">
+          <h3>Black Gold Mala hero shot</h3>
+          <div class="slot-meta">
+            <span class="pillar">Food</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S1-candidates.jpg" alt="S1 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#075</span><code>DSC03632.JPG</code></div><div class="pick"><span class="pick-idx">#079</span><code>DSC03636.JPG</code></div><div class="pick"><span class="pick-idx">#083</span><code>DSC03640.JPG</code></div><div class="pick"><span class="pick-idx">#087</span><code>DSC03644.JPG</code></div><div class="pick"><span class="pick-idx">#091</span><code>DSC03648.JPG</code></div><div class="pick"><span class="pick-idx">#095</span><code>DSC03652.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Hero shot of &quot;川式黑金麻辣鸡煲&quot; Sichuan Black Gold Mala chicken hotpot — top-down, deep red broth with layered chili oil, glistening, dark wood backdrop, dramatic single key light, food editorial style</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q2" id="S2">
+      <div class="slot-head">
+        <div class="slot-id">S2</div>
+        <div class="slot-info">
+          <h3>Stone Olive hero shot</h3>
+          <div class="slot-meta">
+            <span class="pillar">Food</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★ partial</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S2-candidates.jpg" alt="S2 candidates" loading="lazy">
+          <div class="sheet-cap">10 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#211</span><code>DSC03768.JPG</code></div><div class="pick"><span class="pick-idx">#212</span><code>DSC03769.JPG</code></div><div class="pick"><span class="pick-idx">#213</span><code>DSC03770.JPG</code></div><div class="pick"><span class="pick-idx">#214</span><code>DSC03771.JPG</code></div><div class="pick"><span class="pick-idx">#215</span><code>DSC03772.JPG</code></div><div class="pick"><span class="pick-idx">#216</span><code>DSC03773.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Hero shot of &quot;野生石橄榄鸡煲&quot; Wild Stone Olive chicken pot — clear amber broth, jujubes + goji + olives + green herbs visible, served in black clay pot, 45° angle, soft natural light, calm wellness mood</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="S3">
+      <div class="slot-head">
+        <div class="slot-id">S3</div>
+        <div class="slot-info">
+          <h3>Fresh chicken cuts macro</h3>
+          <div class="slot-meta">
+            <span class="pillar">Food · 现切</span>
+            <span class="loc">📍 JB Factory</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S3-candidates.jpg" alt="S3 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#261</span><code>DSC03818.JPG</code></div><div class="pick"><span class="pick-idx">#262</span><code>DSC03819.JPG</code></div><div class="pick"><span class="pick-idx">#263</span><code>DSC03820.JPG</code></div><div class="pick"><span class="pick-idx">#264</span><code>DSC03821.JPG</code></div><div class="pick"><span class="pick-idx">#265</span><code>DSC03822.JPG</code></div><div class="pick"><span class="pick-idx">#266</span><code>DSC03823.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Macro close-up of freshly cut chicken pieces on wooden board, brass cleaver beside, raw clean cuts, slight steam, top-down composition, warm amber light, &quot;现切&quot; freshness emphasis</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="S4">
+      <div class="slot-head">
+        <div class="slot-id">S4</div>
+        <div class="slot-info">
+          <h3>Signature side dish hero</h3>
+          <div class="slot-meta">
+            <span class="pillar">Food</span>
+            <span class="loc">📍 Paya Lebar</span>
+            <span class="quality">★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S4-candidates.jpg" alt="S4 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#041</span><code>DSC03598.JPG</code></div><div class="pick"><span class="pick-idx">#044</span><code>DSC03601.JPG</code></div><div class="pick"><span class="pick-idx">#047</span><code>DSC03604.JPG</code></div><div class="pick"><span class="pick-idx">#050</span><code>DSC03607.JPG</code></div><div class="pick"><span class="pick-idx">#053</span><code>DSC03610.JPG</code></div><div class="pick"><span class="pick-idx">#056</span><code>DSC03613.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Hero shot of Chao 88 signature side dish — chef-led composition, brass plate or wooden board, garnished, warm overhead light, editorial styling</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q4" id="S5">
+      <div class="slot-head">
+        <div class="slot-id">S5</div>
+        <div class="slot-info">
+          <h3>Bubbling broth close-up</h3>
+          <div class="slot-meta">
+            <span class="pillar">Food</span>
+            <span class="loc">📍 Bukit Timah</span>
+            <span class="quality">★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S5-candidates.jpg" alt="S5 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#075</span><code>DSC03632.JPG</code></div><div class="pick"><span class="pick-idx">#078</span><code>DSC03635.JPG</code></div><div class="pick"><span class="pick-idx">#081</span><code>DSC03638.JPG</code></div><div class="pick"><span class="pick-idx">#084</span><code>DSC03641.JPG</code></div><div class="pick"><span class="pick-idx">#087</span><code>DSC03644.JPG</code></div><div class="pick"><span class="pick-idx">#090</span><code>DSC03647.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Macro close-up of bubbling Chaoshan chicken broth — golden surface tension, rising steam, jujubes floating, glistening highlights, warm amber tone, intimate texture detail</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="S6">
+      <div class="slot-head">
+        <div class="slot-id">S6</div>
+        <div class="slot-info">
+          <h3>Full table hero spread</h3>
+          <div class="slot-meta">
+            <span class="pillar">Food</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S6-candidates.jpg" alt="S6 candidates" loading="lazy">
+          <div class="sheet-cap">10 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005 · drive-download-20260605T021129Z-3-006)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#121</span><code>DSC03678.JPG</code></div><div class="pick"><span class="pick-idx">#122</span><code>DSC03679.JPG</code></div><div class="pick"><span class="pick-idx">#123</span><code>DSC03680.JPG</code></div><div class="pick"><span class="pick-idx">#124</span><code>DSC03681.JPG</code></div><div class="pick"><span class="pick-idx">#125</span><code>DSC03682.JPG</code></div><div class="pick"><span class="pick-idx">#126</span><code>DSC03683.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Top-down hero spread of full Chao 88 table — clay pot center with chicken hotpot, surrounding small plates of side dishes, dipping sauces, fresh ingredients, warm wood table, 4-8 people share, abundant family table mood</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="S7">
+      <div class="slot-head">
+        <div class="slot-id">S7</div>
+        <div class="slot-info">
+          <h3>Horne Rd storefront</h3>
+          <div class="slot-meta">
+            <span class="pillar">Brand &amp; Space</span>
+            <span class="loc">📍 Horne Rd</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S7-candidates.jpg" alt="S7 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#129</span><code>DSC03686.JPG</code></div><div class="pick"><span class="pick-idx">#131</span><code>DSC03688.JPG</code></div><div class="pick"><span class="pick-idx">#133</span><code>DSC03690.JPG</code></div><div class="pick"><span class="pick-idx">#135</span><code>DSC03692.JPG</code></div><div class="pick"><span class="pick-idx">#137</span><code>DSC03694.JPG</code></div><div class="pick"><span class="pick-idx">#139</span><code>DSC03696.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Storefront photograph of &quot;潮八八现切鸡煲&quot; Horne Rd outlet — red signage with rooster logo, golden hour exterior, lanterns visible, customers walking by, Teochew heritage aesthetic</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="S8">
+      <div class="slot-head">
+        <div class="slot-id">S8</div>
+        <div class="slot-info">
+          <h3>Paya Lebar storefront</h3>
+          <div class="slot-meta">
+            <span class="pillar">Brand &amp; Space</span>
+            <span class="loc">📍 Paya Lebar</span>
+            <span class="quality">★★★ (verify outlet)</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S8-candidates.jpg" alt="S8 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#129</span><code>DSC03686.JPG</code></div><div class="pick"><span class="pick-idx">#133</span><code>DSC03690.JPG</code></div><div class="pick"><span class="pick-idx">#137</span><code>DSC03694.JPG</code></div><div class="pick"><span class="pick-idx">#561</span><code>DSC04118.JPG</code></div><div class="pick"><span class="pick-idx">#565</span><code>DSC04122.JPG</code></div><div class="pick"><span class="pick-idx">#569</span><code>DSC04126.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Storefront photograph of Chao 88 Upper Paya Lebar — same heritage red signage, different street context, day or dusk lighting, inviting entrance</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="S9">
+      <div class="slot-head">
+        <div class="slot-id">S9</div>
+        <div class="slot-info">
+          <h3>Bukit Timah storefront</h3>
+          <div class="slot-meta">
+            <span class="pillar">Brand &amp; Space</span>
+            <span class="loc">📍 Bukit Timah</span>
+            <span class="quality">★★★ (verify outlet)</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S9-candidates.jpg" alt="S9 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#129</span><code>DSC03686.JPG</code></div><div class="pick"><span class="pick-idx">#133</span><code>DSC03690.JPG</code></div><div class="pick"><span class="pick-idx">#137</span><code>DSC03694.JPG</code></div><div class="pick"><span class="pick-idx">#561</span><code>DSC04118.JPG</code></div><div class="pick"><span class="pick-idx">#565</span><code>DSC04122.JPG</code></div><div class="pick"><span class="pick-idx">#569</span><code>DSC04126.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Storefront photograph of Chao 88 Bukit Timah outlet — red branded storefront, Teochew details, street-level perspective</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q3" id="S10">
+      <div class="slot-head">
+        <div class="slot-id">S10</div>
+        <div class="slot-info">
+          <h3>SAFRA Punggol storefront</h3>
+          <div class="slot-meta">
+            <span class="pillar">Brand &amp; Space</span>
+            <span class="loc">📍 SAFRA Punggol</span>
+            <span class="quality">★★★ (fit-out)</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S10-candidates.jpg" alt="S10 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#141</span><code>DSC03698.JPG</code></div><div class="pick"><span class="pick-idx">#146</span><code>DSC03703.JPG</code></div><div class="pick"><span class="pick-idx">#151</span><code>DSC03708.JPG</code></div><div class="pick"><span class="pick-idx">#156</span><code>DSC03713.JPG</code></div><div class="pick"><span class="pick-idx">#161</span><code>DSC03718.JPG</code></div><div class="pick"><span class="pick-idx">#166</span><code>DSC03723.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Storefront photograph of Chao 88 SAFRA Punggol — newest outlet, red signage with &quot;斩鸡房&quot; wood detail, opening celebration mood</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="S11">
+      <div class="slot-head">
+        <div class="slot-id">S11</div>
+        <div class="slot-info">
+          <h3>Interior ambience</h3>
+          <div class="slot-meta">
+            <span class="pillar">Brand &amp; Space</span>
+            <span class="loc">📍 TBC</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S11-candidates.jpg" alt="S11 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#001</span><code>DSC03558.JPG</code></div><div class="pick"><span class="pick-idx">#007</span><code>DSC03564.JPG</code></div><div class="pick"><span class="pick-idx">#013</span><code>DSC03570.JPG</code></div><div class="pick"><span class="pick-idx">#019</span><code>DSC03576.JPG</code></div><div class="pick"><span class="pick-idx">#025</span><code>DSC03582.JPG</code></div><div class="pick"><span class="pick-idx">#031</span><code>DSC03588.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Interior ambience shot of Chao 88 — warm wood + red walls, hanging red lanterns, calligraphy art, private dining round tables visible, golden tungsten glow, hospitable empty-table mood</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="S12">
+      <div class="slot-head">
+        <div class="slot-id">S12</div>
+        <div class="slot-info">
+          <h3>Chef portrait</h3>
+          <div class="slot-meta">
+            <span class="pillar">People</span>
+            <span class="loc">📍 Kitchen</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S12-candidates.jpg" alt="S12 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#541</span><code>DSC04098.JPG</code></div><div class="pick"><span class="pick-idx">#542</span><code>DSC04099.JPG</code></div><div class="pick"><span class="pick-idx">#543</span><code>DSC04100.JPG</code></div><div class="pick"><span class="pick-idx">#544</span><code>DSC04101.JPG</code></div><div class="pick"><span class="pick-idx">#545</span><code>DSC04102.JPG</code></div><div class="pick"><span class="pick-idx">#546</span><code>DSC04103.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Editorial portrait of head chef — apron, chef hat, cleaver in hand, kitchen backdrop, single warm key light, 85mm portrait lens look, dignified premium feel</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slot q5" id="S13">
+      <div class="slot-head">
+        <div class="slot-id">S13</div>
+        <div class="slot-info">
+          <h3>Customer enjoying meal</h3>
+          <div class="slot-meta">
+            <span class="pillar">People</span>
+            <span class="loc">📍 All outlets</span>
+            <span class="quality">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="slot-body">
+        <div class="sheet-img">
+          <img src="picks/S13-candidates.jpg" alt="S13 candidates" loading="lazy">
+          <div class="sheet-cap">12 candidates (sampled across drive-download-20260605T021129Z-3-001 · drive-download-20260605T021129Z-3-002 · drive-download-20260605T021129Z-3-003 · drive-download-20260605T021129Z-3-004 · drive-download-20260605T021129Z-3-005)</div>
+        </div>
+        <div class="slot-side">
+          <div class="picks-label">Top file picks to drag into Higgsfield</div>
+          <div class="picks"><div class="pick"><span class="pick-idx">#521</span><code>DSC04078.JPG</code></div><div class="pick"><span class="pick-idx">#527</span><code>DSC04084.JPG</code></div><div class="pick"><span class="pick-idx">#533</span><code>DSC04090.JPG</code></div><div class="pick"><span class="pick-idx">#539</span><code>DSC04096.JPG</code></div><div class="pick"><span class="pick-idx">#545</span><code>DSC04102.JPG</code></div><div class="pick"><span class="pick-idx">#551</span><code>DSC04108.JPG</code></div></div>
+          <div class="prompt-label">Higgsfield prompt suggestion</div>
+          <div class="prompt">Candid customer moment — couple or family eating Chao 88 hotpot, mid-laugh, chopsticks raised, soft restaurant lighting, genuine emotion, &quot;the conversation pauses, the chopsticks pick up faster&quot; mood</div>
+        </div>
+      </div>
+    </section>
+    
+  
+<section class="slot graphics">
+  <div class="slot-head">
+    <div class="slot-id">S14<br/>S15</div>
+    <div class="slot-info">
+      <h3>Launch + Mid-campaign promo graphics</h3>
+      <div class="slot-meta">
+        <span class="pillar">Promo / Launch</span>
+        <span class="loc">📍 Design (no shoot)</span>
+        <span class="quality">N/A — pure graphic</span>
+      </div>
+    </div>
+  </div>
+  <div class="slot-body">
+    <div class="sheet-img" style="background: #1a1a1a; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: #DEB97D; font-family: 'Cormorant Garamond', serif; font-style: italic;">No photo seed needed</div>
+    <div class="slot-side">
+      <div class="picks-label">Build directly in Canva / Illustrator using v7 stamps</div>
+      <div class="prompt-label">Higgsfield optional</div>
+      <div class="prompt">Could generate a promo graphic in v7 brand style: Burgundy #B7342A + cream + gold stamps, brush calligraphy headline, decorative opera-mask/pagoda border. But Canva from stamp library is faster and more controllable.</div>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    CHAO 88 PHOTO MATCH SEED PACK · GENERATED FROM 601 PHOTOS · 28 SLOTS PROCESSED · 23 MAY 2026
+  </footer>
+
+</div>
+</body>
+</html>

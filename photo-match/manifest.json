@@ -1,189 +1,46 @@
 [
   {
-    "slot": "V1",
-    "title": "From farm to pot",
-    "pillar": "Process · 鲜",
-    "location": "JB Factory",
-    "quality": "★★★★★",
-    "prompt": "Cinematic dawn scene of free-range Chaoshan chickens roaming a rural farm at 5am, golden hour backlight, warm amber tones, shallow depth of field, slow motion 24fps, film grain — heritage brand \"潮八八现切鸡煲\" sourcing story",
-    "sheet": "picks/V1-candidates.jpg",
+    "slot": "S1",
+    "title": "\u5ddd\u5f0f\u9ed1\u91d1\u9ebb\u8fa3\u9e21\u7172 \u2014 Sichuan Black Gold Mala",
+    "pillar": "Bold \u00b7 \u9c9c",
+    "post_date": "22 Jun 2026 (Mon)",
+    "ranges": [
+      [
+        99,
+        110
+      ],
+      [
+        271,
+        272
+      ]
+    ],
+    "prompts": {
+      "Hero": "Top-down hero shot of \u5ddd\u5f0f\u9ed1\u91d1\u9ebb\u8fa3\u9e21\u7172 (Sichuan Black Gold Mala chicken hotpot), deep glossy red broth with floating chili pods and Sichuan peppercorns, fresh chicken cuts arranged in the bubbling pot, cream linen background, restrained Chaoshan heritage props (\u53e4\u94dc\u91d1 brass spoon, \u58a8\u9ed1 ceramic dipping bowl), warm overhead lighting, food editorial style, photoreal, 4K",
+      "Detail": "Extreme macro of glistening red chili oil rising on Black Gold Mala broth surface, individual peppercorns and star anise visible, light steam swirl, shallow depth of field, moody side-lit, \u7d2b\u7ea2 #B7342A red dominant, premium food magazine look",
+      "Action": "Mid-action shot of a hand using long bamboo chopsticks to lift a tender chicken thigh out of the bubbling Black Gold Mala pot, droplets of red broth mid-air, steam visible, warm tungsten lamp light, dark wood table, Chaoshan calligraphy menu card softly out of focus in background",
+      "Atmosphere": "Mala pot centered on a family round table, 6 dipping sauce bowls arranged around it, hands of 3 family members reaching in, restaurant ambient red-lantern glow, slight motion blur on hands, evening warmth, \u6162\u706b\u7ec6\u716e mood"
+    },
+    "sheet": "picks/S1-candidates.jpg",
     "picks": [
-      {
-        "idx": 282,
-        "stem": "DSC03839",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03839.JPG"
-      },
-      {
-        "idx": 293,
-        "stem": "DSC03850",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03850.JPG"
-      },
-      {
-        "idx": 304,
-        "stem": "DSC03861",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03861.JPG"
-      },
-      {
-        "idx": 315,
-        "stem": "DSC03872",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03872.JPG"
-      },
-      {
-        "idx": 326,
-        "stem": "DSC03883",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03883.JPG"
-      },
-      {
-        "idx": 337,
-        "stem": "DSC03894",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03894.JPG"
-      },
-      {
-        "idx": 348,
-        "stem": "DSC03905",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03905.JPG"
-      },
-      {
-        "idx": 359,
-        "stem": "DSC03916",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03916.JPG"
-      },
-      {
-        "idx": 370,
-        "stem": "DSC03927",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03927.JPG"
-      },
-      {
-        "idx": 381,
-        "stem": "DSC03938",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03938.JPG"
-      },
-      {
-        "idx": 392,
-        "stem": "DSC03949",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03949.JPG"
-      },
-      {
-        "idx": 403,
-        "stem": "DSC03960",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03960.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V2",
-    "title": "Daily freshness BTS",
-    "pillar": "Process · 鲜",
-    "location": "JB Factory",
-    "quality": "★★★★★",
-    "prompt": "Chef hands cleaning and prepping fresh chicken on a wooden cutting board under warm morning light, brass cleaver, macro detail of cut, steam, 35mm film aesthetic, warm amber + ink black palette, slow build",
-    "sheet": "picks/V2-candidates.jpg",
-    "picks": [
-      {
-        "idx": 181,
-        "stem": "DSC03738",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03738.JPG"
-      },
-      {
-        "idx": 189,
-        "stem": "DSC03746",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03746.JPG"
-      },
-      {
-        "idx": 197,
-        "stem": "DSC03754",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03754.JPG"
-      },
-      {
-        "idx": 205,
-        "stem": "DSC03762",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03762.JPG"
-      },
-      {
-        "idx": 213,
-        "stem": "DSC03770",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03770.JPG"
-      },
-      {
-        "idx": 261,
-        "stem": "DSC03818",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03818.JPG"
-      },
-      {
-        "idx": 269,
-        "stem": "DSC03826",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03826.JPG"
-      },
-      {
-        "idx": 277,
-        "stem": "DSC03834",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03834.JPG"
-      },
-      {
-        "idx": 386,
-        "stem": "DSC03943",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03943.JPG"
-      },
-      {
-        "idx": 394,
-        "stem": "DSC03951",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03951.JPG"
-      },
-      {
-        "idx": 402,
-        "stem": "DSC03959",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03959.JPG"
-      },
-      {
-        "idx": 410,
-        "stem": "DSC03967",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03967.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V3",
-    "title": "Black Gold Mala — Sichuan story",
-    "pillar": "Dish · 川式",
-    "location": "Horne Rd",
-    "quality": "★★★★",
-    "prompt": "Steaming clay pot of Sichuan black-gold mala chicken hotpot, layered chili oil, glistening surface, dramatic chiaroscuro, low-angle 35° shot, warm amber key light from 11 o'clock, dark wood backdrop, premium food cinematography",
-    "sheet": "picks/V3-candidates.jpg",
-    "picks": [
-      {
-        "idx": 75,
-        "stem": "DSC03632",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03632.JPG"
-      },
-      {
-        "idx": 79,
-        "stem": "DSC03636",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03636.JPG"
-      },
-      {
-        "idx": 83,
-        "stem": "DSC03640",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03640.JPG"
-      },
-      {
-        "idx": 87,
-        "stem": "DSC03644",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03644.JPG"
-      },
-      {
-        "idx": 91,
-        "stem": "DSC03648",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03648.JPG"
-      },
-      {
-        "idx": 95,
-        "stem": "DSC03652",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03652.JPG"
-      },
       {
         "idx": 99,
         "stem": "DSC03656",
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03656.JPG"
+      },
+      {
+        "idx": 100,
+        "stem": "DSC03657",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03657.JPG"
+      },
+      {
+        "idx": 101,
+        "stem": "DSC03658",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03658.JPG"
+      },
+      {
+        "idx": 102,
+        "stem": "DSC03659",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03659.JPG"
       },
       {
         "idx": 103,
@@ -191,699 +48,14 @@
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03660.JPG"
       },
       {
-        "idx": 212,
-        "stem": "DSC03769",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03769.JPG"
-      },
-      {
-        "idx": 216,
-        "stem": "DSC03773",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03773.JPG"
-      },
-      {
-        "idx": 220,
-        "stem": "DSC03777",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03777.JPG"
-      },
-      {
-        "idx": 269,
-        "stem": "DSC03826",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03826.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V4",
-    "title": "Stone Olive — health / TCM",
-    "pillar": "Dish · 养",
-    "location": "Horne Rd",
-    "quality": "★★ partial",
-    "prompt": "Clear herbal broth of wild stone olive chicken pot, light amber-yellow color, jujubes and green herbs floating, soft cool light, gentle steam, TCM apothecary mood, served in dark clay pot, calm restorative vibe",
-    "sheet": "picks/V4-candidates.jpg",
-    "picks": [
-      {
-        "idx": 211,
-        "stem": "DSC03768",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03768.JPG"
-      },
-      {
-        "idx": 213,
-        "stem": "DSC03770",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03770.JPG"
-      },
-      {
-        "idx": 215,
-        "stem": "DSC03772",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03772.JPG"
-      },
-      {
-        "idx": 217,
-        "stem": "DSC03774",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03774.JPG"
-      },
-      {
-        "idx": 219,
-        "stem": "DSC03776",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03776.JPG"
-      },
-      {
-        "idx": 75,
-        "stem": "DSC03632",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03632.JPG"
-      },
-      {
-        "idx": 77,
-        "stem": "DSC03634",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03634.JPG"
-      },
-      {
-        "idx": 79,
-        "stem": "DSC03636",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03636.JPG"
-      },
-      {
-        "idx": 81,
-        "stem": "DSC03638",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03638.JPG"
-      },
-      {
-        "idx": 83,
-        "stem": "DSC03640",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03640.JPG"
-      },
-      {
-        "idx": 85,
-        "stem": "DSC03642",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03642.JPG"
-      },
-      {
-        "idx": 87,
-        "stem": "DSC03644",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03644.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V5",
-    "title": "Signature dish 3 (TBD)",
-    "pillar": "Dish · 招牌",
-    "location": "Paya Lebar",
-    "quality": "★★ partial",
-    "prompt": "Signature Chaoshan chicken hotpot in a black cast-iron clay pot, glossy broth surface, fresh ingredients visible, warm overhead light, 45° angle, cinematic shallow DOF, brand pillar story",
-    "sheet": "picks/V5-candidates.jpg",
-    "picks": [
-      {
-        "idx": 75,
-        "stem": "DSC03632",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03632.JPG"
-      },
-      {
-        "idx": 80,
-        "stem": "DSC03637",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03637.JPG"
-      },
-      {
-        "idx": 85,
-        "stem": "DSC03642",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03642.JPG"
-      },
-      {
-        "idx": 90,
-        "stem": "DSC03647",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03647.JPG"
-      },
-      {
-        "idx": 95,
-        "stem": "DSC03652",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03652.JPG"
-      },
-      {
-        "idx": 100,
-        "stem": "DSC03657",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03657.JPG"
+        "idx": 104,
+        "stem": "DSC03661",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03661.JPG"
       },
       {
         "idx": 105,
         "stem": "DSC03662",
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03662.JPG"
-      },
-      {
-        "idx": 110,
-        "stem": "DSC03667",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03667.JPG"
-      },
-      {
-        "idx": 115,
-        "stem": "DSC03672",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03672.JPG"
-      },
-      {
-        "idx": 120,
-        "stem": "DSC03677",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03677.JPG"
-      },
-      {
-        "idx": 125,
-        "stem": "DSC03682",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03682.JPG"
-      },
-      {
-        "idx": 212,
-        "stem": "DSC03769",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03769.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V6",
-    "title": "Signature dish 4 (TBD)",
-    "pillar": "Dish · 招牌",
-    "location": "Bukit Timah",
-    "quality": "★★ partial",
-    "prompt": "Signature Chaoshan chicken hotpot variation, distinct broth color, dramatic steam, served in clay pot, warm key + cool fill light, premium hotpot photography",
-    "sheet": "picks/V6-candidates.jpg",
-    "picks": [
-      {
-        "idx": 75,
-        "stem": "DSC03632",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03632.JPG"
-      },
-      {
-        "idx": 80,
-        "stem": "DSC03637",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03637.JPG"
-      },
-      {
-        "idx": 85,
-        "stem": "DSC03642",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03642.JPG"
-      },
-      {
-        "idx": 90,
-        "stem": "DSC03647",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03647.JPG"
-      },
-      {
-        "idx": 95,
-        "stem": "DSC03652",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03652.JPG"
-      },
-      {
-        "idx": 100,
-        "stem": "DSC03657",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03657.JPG"
-      },
-      {
-        "idx": 105,
-        "stem": "DSC03662",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03662.JPG"
-      },
-      {
-        "idx": 110,
-        "stem": "DSC03667",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03667.JPG"
-      },
-      {
-        "idx": 115,
-        "stem": "DSC03672",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03672.JPG"
-      },
-      {
-        "idx": 120,
-        "stem": "DSC03677",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03677.JPG"
-      },
-      {
-        "idx": 125,
-        "stem": "DSC03682",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03682.JPG"
-      },
-      {
-        "idx": 212,
-        "stem": "DSC03769",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03769.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V7",
-    "title": "Signature dipping sauce",
-    "pillar": "Dish · 蘸料哲学",
-    "location": "Bukit Timah",
-    "quality": "★★★★★",
-    "prompt": "Top-down macro shot of \"蘸料哲学\" dipping sauce: a small dish of fresh sand ginger, minced garlic, light soy sauce — clean composition, brass spoon, wooden table, gentle natural light, editorial food photography",
-    "sheet": "picks/V7-candidates.jpg",
-    "picks": [
-      {
-        "idx": 41,
-        "stem": "DSC03598",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03598.JPG"
-      },
-      {
-        "idx": 43,
-        "stem": "DSC03600",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03600.JPG"
-      },
-      {
-        "idx": 45,
-        "stem": "DSC03602",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03602.JPG"
-      },
-      {
-        "idx": 47,
-        "stem": "DSC03604",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03604.JPG"
-      },
-      {
-        "idx": 49,
-        "stem": "DSC03606",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03606.JPG"
-      },
-      {
-        "idx": 51,
-        "stem": "DSC03608",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03608.JPG"
-      },
-      {
-        "idx": 53,
-        "stem": "DSC03610",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03610.JPG"
-      },
-      {
-        "idx": 55,
-        "stem": "DSC03612",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03612.JPG"
-      },
-      {
-        "idx": 57,
-        "stem": "DSC03614",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03614.JPG"
-      },
-      {
-        "idx": 59,
-        "stem": "DSC03616",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03616.JPG"
-      },
-      {
-        "idx": 61,
-        "stem": "DSC03618",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03618.JPG"
-      },
-      {
-        "idx": 63,
-        "stem": "DSC03620",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03620.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V8",
-    "title": "Horne Rd outlet tour",
-    "pillar": "Design & Hospitality",
-    "location": "Horne Rd",
-    "quality": "★★★★",
-    "prompt": "Walkthrough of Chao 88 Horne Rd outlet interior — Teochew heritage decor, red lanterns, English Yingge dance posters, dark wood, warm tungsten glow, smooth gimbal movement, premium restaurant tour vibe",
-    "sheet": "picks/V8-candidates.jpg",
-    "picks": [
-      {
-        "idx": 1,
-        "stem": "DSC03558",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03558.JPG"
-      },
-      {
-        "idx": 7,
-        "stem": "DSC03564",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03564.JPG"
-      },
-      {
-        "idx": 13,
-        "stem": "DSC03570",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03570.JPG"
-      },
-      {
-        "idx": 19,
-        "stem": "DSC03576",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03576.JPG"
-      },
-      {
-        "idx": 25,
-        "stem": "DSC03582",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03582.JPG"
-      },
-      {
-        "idx": 31,
-        "stem": "DSC03588",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03588.JPG"
-      },
-      {
-        "idx": 37,
-        "stem": "DSC03594",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03594.JPG"
-      },
-      {
-        "idx": 131,
-        "stem": "DSC03688",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03688.JPG"
-      },
-      {
-        "idx": 137,
-        "stem": "DSC03694",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03694.JPG"
-      },
-      {
-        "idx": 253,
-        "stem": "DSC03810",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03810.JPG"
-      },
-      {
-        "idx": 259,
-        "stem": "DSC03816",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03816.JPG"
-      },
-      {
-        "idx": 265,
-        "stem": "DSC03822",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03822.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V9",
-    "title": "Paya Lebar outlet tour",
-    "pillar": "Design & Hospitality",
-    "location": "Paya Lebar",
-    "quality": "★★★",
-    "prompt": "Walkthrough of Chao 88 Upper Paya Lebar outlet — same heritage style, different layout, warm lanterns, slow camera movement, golden hour exterior to interior transition",
-    "sheet": "picks/V9-candidates.jpg",
-    "picks": [
-      {
-        "idx": 1,
-        "stem": "DSC03558",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03558.JPG"
-      },
-      {
-        "idx": 5,
-        "stem": "DSC03562",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03562.JPG"
-      },
-      {
-        "idx": 9,
-        "stem": "DSC03566",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03566.JPG"
-      },
-      {
-        "idx": 13,
-        "stem": "DSC03570",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03570.JPG"
-      },
-      {
-        "idx": 17,
-        "stem": "DSC03574",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03574.JPG"
-      },
-      {
-        "idx": 21,
-        "stem": "DSC03578",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03578.JPG"
-      },
-      {
-        "idx": 25,
-        "stem": "DSC03582",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03582.JPG"
-      },
-      {
-        "idx": 29,
-        "stem": "DSC03586",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03586.JPG"
-      },
-      {
-        "idx": 33,
-        "stem": "DSC03590",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03590.JPG"
-      },
-      {
-        "idx": 37,
-        "stem": "DSC03594",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03594.JPG"
-      },
-      {
-        "idx": 129,
-        "stem": "DSC03686",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03686.JPG"
-      },
-      {
-        "idx": 133,
-        "stem": "DSC03690",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03690.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V10",
-    "title": "Bukit Timah outlet tour",
-    "pillar": "Design & Hospitality",
-    "location": "Bukit Timah",
-    "quality": "★★★",
-    "prompt": "Walkthrough of Chao 88 Bukit Timah outlet — heritage Teochew decor, private dining rooms with round tables, lantern light, calligraphy on walls",
-    "sheet": "picks/V10-candidates.jpg",
-    "picks": [
-      {
-        "idx": 1,
-        "stem": "DSC03558",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03558.JPG"
-      },
-      {
-        "idx": 8,
-        "stem": "DSC03565",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-006/DSC03565.JPG"
-      },
-      {
-        "idx": 15,
-        "stem": "DSC03572",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03572.JPG"
-      },
-      {
-        "idx": 22,
-        "stem": "DSC03579",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03579.JPG"
-      },
-      {
-        "idx": 29,
-        "stem": "DSC03586",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03586.JPG"
-      },
-      {
-        "idx": 36,
-        "stem": "DSC03593",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03593.JPG"
-      },
-      {
-        "idx": 131,
-        "stem": "DSC03688",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03688.JPG"
-      },
-      {
-        "idx": 138,
-        "stem": "DSC03695",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03695.JPG"
-      },
-      {
-        "idx": 565,
-        "stem": "DSC04122",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04122.JPG"
-      },
-      {
-        "idx": 572,
-        "stem": "DSC04129",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04129.JPG"
-      },
-      {
-        "idx": 579,
-        "stem": "DSC04136",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04136.JPG"
-      },
-      {
-        "idx": 586,
-        "stem": "DSC04143",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04143.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V11",
-    "title": "SAFRA Punggol outlet tour",
-    "pillar": "Design & Hospitality",
-    "location": "SAFRA Punggol",
-    "quality": "★★★ (fit-out only)",
-    "prompt": "Walkthrough of brand new Chao 88 SAFRA Punggol outlet — pristine fit-out with red signage \"斩鸡房\", traditional Teochew wood + cream decor, fresh opening energy, golden afternoon light",
-    "sheet": "picks/V11-candidates.jpg",
-    "picks": [
-      {
-        "idx": 141,
-        "stem": "DSC03698",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03698.JPG"
-      },
-      {
-        "idx": 146,
-        "stem": "DSC03703",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03703.JPG"
-      },
-      {
-        "idx": 151,
-        "stem": "DSC03708",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03708.JPG"
-      },
-      {
-        "idx": 156,
-        "stem": "DSC03713",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03713.JPG"
-      },
-      {
-        "idx": 161,
-        "stem": "DSC03718",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03718.JPG"
-      },
-      {
-        "idx": 166,
-        "stem": "DSC03723",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03723.JPG"
-      },
-      {
-        "idx": 171,
-        "stem": "DSC03728",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03728.JPG"
-      },
-      {
-        "idx": 176,
-        "stem": "DSC03733",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03733.JPG"
-      },
-      {
-        "idx": 181,
-        "stem": "DSC03738",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03738.JPG"
-      },
-      {
-        "idx": 186,
-        "stem": "DSC03743",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03743.JPG"
-      },
-      {
-        "idx": 191,
-        "stem": "DSC03748",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03748.JPG"
-      },
-      {
-        "idx": 196,
-        "stem": "DSC03753",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03753.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V12",
-    "title": "Meet the head chef",
-    "pillar": "Chef & Team",
-    "location": "Kitchen",
-    "quality": "★★★★★",
-    "prompt": "Portrait of head chef in red apron and white chef hat, holding cleaver, beside black calligraphy \"鸡\" sign, 20+ years experience, warm tungsten studio light, shallow DOF, dignified mood, premium chef cinematography",
-    "sheet": "picks/V12-candidates.jpg",
-    "picks": [
-      {
-        "idx": 79,
-        "stem": "DSC03636",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03636.JPG"
-      },
-      {
-        "idx": 81,
-        "stem": "DSC03638",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03638.JPG"
-      },
-      {
-        "idx": 83,
-        "stem": "DSC03640",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03640.JPG"
-      },
-      {
-        "idx": 85,
-        "stem": "DSC03642",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03642.JPG"
-      },
-      {
-        "idx": 87,
-        "stem": "DSC03644",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03644.JPG"
-      },
-      {
-        "idx": 89,
-        "stem": "DSC03646",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03646.JPG"
-      },
-      {
-        "idx": 541,
-        "stem": "DSC04098",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04098.JPG"
-      },
-      {
-        "idx": 543,
-        "stem": "DSC04100",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04100.JPG"
-      },
-      {
-        "idx": 545,
-        "stem": "DSC04102",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04102.JPG"
-      },
-      {
-        "idx": 547,
-        "stem": "DSC04104",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04104.JPG"
-      },
-      {
-        "idx": 549,
-        "stem": "DSC04106",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04106.JPG"
-      },
-      {
-        "idx": 551,
-        "stem": "DSC04108",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04108.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V13",
-    "title": "Day in the life of kitchen team",
-    "pillar": "Chef & Team",
-    "location": "Kitchen",
-    "quality": "★★★★★",
-    "prompt": "Day in the life of Chao 88 kitchen team — early morning prep, washing chicken, slow simmer broths, cutting, plating, multiple camera angles, fast-cut energetic but warm, Chef's Table style",
-    "sheet": "picks/V13-candidates.jpg",
-    "picks": [
-      {
-        "idx": 41,
-        "stem": "DSC03598",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03598.JPG"
-      },
-      {
-        "idx": 54,
-        "stem": "DSC03611",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03611.JPG"
-      },
-      {
-        "idx": 67,
-        "stem": "DSC03624",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03624.JPG"
-      },
-      {
-        "idx": 80,
-        "stem": "DSC03637",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03637.JPG"
-      },
-      {
-        "idx": 93,
-        "stem": "DSC03650",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03650.JPG"
       },
       {
         "idx": 106,
@@ -891,284 +63,46 @@
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-006/DSC03663.JPG"
       },
       {
-        "idx": 119,
-        "stem": "DSC03676",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03676.JPG"
+        "idx": 107,
+        "stem": "DSC03664",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03664.JPG"
       },
       {
-        "idx": 192,
-        "stem": "DSC03749",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03749.JPG"
+        "idx": 108,
+        "stem": "DSC03665",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03665.JPG"
       },
       {
-        "idx": 205,
-        "stem": "DSC03762",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03762.JPG"
+        "idx": 109,
+        "stem": "DSC03666",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03666.JPG"
       },
       {
-        "idx": 218,
-        "stem": "DSC03775",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03775.JPG"
-      },
-      {
-        "idx": 231,
-        "stem": "DSC03788",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03788.JPG"
-      },
-      {
-        "idx": 244,
-        "stem": "DSC03801",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03801.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V14",
-    "title": "Customer testimonials compilation",
-    "pillar": "Testimonials",
-    "location": "All 4 outlets",
-    "quality": "★★★★",
-    "prompt": "Multi-generational Chinese family + couples + groups dining at round tables in Chao 88, eating hotpot, laughing, picking chicken with chopsticks, genuine candid moments, warm restaurant lighting, 35mm aesthetic",
-    "sheet": "picks/V14-candidates.jpg",
-    "picks": [
-      {
-        "idx": 521,
-        "stem": "DSC04078",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04078.JPG"
-      },
-      {
-        "idx": 527,
-        "stem": "DSC04084",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04084.JPG"
-      },
-      {
-        "idx": 533,
-        "stem": "DSC04090",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04090.JPG"
-      },
-      {
-        "idx": 539,
-        "stem": "DSC04096",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04096.JPG"
-      },
-      {
-        "idx": 545,
-        "stem": "DSC04102",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04102.JPG"
-      },
-      {
-        "idx": 551,
-        "stem": "DSC04108",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04108.JPG"
-      },
-      {
-        "idx": 557,
-        "stem": "DSC04114",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04114.JPG"
-      },
-      {
-        "idx": 563,
-        "stem": "DSC04120",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04120.JPG"
-      },
-      {
-        "idx": 569,
-        "stem": "DSC04126",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04126.JPG"
-      },
-      {
-        "idx": 575,
-        "stem": "DSC04132",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04132.JPG"
-      },
-      {
-        "idx": 581,
-        "stem": "DSC04138",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04138.JPG"
-      },
-      {
-        "idx": 587,
-        "stem": "DSC04144",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04144.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "V15",
-    "title": "Family dining moment (UGC-style)",
-    "pillar": "Testimonials · 家",
-    "location": "TBC",
-    "quality": "★★★★",
-    "prompt": "Three generations at one round table — grandma, parents, kids — sharing a steaming Chao 88 chicken hotpot, warm lantern light, lens flare, intimate emotional moment, slow zoom-out, golden hour mood",
-    "sheet": "picks/V15-candidates.jpg",
-    "picks": [
-      {
-        "idx": 551,
-        "stem": "DSC04108",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04108.JPG"
-      },
-      {
-        "idx": 555,
-        "stem": "DSC04112",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04112.JPG"
-      },
-      {
-        "idx": 559,
-        "stem": "DSC04116",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04116.JPG"
-      },
-      {
-        "idx": 563,
-        "stem": "DSC04120",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04120.JPG"
-      },
-      {
-        "idx": 567,
-        "stem": "DSC04124",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04124.JPG"
-      },
-      {
-        "idx": 571,
-        "stem": "DSC04128",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04128.JPG"
-      },
-      {
-        "idx": 575,
-        "stem": "DSC04132",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04132.JPG"
-      },
-      {
-        "idx": 579,
-        "stem": "DSC04136",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04136.JPG"
-      },
-      {
-        "idx": 583,
-        "stem": "DSC04140",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04140.JPG"
-      },
-      {
-        "idx": 587,
-        "stem": "DSC04144",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04144.JPG"
-      },
-      {
-        "idx": 591,
-        "stem": "DSC04148",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04148.JPG"
-      },
-      {
-        "idx": 595,
-        "stem": "DSC04152",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04152.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S1",
-    "title": "Black Gold Mala hero shot",
-    "pillar": "Food",
-    "location": "Horne Rd",
-    "quality": "★★★★",
-    "prompt": "Hero shot of \"川式黑金麻辣鸡煲\" Sichuan Black Gold Mala chicken hotpot — top-down, deep red broth with layered chili oil, glistening, dark wood backdrop, dramatic single key light, food editorial style",
-    "sheet": "picks/S1-candidates.jpg",
-    "picks": [
-      {
-        "idx": 75,
-        "stem": "DSC03632",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03632.JPG"
-      },
-      {
-        "idx": 79,
-        "stem": "DSC03636",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03636.JPG"
-      },
-      {
-        "idx": 83,
-        "stem": "DSC03640",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03640.JPG"
-      },
-      {
-        "idx": 87,
-        "stem": "DSC03644",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03644.JPG"
-      },
-      {
-        "idx": 91,
-        "stem": "DSC03648",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03648.JPG"
-      },
-      {
-        "idx": 95,
-        "stem": "DSC03652",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03652.JPG"
-      },
-      {
-        "idx": 99,
-        "stem": "DSC03656",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03656.JPG"
-      },
-      {
-        "idx": 103,
-        "stem": "DSC03660",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03660.JPG"
-      },
-      {
-        "idx": 212,
-        "stem": "DSC03769",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03769.JPG"
-      },
-      {
-        "idx": 216,
-        "stem": "DSC03773",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03773.JPG"
-      },
-      {
-        "idx": 220,
-        "stem": "DSC03777",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03777.JPG"
-      },
-      {
-        "idx": 269,
-        "stem": "DSC03826",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03826.JPG"
+        "idx": 110,
+        "stem": "DSC03667",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03667.JPG"
       }
     ]
   },
   {
     "slot": "S2",
-    "title": "Stone Olive hero shot",
-    "pillar": "Food",
-    "location": "Horne Rd",
-    "quality": "★★ partial",
-    "prompt": "Hero shot of \"野生石橄榄鸡煲\" Wild Stone Olive chicken pot — clear amber broth, jujubes + goji + olives + green herbs visible, served in black clay pot, 45° angle, soft natural light, calm wellness mood",
+    "title": "\u91ce\u751f\u77f3\u6a44\u6984\u9e21\u7172 \u2014 Wild Stone Olive (TCM)",
+    "pillar": "Nourish \u00b7 \u517b",
+    "post_date": "24 Jun 2026 (Wed)",
+    "ranges": [
+      [
+        216,
+        220
+      ]
+    ],
+    "prompts": {
+      "Hero": "Top-down hero of \u91ce\u751f\u77f3\u6a44\u6984\u9e21\u7172, clear amber-gold broth with whole wild stone olives, free-range chicken pieces, red dates and goji berries floating, served in earthy clay pot, cream linen, neutral apothecary props (small TCM ingredient bowls), soft natural daylight, \u6e29\u6da6\u98df\u8865 nourishing mood, photoreal",
+      "Detail": "Macro close-up of a single wild stone olive (\u6a44\u6984) cracked open in the amber broth, herbal aroma steam, golden translucent liquid, shallow depth of field, soft window light, editorial premium",
+      "Action": "Slow pour shot \u2014 ladle dipping into clay pot and rising with steaming amber broth, single chicken piece visible, droplets cascading, dark green Chaoshan backdrop (\u6f6e\u6c55\u7eff #1E5A44), morning natural light",
+      "Atmosphere": "Cozy private dining nook with the clay pot in foreground, soft red lantern in background bokeh, two ceramic cups of warm tea beside, traditional wooden table, quiet domestic mood, slow Sunday lunch feel"
+    },
     "sheet": "picks/S2-candidates.jpg",
     "picks": [
-      {
-        "idx": 211,
-        "stem": "DSC03768",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03768.JPG"
-      },
-      {
-        "idx": 212,
-        "stem": "DSC03769",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03769.JPG"
-      },
-      {
-        "idx": 213,
-        "stem": "DSC03770",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03770.JPG"
-      },
-      {
-        "idx": 214,
-        "stem": "DSC03771",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03771.JPG"
-      },
-      {
-        "idx": 215,
-        "stem": "DSC03772",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03772.JPG"
-      },
       {
         "idx": 216,
         "stem": "DSC03773",
@@ -1198,38 +132,894 @@
   },
   {
     "slot": "S3",
-    "title": "Fresh chicken cuts macro",
-    "pillar": "Food · 现切",
-    "location": "JB Factory",
-    "quality": "★★★★★",
-    "prompt": "Macro close-up of freshly cut chicken pieces on wooden board, brass cleaver beside, raw clean cuts, slight steam, top-down composition, warm amber light, \"现切\" freshness emphasis",
+    "title": "\u73b0\u5207\u9e21 \u2014 Fresh chicken cuts (Process \u00b7 \u9c9c)",
+    "pillar": "Process \u00b7 \u9c9c",
+    "post_date": "27 Jun 2026 (Fri)",
+    "ranges": [
+      [
+        266,
+        270
+      ]
+    ],
+    "prompts": {
+      "Hero": "Top-down hero of freshly cut Chaoshan free-range chicken laid on a black slate board, raw glistening pieces (drumstick, thigh, breast, wing) arranged with a single bone cleaver, surrounding ginger slices and spring onion, cream linen, soft directional north light, \u9c9c freshness as story, photoreal high-res",
+      "Detail": "Macro close-up of the freshly cut chicken showing skin texture, golden subcutaneous fat layer, bone marrow at cleaver-cut edge, tiny droplet of water on skin, micro detail, cold-toned light, food anatomy editorial",
+      "Action": "Mid-cut moment \u2014 chef's hand bringing cleaver down on a whole chicken, slight motion blur on the blade, wood butcher block, raw aesthetic, side-lit, dark background, \u73b0\u5207 (just-cut) story",
+      "Atmosphere": "Wider scene of the open chicken-cutting station inside outlet, hanging fresh chickens on hooks, neon red \u73b0\u5207 sign softly in background bokeh, warm fluorescent + red light mix, documentary feel"
+    },
     "sheet": "picks/S3-candidates.jpg",
     "picks": [
+      {
+        "idx": 266,
+        "stem": "DSC03823",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03823.JPG"
+      },
+      {
+        "idx": 267,
+        "stem": "DSC03824",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03824.JPG"
+      },
+      {
+        "idx": 268,
+        "stem": "DSC03825",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03825.JPG"
+      },
+      {
+        "idx": 269,
+        "stem": "DSC03826",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03826.JPG"
+      },
+      {
+        "idx": 270,
+        "stem": "DSC03827",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03827.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S4",
+    "title": "\u8638\u6599\u54f2\u5b66 \u2014 Dipping Sauce Philosophy (Side dish hero)",
+    "pillar": "Craft \u00b7 \u9c9c",
+    "post_date": "29 Jun 2026 (Mon)",
+    "ranges": [
+      [
+        53,
+        53
+      ],
+      [
+        196,
+        196
+      ],
+      [
+        41,
+        50
+      ]
+    ],
+    "prompts": {
+      "Hero": "Top-down flat lay of Chao 88's signature dipping sauce wheel \u2014 6 to 8 small white ceramic bowls in a circle, each with a different sauce (\u6c99\u8336, \u849c\u6ce5, \u8fa3\u6912\u6cb9, \u8471\u59dc\u6cb9, \u8c49\u6cb9, \u9ebb\u9171), labeled with calligraphy tags, cream linen base, brass spoon centerpiece, soft daylight, editorial flat lay, \u8638\u6599\u54f2\u5b66 dipping philosophy",
+      "Detail": "Macro close-up of one bowl of chili oil \u8fa3\u6912\u6cb9 with crispy chili flakes floating, glossy oil surface reflecting warm light, single peppercorn beside the bowl, premium texture",
+      "Action": "A hand dipping a piece of just-cooked chicken into one of the dipping bowls, droplet of sauce falling, warm tungsten light, dark wood table, slight motion blur, anticipation moment",
+      "Atmosphere": "All 8 dipping bowls fanned out on a long Chaoshan banquet table, family hands reaching in from 4 sides, warm red lantern glow, communal feast feeling, slight overhead angle"
+    },
+    "sheet": "picks/S4-candidates.jpg",
+    "picks": [
+      {
+        "idx": 53,
+        "stem": "DSC03610",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03610.JPG"
+      },
+      {
+        "idx": 196,
+        "stem": "DSC03753",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03753.JPG"
+      },
+      {
+        "idx": 41,
+        "stem": "DSC03598",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03598.JPG"
+      },
+      {
+        "idx": 42,
+        "stem": "DSC03599",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03599.JPG"
+      },
+      {
+        "idx": 43,
+        "stem": "DSC03600",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03600.JPG"
+      },
+      {
+        "idx": 44,
+        "stem": "DSC03601",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03601.JPG"
+      },
+      {
+        "idx": 45,
+        "stem": "DSC03602",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03602.JPG"
+      },
+      {
+        "idx": 46,
+        "stem": "DSC03603",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03603.JPG"
+      },
+      {
+        "idx": 47,
+        "stem": "DSC03604",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03604.JPG"
+      },
+      {
+        "idx": 48,
+        "stem": "DSC03605",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03605.JPG"
+      },
+      {
+        "idx": 49,
+        "stem": "DSC03606",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03606.JPG"
+      },
+      {
+        "idx": 50,
+        "stem": "DSC03607",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03607.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S5",
+    "title": "Bubbling broth close-up (Mood \u00b7 \u9c9c)",
+    "pillar": "Mood \u00b7 \u9c9c",
+    "post_date": "1 Jul 2026 (Wed)",
+    "ranges": [
+      [
+        99,
+        108
+      ],
+      [
+        545,
+        545
+      ]
+    ],
+    "prompts": {
+      "Hero": "Cinematic close-up of a clay pot of chicken broth gently bubbling at simmer, single large bubble breaking the surface, herbal aroma steam rising in clean column, warm honey-amber broth, slightly off-center composition, dark moody background, side-lit golden hour, \u6162\u706b\u7ec6\u716e slow-cook story, photoreal",
+      "Detail": "Extreme macro of a single soup bubble forming and bursting on broth surface, droplets suspended mid-air, condensation on the pot rim, surface tension micro detail, slow-motion still",
+      "Action": "Ladle gliding through the surface of the broth, displacing a goji berry and a red date, steam puffing upward, hand barely visible at top of frame, warm side light",
+      "Atmosphere": "Wider scene \u2014 clay pot on portable burner, soft blue gas flame underneath, dim restaurant background with red lantern bokeh, family member silhouettes out of focus, quiet anticipation"
+    },
+    "sheet": "picks/S5-candidates.jpg",
+    "picks": [
+      {
+        "idx": 99,
+        "stem": "DSC03656",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03656.JPG"
+      },
+      {
+        "idx": 100,
+        "stem": "DSC03657",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03657.JPG"
+      },
+      {
+        "idx": 101,
+        "stem": "DSC03658",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03658.JPG"
+      },
+      {
+        "idx": 102,
+        "stem": "DSC03659",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03659.JPG"
+      },
+      {
+        "idx": 103,
+        "stem": "DSC03660",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03660.JPG"
+      },
+      {
+        "idx": 104,
+        "stem": "DSC03661",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03661.JPG"
+      },
+      {
+        "idx": 105,
+        "stem": "DSC03662",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03662.JPG"
+      },
+      {
+        "idx": 106,
+        "stem": "DSC03663",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-006/DSC03663.JPG"
+      },
+      {
+        "idx": 107,
+        "stem": "DSC03664",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03664.JPG"
+      },
+      {
+        "idx": 108,
+        "stem": "DSC03665",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03665.JPG"
+      },
+      {
+        "idx": 545,
+        "stem": "DSC04102",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04102.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S6",
+    "title": "Full table hero spread (Communal \u00b7 \u517b)",
+    "pillar": "Communal \u00b7 \u517b",
+    "post_date": "4 Jul 2026 (Sat-bonus)",
+    "ranges": [
+      [
+        121,
+        128
+      ]
+    ],
+    "prompts": {
+      "Hero": "Stunning overhead top-down hero of a full Chaoshan family feast \u2014 central hotpot of clear chicken broth, surrounded by 8-10 small dishes (fresh chicken cuts, dipping sauces, leafy greens, dumplings, rice bowls, beer), warm wood round table, family hands holding chopsticks reaching into frame from edges, cream linen runner, warm overhead light, abundance, \u56e2\u5706 reunion mood, photoreal editorial",
+      "Detail": "Macro detail of the table's centerpiece hotpot with multiple bowls clustered tight around it, each plate filled, perfect arrangement, slight steam wisp from pot, top-down food editorial",
+      "Action": "Mid-meal mid-action \u2014 multiple chopsticks crossing the pot, one hand lifting chicken out, another adding dipping sauce, warm motion blur, joyful chaos",
+      "Atmosphere": "Pull back wider \u2014 table surrounded by 6 family members of all ages, smiles, red lanterns above, restaurant warmth, \u8001\u5c11\u7686\u5b9c generational mood, candid feeling"
+    },
+    "sheet": "picks/S6-candidates.jpg",
+    "picks": [
+      {
+        "idx": 121,
+        "stem": "DSC03678",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03678.JPG"
+      },
+      {
+        "idx": 122,
+        "stem": "DSC03679",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03679.JPG"
+      },
+      {
+        "idx": 123,
+        "stem": "DSC03680",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03680.JPG"
+      },
+      {
+        "idx": 124,
+        "stem": "DSC03681",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03681.JPG"
+      },
+      {
+        "idx": 125,
+        "stem": "DSC03682",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03682.JPG"
+      },
+      {
+        "idx": 126,
+        "stem": "DSC03683",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03683.JPG"
+      },
+      {
+        "idx": 127,
+        "stem": "DSC03684",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-006/DSC03684.JPG"
+      },
+      {
+        "idx": 128,
+        "stem": "DSC03685",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03685.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S7",
+    "title": "Outlet \u2014 Horne Road (Storefront daytime)",
+    "pillar": "Place \u00b7 \u9c9c",
+    "post_date": "6 Jul 2026 (Mon)",
+    "ranges": [
+      [
+        129,
+        140
+      ],
+      [
+        181,
+        181
+      ]
+    ],
+    "prompts": {
+      "Hero": "Front-facing eye-level hero of the Chao 88 Horne Road outlet storefront in daytime Singapore, clear sky, red signage \"\u6f6e\u516b\u516b\u73b0\u5207\u9e21\u7172\" boldly visible, large window showing fresh-cut chicken display inside, cream and red palette, soft late-morning light, slight wide-angle, street level, lifestyle editorial",
+      "Detail": "Close-up of the storefront signage in red calligraphy \u6f6e\u516b\u516b, with a hint of the menu board beside, warm reflected daylight, paint texture, brand asset focus",
+      "Action": "Customers walking in through the glass door, slight motion blur on figures, doorbell chime moment, sunlight catching the doorframe, candid street photography style",
+      "Atmosphere": "Wider street view showing the Horne Road context \u2014 neighboring shops, parked motorbikes, MRT signage hinting in distance, Chao 88 outlet glowing red at center, daytime SG neighborhood mood"
+    },
+    "sheet": "picks/S7-candidates.jpg",
+    "picks": [
+      {
+        "idx": 129,
+        "stem": "DSC03686",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03686.JPG"
+      },
+      {
+        "idx": 130,
+        "stem": "DSC03687",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03687.JPG"
+      },
+      {
+        "idx": 131,
+        "stem": "DSC03688",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03688.JPG"
+      },
+      {
+        "idx": 132,
+        "stem": "DSC03689",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03689.JPG"
+      },
+      {
+        "idx": 133,
+        "stem": "DSC03690",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03690.JPG"
+      },
+      {
+        "idx": 134,
+        "stem": "DSC03691",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03691.JPG"
+      },
+      {
+        "idx": 135,
+        "stem": "DSC03692",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03692.JPG"
+      },
+      {
+        "idx": 136,
+        "stem": "DSC03693",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03693.JPG"
+      },
+      {
+        "idx": 137,
+        "stem": "DSC03694",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03694.JPG"
+      },
+      {
+        "idx": 138,
+        "stem": "DSC03695",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03695.JPG"
+      },
+      {
+        "idx": 139,
+        "stem": "DSC03696",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03696.JPG"
+      },
+      {
+        "idx": 140,
+        "stem": "DSC03697",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03697.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S8",
+    "title": "Outlet \u2014 Upper Paya Lebar (Storefront)",
+    "pillar": "Place \u00b7 \u9c9c",
+    "post_date": "8 Jul 2026 (Wed)",
+    "ranges": [
+      [
+        186,
+        195
+      ],
+      [
+        257,
+        259
+      ],
+      [
+        569,
+        575
+      ]
+    ],
+    "prompts": {
+      "Hero": "Hero shot of the Chao 88 Upper Paya Lebar outlet storefront, evening blue-hour transition, red signage glowing, warm interior light spilling onto sidewalk, group of customers about to enter, lifestyle editorial wide shot",
+      "Detail": "Macro close-up of the menu poster wall beside the entrance \u2014 dish photography, Chinese calligraphy headlines, prices, brand mark, warm shop-window light",
+      "Action": "Server in red apron stepping out of the entrance to welcome guests, slight motion, warm interior glow framing them, street-side candid",
+      "Atmosphere": "Wider blue-hour street shot \u2014 Paya Lebar context, neighboring storefronts dim, Chao 88 outlet warm and inviting like a heritage lantern, photoreal night-mood editorial"
+    },
+    "sheet": "picks/S8-candidates.jpg",
+    "picks": [
+      {
+        "idx": 186,
+        "stem": "DSC03743",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03743.JPG"
+      },
+      {
+        "idx": 187,
+        "stem": "DSC03744",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03744.JPG"
+      },
+      {
+        "idx": 188,
+        "stem": "DSC03745",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03745.JPG"
+      },
+      {
+        "idx": 189,
+        "stem": "DSC03746",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03746.JPG"
+      },
+      {
+        "idx": 190,
+        "stem": "DSC03747",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03747.JPG"
+      },
+      {
+        "idx": 191,
+        "stem": "DSC03748",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03748.JPG"
+      },
+      {
+        "idx": 192,
+        "stem": "DSC03749",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03749.JPG"
+      },
+      {
+        "idx": 193,
+        "stem": "DSC03750",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03750.JPG"
+      },
+      {
+        "idx": 194,
+        "stem": "DSC03751",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03751.JPG"
+      },
+      {
+        "idx": 195,
+        "stem": "DSC03752",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03752.JPG"
+      },
+      {
+        "idx": 257,
+        "stem": "DSC03814",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03814.JPG"
+      },
+      {
+        "idx": 258,
+        "stem": "DSC03815",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03815.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S9",
+    "title": "Outlet \u2014 Bukit Timah (Storefront night)",
+    "pillar": "Place \u00b7 \u9c9c",
+    "post_date": "11 Jul 2026 (Fri)",
+    "ranges": [
+      [
+        251,
+        261
+      ],
+      [
+        557,
+        557
+      ]
+    ],
+    "prompts": {
+      "Hero": "Cinematic night exterior of the Chao 88 Bukit Timah outlet, deep blue sky, glowing red \u73b0\u5207 sign as the only warm light source, reflection on wet pavement after light rain, slight wide-angle, moody atmosphere, Wong Kar-wai-style color palette (deep reds, neon spill)",
+      "Detail": "Macro close-up of the neon \u73b0\u5207 (fresh-cut) sign at night, reds blooming slightly, electrical hum implied, brand-art focus shot",
+      "Action": "Late-night customer leaving the outlet with a takeaway bag, warm light spilling behind them, soft step into the cool blue street, slight motion blur",
+      "Atmosphere": "Wide pull-back showing Bukit Timah surroundings at night \u2014 quiet street, single car passing with red tail-lights, Chao 88 outlet as a warm beacon in the cool blue scene"
+    },
+    "sheet": "picks/S9-candidates.jpg",
+    "picks": [
+      {
+        "idx": 251,
+        "stem": "DSC03808",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03808.JPG"
+      },
+      {
+        "idx": 252,
+        "stem": "DSC03809",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03809.JPG"
+      },
+      {
+        "idx": 253,
+        "stem": "DSC03810",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03810.JPG"
+      },
+      {
+        "idx": 254,
+        "stem": "DSC03811",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03811.JPG"
+      },
+      {
+        "idx": 255,
+        "stem": "DSC03812",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03812.JPG"
+      },
+      {
+        "idx": 256,
+        "stem": "DSC03813",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03813.JPG"
+      },
+      {
+        "idx": 257,
+        "stem": "DSC03814",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03814.JPG"
+      },
+      {
+        "idx": 258,
+        "stem": "DSC03815",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03815.JPG"
+      },
+      {
+        "idx": 259,
+        "stem": "DSC03816",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03816.JPG"
+      },
+      {
+        "idx": 260,
+        "stem": "DSC03817",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03817.JPG"
+      },
       {
         "idx": 261,
         "stem": "DSC03818",
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03818.JPG"
       },
       {
-        "idx": 262,
-        "stem": "DSC03819",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03819.JPG"
+        "idx": 557,
+        "stem": "DSC04114",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04114.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S10",
+    "title": "Outlet \u2014 SAFRA Punggol (New fit-out reveal)",
+    "pillar": "Place \u00b7 \u9c9c",
+    "post_date": "13 Jul 2026 (Mon)",
+    "ranges": [
+      [
+        141,
+        200
+      ]
+    ],
+    "prompts": {
+      "Hero": "Hero \"first look\" shot of the brand new Chao 88 SAFRA Punggol outlet interior \u2014 fresh fit-out, new red lacquer panels, gold lighting fixtures, untouched cream banquette seating, brand calligraphy mural on far wall, 50mm lens, soft morning light through window, magazine-style architectural editorial",
+      "Detail": "Macro detail of a brass light fixture above a banquette, cream and red palette, design-magazine close-up",
+      "Action": "Construction handover moment \u2014 owner Joanna unveiling the storefront signage being installed, hand caught mid-gesture, daylight, behind-the-scenes documentary tone",
+      "Atmosphere": "Wide architectural shot of the empty new outlet ready for opening \u2014 clean tables, no customers yet, anticipation mood, opening-day feel, slight golden-hour through the windows"
+    },
+    "sheet": "picks/S10-candidates.jpg",
+    "picks": [
+      {
+        "idx": 141,
+        "stem": "DSC03698",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03698.JPG"
       },
       {
-        "idx": 263,
-        "stem": "DSC03820",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03820.JPG"
+        "idx": 142,
+        "stem": "DSC03699",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03699.JPG"
       },
       {
-        "idx": 264,
-        "stem": "DSC03821",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03821.JPG"
+        "idx": 143,
+        "stem": "DSC03700",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03700.JPG"
       },
       {
-        "idx": 265,
-        "stem": "DSC03822",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03822.JPG"
+        "idx": 144,
+        "stem": "DSC03701",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03701.JPG"
       },
+      {
+        "idx": 145,
+        "stem": "DSC03702",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-006/DSC03702.JPG"
+      },
+      {
+        "idx": 146,
+        "stem": "DSC03703",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03703.JPG"
+      },
+      {
+        "idx": 147,
+        "stem": "DSC03704",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03704.JPG"
+      },
+      {
+        "idx": 148,
+        "stem": "DSC03705",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03705.JPG"
+      },
+      {
+        "idx": 149,
+        "stem": "DSC03706",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03706.JPG"
+      },
+      {
+        "idx": 150,
+        "stem": "DSC03707",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03707.JPG"
+      },
+      {
+        "idx": 151,
+        "stem": "DSC03708",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03708.JPG"
+      },
+      {
+        "idx": 152,
+        "stem": "DSC03709",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03709.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S11",
+    "title": "Interior ambience \u2014 Heritage warmth",
+    "pillar": "Atmosphere \u00b7 \u517b",
+    "post_date": "15 Jul 2026 (Wed)",
+    "ranges": [
+      [
+        1,
+        25
+      ],
+      [
+        533,
+        533
+      ]
+    ],
+    "prompts": {
+      "Hero": "Cinematic interior hero of a Chao 88 dining room \u2014 long Chaoshan banquet wooden tables, red cushioned seating, hanging red lanterns above, calligraphy menu cards on wall, soft tungsten warm lighting, empty pre-service moment, sense of heritage and quiet, photoreal editorial",
+      "Detail": "Macro close-up of a single red lantern hanging from the ceiling, paper texture, gold calligraphy, slight tungsten warmth, lens flare hint, brand-mood asset",
+      "Action": "Server walking down the central aisle of the dining room carrying a clay pot of steaming chicken broth, slight motion blur, warm light path on floor, candid documentary",
+      "Atmosphere": "Wider room scene \u2014 half-full dinner service, soft chatter implied, lantern glow, family tables in deep background bokeh, foreground table with empty pot waiting, \u6162\u706b\u7ec6\u716e mood"
+    },
+    "sheet": "picks/S11-candidates.jpg",
+    "picks": [
+      {
+        "idx": 1,
+        "stem": "DSC03558",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03558.JPG"
+      },
+      {
+        "idx": 2,
+        "stem": "DSC03559",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03559.JPG"
+      },
+      {
+        "idx": 3,
+        "stem": "DSC03560",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03560.JPG"
+      },
+      {
+        "idx": 4,
+        "stem": "DSC03561",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03561.JPG"
+      },
+      {
+        "idx": 5,
+        "stem": "DSC03562",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03562.JPG"
+      },
+      {
+        "idx": 6,
+        "stem": "DSC03563",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03563.JPG"
+      },
+      {
+        "idx": 7,
+        "stem": "DSC03564",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03564.JPG"
+      },
+      {
+        "idx": 8,
+        "stem": "DSC03565",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-006/DSC03565.JPG"
+      },
+      {
+        "idx": 9,
+        "stem": "DSC03566",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03566.JPG"
+      },
+      {
+        "idx": 10,
+        "stem": "DSC03567",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03567.JPG"
+      },
+      {
+        "idx": 11,
+        "stem": "DSC03568",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03568.JPG"
+      },
+      {
+        "idx": 12,
+        "stem": "DSC03569",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03569.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S12",
+    "title": "Chef / Team portrait (People \u00b7 \u517b)",
+    "pillar": "People \u00b7 \u517b",
+    "post_date": "18 Jul 2026 (Sat-bonus)",
+    "ranges": [
+      [
+        31,
+        37
+      ],
+      [
+        546,
+        550
+      ]
+    ],
+    "prompts": {
+      "Hero": "Editorial chef portrait \u2014 Chao 88 head chef in white tunic with red apron, standing in front of the fresh-cut chicken hanging rack, cleaver held confidently at waist, calm intense gaze to camera, warm tungsten light, slight smile, Chaoshan heritage backdrop, photoreal premium portrait",
+      "Detail": "Close-up of chef's hands holding the cleaver mid-cut on a fresh chicken, focus on hands and blade, motion sharpness, golden ambient light, craft-focused detail",
+      "Action": "Chef plating fresh-cut chicken on a black slate board with practiced choreography, hands moving fast, slight blur, behind-the-line documentary feel",
+      "Atmosphere": "Wider team shot \u2014 head chef in center, surrounded by 3-4 line cooks and servers in red aprons, all looking at camera, kitchen pass behind them, warm restaurant light, brand family mood"
+    },
+    "sheet": "picks/S12-candidates.jpg",
+    "picks": [
+      {
+        "idx": 31,
+        "stem": "DSC03588",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03588.JPG"
+      },
+      {
+        "idx": 32,
+        "stem": "DSC03589",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03589.JPG"
+      },
+      {
+        "idx": 33,
+        "stem": "DSC03590",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03590.JPG"
+      },
+      {
+        "idx": 34,
+        "stem": "DSC03591",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03591.JPG"
+      },
+      {
+        "idx": 35,
+        "stem": "DSC03592",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03592.JPG"
+      },
+      {
+        "idx": 36,
+        "stem": "DSC03593",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03593.JPG"
+      },
+      {
+        "idx": 37,
+        "stem": "DSC03594",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03594.JPG"
+      },
+      {
+        "idx": 546,
+        "stem": "DSC04103",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04103.JPG"
+      },
+      {
+        "idx": 547,
+        "stem": "DSC04104",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04104.JPG"
+      },
+      {
+        "idx": 548,
+        "stem": "DSC04105",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04105.JPG"
+      },
+      {
+        "idx": 549,
+        "stem": "DSC04106",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04106.JPG"
+      },
+      {
+        "idx": 550,
+        "stem": "DSC04107",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04107.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S13",
+    "title": "Customer dining moment (Community \u00b7 \u517b)",
+    "pillar": "Community \u00b7 \u517b",
+    "post_date": "20 Jul 2026 (Mon)",
+    "ranges": [
+      [
+        521,
+        544
+      ]
+    ],
+    "prompts": {
+      "Hero": "Candid hero of a 3-generation Singaporean family seated around a round table with the Chao 88 hotpot at center, grandparents, parents, and teenage kids sharing chicken, laughter mid-frame, warm tungsten lantern light overhead, photoreal documentary editorial, \u56e2\u5706 reunion mood",
+      "Detail": "Macro detail of a child reaching into the pot with chopsticks, parent's hand guiding gently, warm light catching the chicken being lifted, intergenerational moment",
+      "Action": "Mid-cheers moment \u2014 family raising glasses of warm tea / beer over the hotpot, smiles, slight motion blur on glasses, warm communal feel, \u5e72\u676f toast",
+      "Atmosphere": "Wider room scene \u2014 multiple tables of customers, the family in foreground as the hero, red lanterns and Chaoshan calligraphy in background bokeh, packed-house energy, warm hour"
+    },
+    "sheet": "picks/S13-candidates.jpg",
+    "picks": [
+      {
+        "idx": 521,
+        "stem": "DSC04078",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04078.JPG"
+      },
+      {
+        "idx": 522,
+        "stem": "DSC04079",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04079.JPG"
+      },
+      {
+        "idx": 523,
+        "stem": "DSC04080",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04080.JPG"
+      },
+      {
+        "idx": 524,
+        "stem": "DSC04081",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04081.JPG"
+      },
+      {
+        "idx": 525,
+        "stem": "DSC04082",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04082.JPG"
+      },
+      {
+        "idx": 526,
+        "stem": "DSC04083",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04083.JPG"
+      },
+      {
+        "idx": 527,
+        "stem": "DSC04084",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04084.JPG"
+      },
+      {
+        "idx": 528,
+        "stem": "DSC04085",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04085.JPG"
+      },
+      {
+        "idx": 529,
+        "stem": "DSC04086",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04086.JPG"
+      },
+      {
+        "idx": 530,
+        "stem": "DSC04087",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04087.JPG"
+      },
+      {
+        "idx": 531,
+        "stem": "DSC04088",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04088.JPG"
+      },
+      {
+        "idx": 532,
+        "stem": "DSC04089",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04089.JPG"
+      }
+    ]
+  },
+  {
+    "slot": "S14",
+    "title": "Brand IP \u2014 \u5403\u9e21\u56fe\u8c31 (Chicken Cuts Cooking Guide infographic)",
+    "pillar": "Education \u00b7 \u9c9c",
+    "post_date": "23 Jul 2026 (Thu-bonus)",
+    "ranges": [
+      [
+        266,
+        270
+      ],
+      [
+        31,
+        37
+      ]
+    ],
+    "prompts": {
+      "Hero": "Top-down infographic-style flat lay of \"\u5403\u9e21\u56fe\u8c31\" (chicken cuts cooking guide) \u2014 a whole laid-out free-range chicken on cream linen, each cut labeled with Chaoshan calligraphy tags (\u9e21\u817f/leg, \u9e21\u80f8/breast, \u9e21\u7ffc/wing, \u9e21\u80cc/back), tiny brass icons indicating ideal cooking method (\u6dae dip-cook, \u7117 braise, \u7096 stew), educational editorial flat lay, brand IP asset",
+      "Detail": "Macro of one calligraphy label tag on the chicken cut diagram, ink texture, brass-pin holding the tag, premium publishing feel",
+      "Action": "Chef's hand placing a numbered label beside a chicken cut, mid-gesture, gentle daylight, behind-the-scenes of brand-IP creation",
+      "Atmosphere": "Wider flat lay also showing complementary props \u2014 small Chaoshan ceramic bowls, brass spoon, bamboo chopsticks, dipping sauce wheel hinted at frame edge, brand book-style spread"
+    },
+    "sheet": "picks/S14-candidates.jpg",
+    "picks": [
       {
         "idx": 266,
         "stem": "DSC03823",
@@ -1256,167 +1046,64 @@
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03827.JPG"
       },
       {
-        "idx": 271,
-        "stem": "DSC03828",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03828.JPG"
+        "idx": 31,
+        "stem": "DSC03588",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03588.JPG"
       },
       {
-        "idx": 272,
-        "stem": "DSC03829",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03829.JPG"
+        "idx": 32,
+        "stem": "DSC03589",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03589.JPG"
+      },
+      {
+        "idx": 33,
+        "stem": "DSC03590",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03590.JPG"
+      },
+      {
+        "idx": 34,
+        "stem": "DSC03591",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03591.JPG"
+      },
+      {
+        "idx": 35,
+        "stem": "DSC03592",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03592.JPG"
+      },
+      {
+        "idx": 36,
+        "stem": "DSC03593",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03593.JPG"
+      },
+      {
+        "idx": 37,
+        "stem": "DSC03594",
+        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03594.JPG"
       }
     ]
   },
   {
-    "slot": "S4",
-    "title": "Signature side dish hero",
-    "pillar": "Food",
-    "location": "Paya Lebar",
-    "quality": "★★★",
-    "prompt": "Hero shot of Chao 88 signature side dish — chef-led composition, brass plate or wooden board, garnished, warm overhead light, editorial styling",
-    "sheet": "picks/S4-candidates.jpg",
-    "picks": [
-      {
-        "idx": 41,
-        "stem": "DSC03598",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03598.JPG"
-      },
-      {
-        "idx": 44,
-        "stem": "DSC03601",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03601.JPG"
-      },
-      {
-        "idx": 47,
-        "stem": "DSC03604",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03604.JPG"
-      },
-      {
-        "idx": 50,
-        "stem": "DSC03607",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03607.JPG"
-      },
-      {
-        "idx": 53,
-        "stem": "DSC03610",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03610.JPG"
-      },
-      {
-        "idx": 56,
-        "stem": "DSC03613",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03613.JPG"
-      },
-      {
-        "idx": 59,
-        "stem": "DSC03616",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03616.JPG"
-      },
-      {
-        "idx": 76,
-        "stem": "DSC03633",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03633.JPG"
-      },
-      {
-        "idx": 79,
-        "stem": "DSC03636",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03636.JPG"
-      },
-      {
-        "idx": 82,
-        "stem": "DSC03639",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03639.JPG"
-      },
-      {
-        "idx": 85,
-        "stem": "DSC03642",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03642.JPG"
-      },
-      {
-        "idx": 88,
-        "stem": "DSC03645",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03645.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S5",
-    "title": "Bubbling broth close-up",
-    "pillar": "Food",
-    "location": "Bukit Timah",
-    "quality": "★★★★",
-    "prompt": "Macro close-up of bubbling Chaoshan chicken broth — golden surface tension, rising steam, jujubes floating, glistening highlights, warm amber tone, intimate texture detail",
-    "sheet": "picks/S5-candidates.jpg",
-    "picks": [
-      {
-        "idx": 75,
-        "stem": "DSC03632",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03632.JPG"
-      },
-      {
-        "idx": 78,
-        "stem": "DSC03635",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03635.JPG"
-      },
-      {
-        "idx": 81,
-        "stem": "DSC03638",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03638.JPG"
-      },
-      {
-        "idx": 84,
-        "stem": "DSC03641",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03641.JPG"
-      },
-      {
-        "idx": 87,
-        "stem": "DSC03644",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03644.JPG"
-      },
-      {
-        "idx": 90,
-        "stem": "DSC03647",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03647.JPG"
-      },
-      {
-        "idx": 93,
-        "stem": "DSC03650",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03650.JPG"
-      },
-      {
-        "idx": 96,
-        "stem": "DSC03653",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03653.JPG"
-      },
-      {
-        "idx": 99,
-        "stem": "DSC03656",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03656.JPG"
-      },
-      {
-        "idx": 102,
-        "stem": "DSC03659",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03659.JPG"
-      },
-      {
-        "idx": 105,
-        "stem": "DSC03662",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03662.JPG"
-      },
-      {
-        "idx": 108,
-        "stem": "DSC03665",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03665.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S6",
-    "title": "Full table hero spread",
-    "pillar": "Food",
-    "location": "Horne Rd",
-    "quality": "★★★★★",
-    "prompt": "Top-down hero spread of full Chao 88 table — clay pot center with chicken hotpot, surrounding small plates of side dishes, dipping sauces, fresh ingredients, warm wood table, 4-8 people share, abundant family table mood",
-    "sheet": "picks/S6-candidates.jpg",
+    "slot": "S15",
+    "title": "Mid-campaign promo offer (Activation graphic)",
+    "pillar": "Activation \u00b7 \u9c9c",
+    "post_date": "25 Jul 2026 (Sat-bonus)",
+    "ranges": [
+      [
+        121,
+        128
+      ],
+      [
+        181,
+        181
+      ]
+    ],
+    "prompts": {
+      "Hero": "Graphic poster hero \u2014 central image of the Chao 88 hotpot table spread (top-down) framed by a circular red Chaoshan-pattern border, bold calligraphy headline \"\u6f6e\u516b\u516b \u00b7 \u6691\u671f\u5bb6\u5bb4\" (Summer Family Feast), promo offer slot (e.g. 1 free side dish with 4-pax order) as small subhead, brand red #B7342A + cream #F6E9D3 + gold #C89A5B palette, social-poster composition 1080\u00d71350, designed feel + photoreal hero",
+      "Detail": "Close-up of the promo CTA section of the poster \u2014 calligraphy seal, gold-foil-look outline, QR code placeholder, premium printed-poster texture",
+      "Action": "Lifestyle activation moment \u2014 hand holding up a phone showing the Chao 88 promo poster on Instagram feed, soft window light, behind-the-scenes meta-shot",
+      "Atmosphere": "Outlet entrance with the printed promo poster on a standee outside the door, evening warm light, passers-by glancing at it, lifestyle activation feel"
+    },
+    "sheet": "picks/S15-candidates.jpg",
     "picks": [
       {
         "idx": 121,
@@ -1459,511 +1146,9 @@
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03685.JPG"
       },
       {
-        "idx": 129,
-        "stem": "DSC03686",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03686.JPG"
-      },
-      {
-        "idx": 130,
-        "stem": "DSC03687",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03687.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S7",
-    "title": "Horne Rd storefront",
-    "pillar": "Brand & Space",
-    "location": "Horne Rd",
-    "quality": "★★★★★",
-    "prompt": "Storefront photograph of \"潮八八现切鸡煲\" Horne Rd outlet — red signage with rooster logo, golden hour exterior, lanterns visible, customers walking by, Teochew heritage aesthetic",
-    "sheet": "picks/S7-candidates.jpg",
-    "picks": [
-      {
-        "idx": 129,
-        "stem": "DSC03686",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03686.JPG"
-      },
-      {
-        "idx": 131,
-        "stem": "DSC03688",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03688.JPG"
-      },
-      {
-        "idx": 133,
-        "stem": "DSC03690",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03690.JPG"
-      },
-      {
-        "idx": 135,
-        "stem": "DSC03692",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03692.JPG"
-      },
-      {
-        "idx": 137,
-        "stem": "DSC03694",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03694.JPG"
-      },
-      {
-        "idx": 139,
-        "stem": "DSC03696",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03696.JPG"
-      },
-      {
-        "idx": 251,
-        "stem": "DSC03808",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03808.JPG"
-      },
-      {
-        "idx": 253,
-        "stem": "DSC03810",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03810.JPG"
-      },
-      {
-        "idx": 255,
-        "stem": "DSC03812",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03812.JPG"
-      },
-      {
-        "idx": 257,
-        "stem": "DSC03814",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03814.JPG"
-      },
-      {
-        "idx": 259,
-        "stem": "DSC03816",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03816.JPG"
-      },
-      {
-        "idx": 261,
-        "stem": "DSC03818",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03818.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S8",
-    "title": "Paya Lebar storefront",
-    "pillar": "Brand & Space",
-    "location": "Paya Lebar",
-    "quality": "★★★ (verify outlet)",
-    "prompt": "Storefront photograph of Chao 88 Upper Paya Lebar — same heritage red signage, different street context, day or dusk lighting, inviting entrance",
-    "sheet": "picks/S8-candidates.jpg",
-    "picks": [
-      {
-        "idx": 129,
-        "stem": "DSC03686",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03686.JPG"
-      },
-      {
-        "idx": 133,
-        "stem": "DSC03690",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03690.JPG"
-      },
-      {
-        "idx": 137,
-        "stem": "DSC03694",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03694.JPG"
-      },
-      {
-        "idx": 561,
-        "stem": "DSC04118",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04118.JPG"
-      },
-      {
-        "idx": 565,
-        "stem": "DSC04122",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04122.JPG"
-      },
-      {
-        "idx": 569,
-        "stem": "DSC04126",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04126.JPG"
-      },
-      {
-        "idx": 573,
-        "stem": "DSC04130",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04130.JPG"
-      },
-      {
-        "idx": 577,
-        "stem": "DSC04134",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04134.JPG"
-      },
-      {
-        "idx": 581,
-        "stem": "DSC04138",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04138.JPG"
-      },
-      {
-        "idx": 585,
-        "stem": "DSC04142",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04142.JPG"
-      },
-      {
-        "idx": 589,
-        "stem": "DSC04146",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04146.JPG"
-      },
-      {
-        "idx": 593,
-        "stem": "DSC04150",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04150.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S9",
-    "title": "Bukit Timah storefront",
-    "pillar": "Brand & Space",
-    "location": "Bukit Timah",
-    "quality": "★★★ (verify outlet)",
-    "prompt": "Storefront photograph of Chao 88 Bukit Timah outlet — red branded storefront, Teochew details, street-level perspective",
-    "sheet": "picks/S9-candidates.jpg",
-    "picks": [
-      {
-        "idx": 129,
-        "stem": "DSC03686",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03686.JPG"
-      },
-      {
-        "idx": 133,
-        "stem": "DSC03690",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03690.JPG"
-      },
-      {
-        "idx": 137,
-        "stem": "DSC03694",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03694.JPG"
-      },
-      {
-        "idx": 561,
-        "stem": "DSC04118",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04118.JPG"
-      },
-      {
-        "idx": 565,
-        "stem": "DSC04122",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04122.JPG"
-      },
-      {
-        "idx": 569,
-        "stem": "DSC04126",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04126.JPG"
-      },
-      {
-        "idx": 573,
-        "stem": "DSC04130",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04130.JPG"
-      },
-      {
-        "idx": 577,
-        "stem": "DSC04134",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04134.JPG"
-      },
-      {
-        "idx": 581,
-        "stem": "DSC04138",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04138.JPG"
-      },
-      {
-        "idx": 585,
-        "stem": "DSC04142",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04142.JPG"
-      },
-      {
-        "idx": 589,
-        "stem": "DSC04146",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04146.JPG"
-      },
-      {
-        "idx": 593,
-        "stem": "DSC04150",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04150.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S10",
-    "title": "SAFRA Punggol storefront",
-    "pillar": "Brand & Space",
-    "location": "SAFRA Punggol",
-    "quality": "★★★ (fit-out)",
-    "prompt": "Storefront photograph of Chao 88 SAFRA Punggol — newest outlet, red signage with \"斩鸡房\" wood detail, opening celebration mood",
-    "sheet": "picks/S10-candidates.jpg",
-    "picks": [
-      {
-        "idx": 141,
-        "stem": "DSC03698",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03698.JPG"
-      },
-      {
-        "idx": 146,
-        "stem": "DSC03703",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03703.JPG"
-      },
-      {
-        "idx": 151,
-        "stem": "DSC03708",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03708.JPG"
-      },
-      {
-        "idx": 156,
-        "stem": "DSC03713",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03713.JPG"
-      },
-      {
-        "idx": 161,
-        "stem": "DSC03718",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03718.JPG"
-      },
-      {
-        "idx": 166,
-        "stem": "DSC03723",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03723.JPG"
-      },
-      {
-        "idx": 171,
-        "stem": "DSC03728",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03728.JPG"
-      },
-      {
-        "idx": 176,
-        "stem": "DSC03733",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03733.JPG"
-      },
-      {
         "idx": 181,
         "stem": "DSC03738",
         "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03738.JPG"
-      },
-      {
-        "idx": 186,
-        "stem": "DSC03743",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03743.JPG"
-      },
-      {
-        "idx": 191,
-        "stem": "DSC03748",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03748.JPG"
-      },
-      {
-        "idx": 196,
-        "stem": "DSC03753",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03753.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S11",
-    "title": "Interior ambience",
-    "pillar": "Brand & Space",
-    "location": "TBC",
-    "quality": "★★★★★",
-    "prompt": "Interior ambience shot of Chao 88 — warm wood + red walls, hanging red lanterns, calligraphy art, private dining round tables visible, golden tungsten glow, hospitable empty-table mood",
-    "sheet": "picks/S11-candidates.jpg",
-    "picks": [
-      {
-        "idx": 1,
-        "stem": "DSC03558",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03558.JPG"
-      },
-      {
-        "idx": 7,
-        "stem": "DSC03564",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03564.JPG"
-      },
-      {
-        "idx": 13,
-        "stem": "DSC03570",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC03570.JPG"
-      },
-      {
-        "idx": 19,
-        "stem": "DSC03576",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC03576.JPG"
-      },
-      {
-        "idx": 25,
-        "stem": "DSC03582",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC03582.JPG"
-      },
-      {
-        "idx": 31,
-        "stem": "DSC03588",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC03588.JPG"
-      },
-      {
-        "idx": 37,
-        "stem": "DSC03594",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC03594.JPG"
-      },
-      {
-        "idx": 563,
-        "stem": "DSC04120",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04120.JPG"
-      },
-      {
-        "idx": 569,
-        "stem": "DSC04126",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04126.JPG"
-      },
-      {
-        "idx": 575,
-        "stem": "DSC04132",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04132.JPG"
-      },
-      {
-        "idx": 581,
-        "stem": "DSC04138",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04138.JPG"
-      },
-      {
-        "idx": 587,
-        "stem": "DSC04144",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04144.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S12",
-    "title": "Chef portrait",
-    "pillar": "People",
-    "location": "Kitchen",
-    "quality": "★★★★★",
-    "prompt": "Editorial portrait of head chef — apron, chef hat, cleaver in hand, kitchen backdrop, single warm key light, 85mm portrait lens look, dignified premium feel",
-    "sheet": "picks/S12-candidates.jpg",
-    "picks": [
-      {
-        "idx": 541,
-        "stem": "DSC04098",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04098.JPG"
-      },
-      {
-        "idx": 542,
-        "stem": "DSC04099",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04099.JPG"
-      },
-      {
-        "idx": 543,
-        "stem": "DSC04100",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04100.JPG"
-      },
-      {
-        "idx": 544,
-        "stem": "DSC04101",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04101.JPG"
-      },
-      {
-        "idx": 545,
-        "stem": "DSC04102",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04102.JPG"
-      },
-      {
-        "idx": 546,
-        "stem": "DSC04103",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04103.JPG"
-      },
-      {
-        "idx": 547,
-        "stem": "DSC04104",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04104.JPG"
-      },
-      {
-        "idx": 548,
-        "stem": "DSC04105",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04105.JPG"
-      },
-      {
-        "idx": 549,
-        "stem": "DSC04106",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04106.JPG"
-      },
-      {
-        "idx": 550,
-        "stem": "DSC04107",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04107.JPG"
-      },
-      {
-        "idx": 551,
-        "stem": "DSC04108",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04108.JPG"
-      },
-      {
-        "idx": 552,
-        "stem": "DSC04109",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04109.JPG"
-      }
-    ]
-  },
-  {
-    "slot": "S13",
-    "title": "Customer enjoying meal",
-    "pillar": "People",
-    "location": "All outlets",
-    "quality": "★★★★★",
-    "prompt": "Candid customer moment — couple or family eating Chao 88 hotpot, mid-laugh, chopsticks raised, soft restaurant lighting, genuine emotion, \"the conversation pauses, the chopsticks pick up faster\" mood",
-    "sheet": "picks/S13-candidates.jpg",
-    "picks": [
-      {
-        "idx": 521,
-        "stem": "DSC04078",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-002/DSC04078.JPG"
-      },
-      {
-        "idx": 527,
-        "stem": "DSC04084",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04084.JPG"
-      },
-      {
-        "idx": 533,
-        "stem": "DSC04090",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04090.JPG"
-      },
-      {
-        "idx": 539,
-        "stem": "DSC04096",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-001/DSC04096.JPG"
-      },
-      {
-        "idx": 545,
-        "stem": "DSC04102",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04102.JPG"
-      },
-      {
-        "idx": 551,
-        "stem": "DSC04108",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-005/DSC04108.JPG"
-      },
-      {
-        "idx": 557,
-        "stem": "DSC04114",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04114.JPG"
-      },
-      {
-        "idx": 563,
-        "stem": "DSC04120",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04120.JPG"
-      },
-      {
-        "idx": 569,
-        "stem": "DSC04126",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04126.JPG"
-      },
-      {
-        "idx": 575,
-        "stem": "DSC04132",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-003/DSC04132.JPG"
-      },
-      {
-        "idx": 581,
-        "stem": "DSC04138",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04138.JPG"
-      },
-      {
-        "idx": 587,
-        "stem": "DSC04144",
-        "path": "/Users/lengzai/Downloads/drive-download-20260605T021129Z-3-004/DSC04144.JPG"
       }
     ]
   }
